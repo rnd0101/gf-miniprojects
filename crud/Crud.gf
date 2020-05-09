@@ -35,10 +35,12 @@ abstract Crud = Numeral ** {
     Internal : Property ;
 
     Add : Action ;
+    Arrive : Action ;
     Create : Action ;
     Delete : Action ;
     End : Action ;
     End2 : Action ;
+    Get : Action ;
     Process : Action ;
     Process2 : Action ;
     Show : Action ;

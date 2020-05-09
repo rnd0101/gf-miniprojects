@@ -21,10 +21,11 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     NItemsDig num kind = mkS (mkCl (mkNP (mkDet num) kind)) ;
 
     Add = add_V2 ;
-    Create = create_V2 ;
+    Arrive = arrive_V2 ;
     Delete = delete_V2 ;
     End = end_V2 ;
     End2 = end2_V2 ;
+    Get = get_V2 ;
     Process = process_V2 ;
     Process2 = process2_V2 ;
     Show = show_V2 ;

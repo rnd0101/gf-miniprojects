@@ -3,11 +3,12 @@
 instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
   oper
     add_V2 = mkV2 (mkV "lisätä")  ;
-    arrive_V = mkV "saapua" ;
+    arrive_V2 = mkV2 (mkV "saapua") ;
     create_V2 = mkV2 (mkV "luoda")  ;
     delete_V2 = mkV2 (mkV "poistaa")  ;
-    end_V2 = mkV2 (mkV "päättyä") ;
     end2_V2 = mkV2 (mkV "päättää") ;
+    end_V2 = mkV2 (mkV "päättyä") ;
+    get_V2 = mkV2 (mkV "saada") ;
 
     process2_V2 = process_V2  ;
     process_V2 = mkV2 (mkV "käsitellä")  ;

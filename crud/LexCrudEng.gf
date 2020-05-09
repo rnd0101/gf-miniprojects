@@ -3,11 +3,12 @@
 instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng in {
   oper
     add_V2 = mkV2 "add" ;
-    arrive_V = mkV "arrive" ;
+    arrive_V2 = mkV2 "arrive" ;
     create_V2 = mkV2 "create" ;
     delete_V2 = mkV2 "delete" ;
-    end_V2 = mkV2 "end" ;
     end2_V2 = mkV2 "end" ;
+    end_V2 = mkV2 "end" ;
+    get_V2 = mkV2 IrregEng.get_V ;
     process2_V2 = process_V2 ;
     process_V2 = mkV2 "process" ;
     show2_V2 = show_V2 ;
