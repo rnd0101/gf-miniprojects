@@ -5,7 +5,6 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Property = AP;
     Adjective = A;
     Complem = Str;
-    PropertyWith = A2;
     Status = V;
     Action = V2;
     Clause = S;

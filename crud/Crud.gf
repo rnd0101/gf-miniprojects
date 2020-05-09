@@ -4,7 +4,6 @@ abstract Crud = Numeral ** {
     Kind ;
     DetKind ;
     Property ;
-    PropertyWith ;
     Action ;
     DoCommand ;
     Status ;
