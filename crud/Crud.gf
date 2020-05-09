@@ -21,7 +21,6 @@ abstract Crud = Numeral ** {
 
     AProcess: Kind ;
     Group: Kind ;
-    Interview: Kind ;
     Note: Kind ;
     Piece: Kind ;
     Position: Kind ;
