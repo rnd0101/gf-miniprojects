@@ -1,11 +1,14 @@
 --# -coding=utf-8
 
-instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus in {
+instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, ResRus in {
   oper
     add_V = regV perfective first "добав" "лю" "добавил" "добавь" "добавить"  ;
     add_V2 = dirV2 add_V  ;
     arrive_V = regV imperfective first "прибуд" "у" "прибыл" "прибудь" "прибыть" ;
     arrive_V2 = dirV2 arrive_V  ;
+    connect_V = regV imperfective first "свяж" "у" "связал" "свяжи" "связать"  ;
+    -- connect_V = mkV imperfective "связывают" "связывают" "свяжет" "связывают" "связывают" "свяжут" "связывают" "связывайте" "связать"  ;
+    connect_V2 = dirV2 connect_V  ;
     create_V = regV perfective first "созда" "ю" "создал" "создай" "создать"  ;
     create_V2 = dirV2 create_V  ;
     delete_V = regV perfective first "удал" "ю" "удалил" "удали" "удалить"  ;
@@ -38,7 +41,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus in {
                  "временами" "времена" "времен" "временам" "времена" "временами" "временах" neuter inanimate ;
 
     additional_A = mkA "дополнительный";
-    connected_A = mkA "связанный" ;
+    connected_A = mkActPastParticiple connect_V ;
     external_A = mkA "внешний";
     internal_A = mkA "внутренний";
 }

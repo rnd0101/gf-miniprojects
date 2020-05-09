@@ -4,6 +4,7 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
   oper
     add_V2 = mkV2 "add" ;
     arrive_V2 = mkV2 "arrive" ;
+    connect_V2 = mkV2 "connect" ;
     create_V2 = mkV2 "create" ;
     delete_V2 = mkV2 "delete" ;
     end2_V2 = mkV2 "end" ;
