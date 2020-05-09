@@ -5,6 +5,7 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     add_V2 = mkV2 "add" ;
     arrive_V2 = mkV2 "arrive" ;
     connect_V2 = mkV2 "connect" ;
+    connect2_V2 = mkV2 "connect" ;
     create_V2 = mkV2 "create" ;
     delete_V2 = mkV2 "delete" ;
     end2_V2 = mkV2 "end" ;
@@ -15,6 +16,7 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     show2_V2 = show_V2 ;
     show_V2 = mkV2 (irregV "show" "showed" (variants {"shown" ; "showed"}) );
     update_V2 = mkV2 (mkV "edit" "edits" "edited" "edited" "editing");
+    update2_V2 = update_V2;
 
     group_N = mkN "group" ;
     note_N = mkN "note" ;

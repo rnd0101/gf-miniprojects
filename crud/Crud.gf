@@ -36,6 +36,7 @@ abstract Crud = Numeral ** {
     Add : Action ;
     Arrive : Action ;
     Connect : Action ;
+    Connect2 : Action ;
     Create : Action ;
     Delete : Action ;
     End : Action ;
@@ -46,6 +47,7 @@ abstract Crud = Numeral ** {
     Show : Action ;
     Show2 : Action ;
     Update : Action ;
+    Update2 : Action ;
 
     Do : Action -> Kind -> DoCommand ;
     Done : Action -> Kind -> Clause ;

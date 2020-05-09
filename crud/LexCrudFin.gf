@@ -4,7 +4,8 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
   oper
     add_V2 = mkV2 (mkV "lisätä")  ;
     arrive_V2 = mkV2 (mkV "saapua") ;
-    connect_V2 = mkV2 "connect" ;
+    connect_V2 = mkV2 "yhdistää" ;
+    connect2_V2 = mkV2 "yhdistellä" ;
     create_V2 = mkV2 (mkV "luoda")  ;
     delete_V2 = mkV2 (mkV "poistaa")  ;
     end2_V2 = mkV2 (mkV "päättää") ;
@@ -16,6 +17,7 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     show2_V2 = mkV2 (mkV "näytellä")  ;
     show_V2 = mkV2 (mkV "näyttää")  ;
     update_V2 = mkV2 (mkV "muokata")  ;
+    update2_V2 = mkV2 (mkV "muokata")  ; -- ?
 
     group_N = mkN "ryhmä" ;
     note_N = mkN "muistiinpano" ;

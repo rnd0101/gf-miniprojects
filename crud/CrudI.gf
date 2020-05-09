@@ -24,6 +24,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Arrive = arrive_V2 ;
     Create = create_V2 ;
     Connect = connect_V2 ;
+    Connect2 = connect2_V2 ;
     Delete = delete_V2 ;
     End = end_V2 ;
     End2 = end2_V2 ;
@@ -33,6 +34,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Show = show_V2 ;
     Show2 = show2_V2 ;
     Update = update_V2 ;
+    Update2 = update2_V2 ;
 
     Task = mkCN task_N ;
     Time = mkCN time_N ;
