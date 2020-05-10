@@ -5,6 +5,8 @@ interface LexCrud = open Syntax in {
     arrive_V2 : V2 ;
     connect_V2 : V2 ;
     connect2_V2 : V2 ;
+    connect3_V2 : V2 ;
+    connect3_V : V ;
     create_V2 : V2 ;
     delete_V2 : V2 ;
     get_V2 : V2 ;

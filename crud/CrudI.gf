@@ -11,6 +11,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Document = Text;
     DoCommand = Imp;
     NumberOf = Str;
+    SuperAction = {do, doing: V2; done: A} ;
   lin
     Doc clause = mkText (mkPhr (mkUtt clause)) ;
     Command imp = mkText (mkPhr (mkUtt imp)) ;
@@ -25,6 +26,8 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Create = create_V2 ;
     Connect = connect_V2 ;
     Connect2 = connect2_V2 ;
+    Connect3 = connect3_V2 ;
+    Connect3_V = connect3_V ;
     Delete = delete_V2 ;
     End = end_V2 ;
     End2 = end2_V2 ;
@@ -35,6 +38,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Show2 = show2_V2 ;
     Update = update_V2 ;
     Update2 = update2_V2 ;
+    SuperUpdate = {do=Update; doing=Update2; done=connected_A} ;
 
     Task = mkCN task_N ;
     Time = mkCN time_N ;
@@ -51,8 +55,12 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Internal = mkAP internal_A ;
 
     Do action on_what = mkImp action (mkNP on_what);
-    Done action on_what = mkS pastTense (mkCl (mkNP on_what) (PassV2 action));
+    -- Done action on_what = mkS pastTense (mkCl (mkNP on_what) (PassV2 action));
+    Done action on_what = mkS (mkCl (mkNP on_what) (Connect3_V));
     WillDo action on_what = mkS futureTense simultaneousAnt (mkCl (mkNP on_what) (PassV2 action));
     Doing action on_what = mkS presentTense simultaneousAnt (mkCl (mkNP on_what) (PassV2 action));
     NotDone action on_what = mkS pastTense negativePol (mkCl (mkNP on_what) (PassV2 action));
+
+    SuperDo super_action on_what = mkImp super_action.do (mkNP on_what) ;
+    -- SuperDone super_action on_what = mkS( mkCl (mkCN super_action.done on_what) );
 }

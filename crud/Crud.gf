@@ -10,6 +10,7 @@ abstract Crud = Numeral ** {
     Clause ;
     NumberOf ;
     Document ;
+    SuperAction ;
   fun
     Doc : Clause -> Document ;
     Command : DoCommand -> Document;
@@ -37,6 +38,8 @@ abstract Crud = Numeral ** {
     Arrive : Action ;
     Connect : Action ;
     Connect2 : Action ;
+    Connect3 : Action ;
+    Connect3_V : Action ;
     Create : Action ;
     Delete : Action ;
     End : Action ;
@@ -49,9 +52,14 @@ abstract Crud = Numeral ** {
     Update : Action ;
     Update2 : Action ;
 
+    SuperUpdate : SuperAction ;
+
     Do : Action -> Kind -> DoCommand ;
     Done : Action -> Kind -> Clause ;
     WillDo : Action -> Kind -> Clause ;
     Doing : Action -> Kind -> Clause ;
     NotDone : Action -> Kind -> Clause ;
+
+    SuperDo : SuperAction -> Kind -> DoCommand ;
+    SuperDone : SuperAction -> Kind -> Clause ;
 }

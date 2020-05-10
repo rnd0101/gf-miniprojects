@@ -10,6 +10,8 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, ResRus i
     connect_V2 = dirV2 connect_V  ;
     connect2_V = regV imperfective first "связыва" "ю" "связывал" "связывай" "связывать"  ;
     connect2_V2 = dirV2 connect2_V  ;
+    connect3_V = regV perfective dolzhen "свяж" "у" "связал" "свяжи" "связать"  ;
+    connect3_V2 = dirV2 connect2_V  ;
     create_V = regV perfective first "созда" "ю" "создал" "создай" "создать"  ;
     create_V2 = dirV2 create_V  ;
     delete_V = regV perfective first "удал" "ю" "удалил" "удали" "удалить"  ;
@@ -45,6 +47,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, ResRus i
 
     additional_A = mkA "дополнительный";
     connected_A = mkPassPastParticiple connect_V ;
+    -- connected_A = mkPassPastShortParticiple connect_V ;
     external_A = mkA "внешний";
     internal_A = mkA "внутренний";
 }
