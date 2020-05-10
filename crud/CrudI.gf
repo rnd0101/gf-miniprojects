@@ -11,7 +11,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Document = Text;
     DoCommand = Imp;
     NumberOf = Str;
-    SuperAction = {do, doing: V2; done: A} ;
+    SuperAction = {do, doing: V2; done: V} ;
   lin
     Doc clause = mkText (mkPhr (mkUtt clause)) ;
     Command imp = mkText (mkPhr (mkUtt imp)) ;
@@ -38,7 +38,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Show2 = show2_V2 ;
     Update = update_V2 ;
     Update2 = update2_V2 ;
-    SuperUpdate = {do=Update; doing=Update2; done=connected_A} ;
+    SuperUpdate = {do=Update; doing=Update2; done=Connect3_V} ;
 
     Task = mkCN task_N ;
     Time = mkCN time_N ;
@@ -63,4 +63,5 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
 
     SuperDo super_action on_what = mkImp super_action.do (mkNP on_what) ;
     -- SuperDone super_action on_what = mkS( mkCl (mkCN super_action.done on_what) );
+    SuperDone super_action on_what = mkS presentTense ( mkCl (mkNP on_what) super_action.done );
 }

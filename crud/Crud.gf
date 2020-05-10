@@ -39,7 +39,7 @@ abstract Crud = Numeral ** {
     Connect : Action ;
     Connect2 : Action ;
     Connect3 : Action ;
-    Connect3_V : Action ;
+    Connect3_V : Status ;
     Create : Action ;
     Delete : Action ;
     End : Action ;
