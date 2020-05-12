@@ -21,14 +21,16 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     NItemsDig num kind = mkS (mkCl (mkNP (mkDet num) kind)) ;
 
     Add = add_V2 ;
+    Add2 = add2_V2 ;
     Arrive = arrive_V2 ;
-    Create = create_V2 ;
     Connect = connect_V2 ;
     Connect2 = connect2_V2 ;
+    Create = create_V2 ;
     Delete = delete_V2 ;
     End = end_V2 ;
     End2 = end2_V2 ;
     Get = get_V2 ;
+    Get2 = get2_V2 ;
     Process = process_V2 ;
     Process2 = process2_V2 ;
     Show = show_V2 ;
@@ -36,14 +38,15 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Update = update_V2 ;
     Update2 = update2_V2 ;
 
-    Task = mkCN task_N ;
-    Time = mkCN time_N ;
-    System = mkCN system_N ;
     AProcess = mkCN process_N ;
     Group = mkCN group_N ;
+    Measurement = mkCN measurement_N;
     Note = mkCN note_N ;
     Piece = mkCN piece_N;
     Position = mkCN position_N;
+    System = mkCN system_N ;
+    Task = mkCN task_N ;
+    Time = mkCN time_N ;
 
     Additional = mkAP additional_A ;
     Connected = mkAP connected_A ;
@@ -51,8 +54,12 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Internal = mkAP internal_A ;
 
     Do action on_what = mkImp action (mkNP on_what);
-    Done action on_what = mkS pastTense (mkCl (mkNP on_what) (PassV2 action));
-    WillDo action on_what = mkS futureTense simultaneousAnt (mkCl (mkNP on_what) (PassV2 action));
     Doing action on_what = mkS presentTense simultaneousAnt (mkCl (mkNP on_what) (PassV2 action));
+    DoingAction action = mkS presentTense simultaneousAnt (mkCl (passiveVP action));
+    DoingByItself action = mkS presentTense simultaneousAnt (mkCl (reflexiveVP action));
+    Done action on_what = mkS pastTense (mkCl (mkNP on_what) (PassV2 action));
     NotDone action on_what = mkS pastTense negativePol (mkCl (mkNP on_what) (PassV2 action));
+    SystemDone action on_what = mkS pastTense (mkCl (mkNP system_N) (mkVP action (mkNP on_what) ));
+    WeDone action on_what = mkS pastTense (mkCl we_NP (mkVP action (mkNP on_what) ));
+    WillDo action on_what = mkS futureTense simultaneousAnt (mkCl (mkNP on_what) (PassV2 action));
 }

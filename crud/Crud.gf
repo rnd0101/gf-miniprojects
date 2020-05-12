@@ -23,6 +23,7 @@ abstract Crud = Numeral ** {
     Group: Kind ;
     Note: Kind ;
     Piece: Kind ;
+    Measurement: Kind ;
     Position: Kind ;
     System: Kind ;
     Task: Kind ;
@@ -34,6 +35,7 @@ abstract Crud = Numeral ** {
     Internal : Property ;
 
     Add : Action ;
+    Add2 : Action ;
     Arrive : Action ;
     Connect : Action ;
     Connect2 : Action ;
@@ -42,6 +44,7 @@ abstract Crud = Numeral ** {
     End : Action ;
     End2 : Action ;
     Get : Action ;
+    Get2 : Action ;
     Process : Action ;
     Process2 : Action ;
     Show : Action ;
@@ -50,8 +53,12 @@ abstract Crud = Numeral ** {
     Update2 : Action ;
 
     Do : Action -> Kind -> DoCommand ;
+    SystemDone : Action -> Kind -> Clause ;
+    WeDone : Action -> Kind -> Clause ;
     Done : Action -> Kind -> Clause ;
     WillDo : Action -> Kind -> Clause ;
     Doing : Action -> Kind -> Clause ;
+    DoingByItself : Action -> Clause ;
+    DoingAction : Action -> Clause ;
     NotDone : Action -> Kind -> Clause ;
 }
