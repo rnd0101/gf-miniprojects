@@ -20,43 +20,8 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Say phrase = mkS (mkCl phrase);
     NItemsDig num kind = mkS (mkCl (mkNP (mkDet num) kind)) ;
 
-    -- -- ACTION SECTION -- --
-    Add = add_V2 ;
-    Add2 = add2_V2 ;
-    Arrive = arrive_V2 ;
-    Connect = connect_V2 ;
-    Connect2 = connect2_V2 ;
-    Create = create_V2 ;
-    Delete = delete_V2 ;
-    End = end_V2 ;
-    End2 = end2_V2 ;
-    Get = get_V2 ;
-    Get2 = get2_V2 ;
-    Process = process_V2 ;
-    Process2 = process2_V2 ;
-    Show = show_V2 ;
-    Show2 = show2_V2 ;
-    Update = update_V2 ;
-    Update2 = update2_V2 ;
+{ENTRIES}
 
-    -- -- KIND SECTION -- --
-    AProcess = mkCN process_N ;
-    Group = mkCN group_N ;
-    Measurement = mkCN measurement_N;
-    Note = mkCN note_N ;
-    Piece = mkCN piece_N;
-    Position = mkCN position_N;
-    System = mkCN system_N ;
-    Task = mkCN task_N ;
-    Time = mkCN time_N ;
-
-    -- -- PROPERTY SECTION -- --
-    Additional = mkAP additional_A ;
-    Connected = mkAP connected_A ;
-    External = mkAP external_A ;
-    Internal = mkAP internal_A ;
-
-    -- -- END SECTION -- --
     Do action on_what = mkImp action (mkNP on_what);
     Doing action on_what = mkS presentTense simultaneousAnt (mkCl (mkNP on_what) (PassV2 action));
     DoingAction action = mkS presentTense simultaneousAnt (mkCl (passiveVP action));
