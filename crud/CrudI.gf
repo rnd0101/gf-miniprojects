@@ -20,6 +20,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Say phrase = mkS (mkCl phrase);
     NItemsDig num kind = mkS (mkCl (mkNP (mkDet num) kind)) ;
 
+    -- -- ACTION -- --
     Add = add_V2 ;
     Add2 = add2_V2 ;
     Arrive = arrive_V2 ;
@@ -38,6 +39,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Update = update_V2 ;
     Update2 = update2_V2 ;
 
+    -- -- KIND -- --
     AProcess = mkCN process_N ;
     Group = mkCN group_N ;
     Measurement = mkCN measurement_N;
@@ -48,6 +50,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Task = mkCN task_N ;
     Time = mkCN time_N ;
 
+    -- -- PROPERTY -- --
     Additional = mkAP additional_A ;
     Connected = mkAP connected_A ;
     External = mkAP external_A ;
@@ -59,7 +62,8 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     DoingByItself action = mkS presentTense simultaneousAnt (mkCl (reflexiveVP action));
     Done action on_what = mkS pastTense (mkCl (mkNP on_what) (PassV2 action));
     NotDone action on_what = mkS pastTense negativePol (mkCl (mkNP on_what) (PassV2 action));
-    SystemDone action on_what = mkS pastTense (mkCl (mkNP system_N) (mkVP action (mkNP on_what) ));
+    SystemDone action on_what = mkS pastTense anteriorAnt (mkCl (mkNP system_N) (mkVP action (mkNP on_what) ));
+    -- SystemDone action on_what = mkS pastTense simultaneousAnt (mkCl (mkNP system_N) (mkVP action (mkNP on_what) ));
     WeDone action on_what = mkS pastTense (mkCl we_NP (mkVP action (mkNP on_what) ));
     WillDo action on_what = mkS futureTense simultaneousAnt (mkCl (mkNP on_what) (PassV2 action));
 }

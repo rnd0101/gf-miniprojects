@@ -1,6 +1,7 @@
 
 interface LexCrud = open Syntax in {
   oper
+    -- -- V2 DECLARATION -- --
     add_V2 : V2 ;
     add2_V2 : V2 ;
     arrive_V2 : V2 ;
@@ -19,6 +20,7 @@ interface LexCrud = open Syntax in {
     update_V2 : V2 ;
     update2_V2 : V2 ;
 
+    -- -- N DECLARATION -- --
     group_N : N ;
     note_N : N ;
     piece_N : N ;
@@ -29,6 +31,7 @@ interface LexCrud = open Syntax in {
     task_N : N ;
     time_N : N;
 
+    -- -- A DECLARATION -- --
     additional_A : A ;
     connected_A : A ;
     external_A : A ;

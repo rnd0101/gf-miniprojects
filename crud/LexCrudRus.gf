@@ -2,6 +2,7 @@
 
 instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, ResRus in {
   oper
+    -- -- V2 LEXICON -- --
     add2_V = regV imperfective second "добавля" "ю" "добавлял" "добавляй" "добавлять"  ;
     add2_V2 = dirV2 add2_V  ;
     add_V = regV perfective second "добав" "лю" "добавил" "добавь" "добавить"  ;
@@ -22,7 +23,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, ResRus i
     end_V2 = dirV2 end_V  ;
     get_V = regV perfective first "получа" "ю" "получил" "получи" "получить" ;
     get_V2 = dirV2 get_V  ;
-    get2_V = regV imperfective first "получа" "ю" "получил" "получай" "получать" ;
+    get2_V = regV imperfective first "получа" "ю" "получал" "получай" "получать" ;
     get2_V2 = dirV2 get2_V  ;
     process2_V = regV imperfective first "обрабатыва" "ю" "обрабатывал" "обрабатывай" "обрабатывать"  ;
     process2_V2 = dirV2 process2_V ;
@@ -37,6 +38,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, ResRus i
     update_V = regV perfective first "исправля" "ю" "исправил" "исправь" "исправить"  ;
     update_V2 = dirV2 update_V  ;
 
+    -- -- N LEXICON -- --
     group_N = mkN "группа" ;
     measurement_N = mkN "измерение" ;
     note_N = mkN "заметка" ;
@@ -47,6 +49,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, ResRus i
     task_N = mkN "задание" ;
     time_N = mkN "время" "времени" "времени" "время" "временем" "времени" "временами" "времена" "времен" "временам" "времена" "временами" "временах" neuter inanimate ;
 
+    -- -- A LEXICON -- --
     additional_A = mkA "дополнительный";
     connected_A = mkPassPastParticiple connect_V ;
     external_A = mkA "внешний";

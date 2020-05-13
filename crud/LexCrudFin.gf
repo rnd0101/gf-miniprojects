@@ -2,6 +2,7 @@
 
 instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
   oper
+    -- -- V2 LEXICON -- --
     add2_V2 = mkV2 (mkV "lisätä")  ;
     add_V2 = mkV2 (mkV "lisätä")  ;
     arrive_V2 = mkV2 (mkV "saapua") ;
@@ -11,9 +12,8 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     delete_V2 = mkV2 (mkV "poistaa")  ;
     end2_V2 = mkV2 (mkV "päättää") ;
     end_V2 = mkV2 (mkV "päättyä") ;
-    get_V2 = mkV2 (mkV "saada") ;
     get2_V2 = mkV2 (mkV "saada") ;
-
+    get_V2 = mkV2 (mkV "saada") ;
     process2_V2 = process_V2  ;
     process_V2 = mkV2 (mkV "käsitellä")  ;
     show2_V2 = mkV2 (mkV "näytellä")  ;
@@ -21,6 +21,7 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     update2_V2 = mkV2 (mkV "muokata")  ; -- ?
     update_V2 = mkV2 (mkV "muokata")  ;
 
+    -- -- N LEXICON -- --
     group_N = mkN "ryhmä" ;
     measurement_N = mkN "mittaus" ;
     note_N = mkN "muistiinpano" ;
@@ -31,6 +32,7 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     task_N = mkN "tehtävä" ;
     time_N = mkN "aika" "ajan" "aikaa" "aikana" "aikaan" "aikojen" "aikoja" "aikoina" "aikoissa" "aikoihin";
 
+    -- -- A LEXICON -- --
     additional_A = mkA "ylimääräinen";
     connected_A = mkA "liittyvä" ;
     external_A = mkA "ulkoinen";

@@ -19,6 +19,7 @@ abstract Crud = Numeral ** {
     AdjKind : Property -> Kind -> Kind ;
     NItemsDig : Digits -> Kind -> Clause ;
 
+    -- -- KIND DECLARATION -- --
     AProcess: Kind ;
     Group: Kind ;
     Note: Kind ;
@@ -29,11 +30,13 @@ abstract Crud = Numeral ** {
     Task: Kind ;
     Time: Kind ;
 
+    -- -- PROPERTY DECLARATION -- --
     Additional : Property ;
     Connected : Property ;
     External : Property ;
     Internal : Property ;
 
+    -- -- ACTION DECLARATION -- --
     Add : Action ;
     Add2 : Action ;
     Arrive : Action ;
