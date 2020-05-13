@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """
-- analize Lex files for additions
-- add entries into other files
+- read lexicons
+- write grammar files with templates
 """
 import glob
 import os
@@ -30,8 +30,6 @@ def parse_parts(file_path, re_pattern):
                 declarations.setdefault(section_type, {}).setdefault(category, {})
                 current_category = category
                 current_type = section_type
-
-                print(category, section_type)
                 continue
             if not current_category or not current_type:
                 continue
@@ -39,7 +37,6 @@ def parse_parts(file_path, re_pattern):
             if m:
                 lhs, rhs = m.groups()
                 declarations[current_type][current_category][lhs] = rhs
-                # print(lhs, rhs)
 
     return declarations
 
@@ -65,7 +62,8 @@ def generate_lex_abs(lexicon_structs):
     for lex in lexicon_structs:
         for gr_cat, gr_cat_entries in lex["LEXICON"].items():
             for key, entry in gr_cat_entries.items():
-                common_lex.setdefault(gr_cat, {})[key] = " : {}".format(gr_cat)
+                if key.endswith("_" + gr_cat):
+                    common_lex.setdefault(gr_cat, {})[key] = " : {} ;".format(gr_cat)
 
     return common_lex
 
@@ -92,7 +90,7 @@ def generate_abs(lex_abs):
         for lex_item, _type in gr_cat_entries.items():
             abs_item, abs_rhs = lex_item_to_abs_item(lex_item, gr_cat, existing)
             existing.add(abs_item)
-            abs_i.setdefault(mapping[gr_cat][0], {})[abs_item] = " = {} ;".format(abs_rhs)
+            abs_i.setdefault(mapping[gr_cat][0], {})[abs_item] = "{}".format(abs_rhs)
             abs.setdefault(mapping[gr_cat][0], {})[abs_item] = " : {} ;".format(mapping[gr_cat][0])
     return abs_i, abs
 
@@ -133,7 +131,7 @@ def main(abs_grammar_path):
 
     abs_i_out = output_abs_i(abs_i)
     abs_i_contents = open(abstract_i_template, "r").read().replace("{ENTRIES}", abs_i_out)
-    with open(lexicon_i, "w", encoding="utf-8") as fh:
+    with open(abstract_i, "w", encoding="utf-8") as fh:
         fh.write(abs_i_contents)
 
     abs_out = output_abs(abs)

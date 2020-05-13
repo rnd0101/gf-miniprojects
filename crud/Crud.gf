@@ -19,43 +19,39 @@ abstract Crud = Numeral ** {
     AdjKind : Property -> Kind -> Kind ;
     NItemsDig : Digits -> Kind -> Clause ;
 
-    -- -- KIND DECLARATION -- --
-    AProcess: Kind ;
-    Group: Kind ;
-    Note: Kind ;
-    Piece: Kind ;
-    Measurement: Kind ;
-    Position: Kind ;
-    System: Kind ;
-    Task: Kind ;
-    Time: Kind ;
+    Add2 : Action ;
+    Add : Action ;
+    Arrive : Action ;
+    Connect2 : Action ;
+    Connect : Action ;
+    Create : Action ;
+    Delete : Action ;
+    End2 : Action ;
+    End : Action ;
+    Get : Action ;
+    Get2 : Action ;
+    Process2 : Action ;
+    Process : Action ;
+    Show2 : Action ;
+    Show : Action ;
+    Update2 : Action ;
+    Update : Action ;
 
-    -- -- PROPERTY DECLARATION -- --
+    Group : Kind ;
+    Measurement : Kind ;
+    Note : Kind ;
+    Piece : Kind ;
+    Position : Kind ;
+    AProcess : Kind ;
+    System : Kind ;
+    Task : Kind ;
+    Time : Kind ;
+
     Additional : Property ;
     Connected : Property ;
     External : Property ;
     Internal : Property ;
 
-    -- -- ACTION DECLARATION -- --
-    Add : Action ;
-    Add2 : Action ;
-    Arrive : Action ;
-    Connect : Action ;
-    Connect2 : Action ;
-    Create : Action ;
-    Delete : Action ;
-    End : Action ;
-    End2 : Action ;
-    Get : Action ;
-    Get2 : Action ;
-    Process : Action ;
-    Process2 : Action ;
-    Show : Action ;
-    Show2 : Action ;
-    Update : Action ;
-    Update2 : Action ;
-
-    -- -- END DECLARATION -- --
     Do : Action -> Kind -> DoCommand ;
     SystemDone : Action -> Kind -> Clause ;
     WeDone : Action -> Kind -> Clause ;
