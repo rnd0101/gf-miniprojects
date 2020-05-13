@@ -32,6 +32,8 @@ abstract Crud = Numeral ** {
     Get : Action ;
     Process2 : Action ;
     Process : Action ;
+    Receive2 : Action ;
+    Receive : Action ;
     Show2 : Action ;
     Show : Action ;
     Update2 : Action ;
