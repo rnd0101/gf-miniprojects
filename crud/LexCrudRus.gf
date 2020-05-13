@@ -37,6 +37,10 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, ResRus i
     update2_V2 = dirV2 update2_V  ;
     update_V = regV perfective first "исправля" "ю" "исправил" "исправь" "исправить"  ;
     update_V2 = dirV2 update_V  ;
+    verify2_V = regV imperfective first "проверя" "ю" "проверял" "проверяй" "проверять"  ;
+    verify2_V2 = dirV2 verify2_V  ;
+    verify_V = regV perfective first "проверя" "ю" "проверил" "проверь" "проверить"  ;
+    verify_V2 = dirV2 verify_V  ;
 
     -- -- N LEXICON -- --
     group_N = mkN "группа" ;

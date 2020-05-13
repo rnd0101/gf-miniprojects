@@ -29,14 +29,16 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Delete = delete_V2 ;
     End2 = end2_V2 ;
     End = end_V2 ;
-    Get = get_V2 ;
     Get2 = get2_V2 ;
+    Get = get_V2 ;
     Process2 = process2_V2 ;
     Process = process_V2 ;
     Show2 = show2_V2 ;
     Show = show_V2 ;
     Update2 = update2_V2 ;
     Update = update_V2 ;
+    Verify2 = verify2_V2 ;
+    Verify = verify_V2 ;
 
     Group = mkCN group_N ;
     Measurement = mkCN measurement_N ;

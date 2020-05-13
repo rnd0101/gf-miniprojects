@@ -28,14 +28,16 @@ abstract Crud = Numeral ** {
     Delete : Action ;
     End2 : Action ;
     End : Action ;
-    Get : Action ;
     Get2 : Action ;
+    Get : Action ;
     Process2 : Action ;
     Process : Action ;
     Show2 : Action ;
     Show : Action ;
     Update2 : Action ;
     Update : Action ;
+    Verify2 : Action ;
+    Verify : Action ;
 
     Group : Kind ;
     Measurement : Kind ;

@@ -12,14 +12,16 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     delete_V2 = mkV2 "delete" ;
     end2_V2 = mkV2 "end" ;
     end_V2 = mkV2 "end" ;
-    get_V2 = mkV2 IrregEng.get_V ;
     get2_V2 = mkV2 IrregEng.get_V ;
+    get_V2 = mkV2 IrregEng.get_V ;
     process2_V2 = process_V2 ;
     process_V2 = mkV2 "process" ;
     show2_V2 = show_V2 ;
     show_V2 = mkV2 (irregV "show" "showed" (variants {"shown" ; "showed"}) );
     update2_V2 = update_V2;
     update_V2 = mkV2 (mkV "edit" "edits" "edited" "edited" "editing");
+    verify2_V2 = mkV2 "verify" ;
+    verify_V2 = mkV2 "verify" ;
 
     -- -- N LEXICON -- --
     group_N = mkN "group" ;
