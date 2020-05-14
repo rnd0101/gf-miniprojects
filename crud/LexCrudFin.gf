@@ -35,6 +35,7 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     system_N = mkN "järjestelmä" ;
     task_N = mkN "tehtävä" ;
     time_N = mkN "aika" "ajan" "aikaa" "aikana" "aikaan" "aikojen" "aikoja" "aikoina" "aikoissa" "aikoihin";
+    user_N = mkN "käyttäjä" ;
 
     -- -- A LEXICON -- --
     additional_A = mkA "ylimääräinen";

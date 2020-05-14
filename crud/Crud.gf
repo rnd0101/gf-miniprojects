@@ -50,6 +50,7 @@ abstract Crud = Numeral ** {
     System : Kind ;
     Task : Kind ;
     Time : Kind ;
+    User : Kind ;
 
     Additional : Property ;
     Connected : Property ;

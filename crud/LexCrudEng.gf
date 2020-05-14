@@ -35,6 +35,7 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     system_N = mkN "system" ;
     task_N = mkN "task" ;
     time_N = mkN "time" ;
+    user_N = mkN "user" ;
 
     -- -- A LEXICON -- --
     additional_A = mkA "additional";

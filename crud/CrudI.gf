@@ -51,6 +51,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     System = mkCN system_N ;
     Task = mkCN task_N ;
     Time = mkCN time_N ;
+    User = mkCN user_N ;
 
     Additional = mkAP additional_A ;
     Connected = mkAP connected_A ;

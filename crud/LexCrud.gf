@@ -32,6 +32,7 @@ interface LexCrud = open Syntax in {
     system_N : N ;
     task_N : N ;
     time_N : N ;
+    user_N : N ;
 
     additional_A : A ;
     connected_A : A ;
