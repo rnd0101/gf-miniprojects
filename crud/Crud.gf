@@ -20,6 +20,7 @@ abstract Crud = Numeral ** {
     AdjKind : Property -> Kind -> Kind ;
     --TheActor : Kind -> Actor ;
     NItemsDig : Digits -> Kind -> Clause ;
+    ActorWe : Actor ;
 
     Add2 : Action ;
     Add : Action ;
@@ -28,6 +29,7 @@ abstract Crud = Numeral ** {
     Connect : Action ;
     Create : Action ;
     Delete : Action ;
+    Delete2 : Action ;
     End2 : Action ;
     End : Action ;
     Get2 : Action ;
@@ -70,16 +72,20 @@ abstract Crud = Numeral ** {
     External : Property ;
     Internal : Property ;
 
+    ActorCan : Actor -> Action -> Kind -> Clause ;
+    ActorDone : Actor -> Action -> Kind -> Clause ;
+    ActorDoes : Actor -> Action -> Kind -> Clause ;
+    CanDone : Action -> Kind -> Clause ;
     Do : Action -> Kind -> DoCommand ;
+    Doing : Action -> Kind -> Clause ;
+    DoingAction : Action -> Clause ;
+    DoingByItself : Action -> Clause ;
+    Done : Action -> Kind -> Clause ;
+    NotDone : Action -> Kind -> Clause ;
+    WillDo : Action -> Kind -> Clause ;
+
     SystemDone : Action -> Kind -> Clause ;
     SystemCan : Action -> Kind -> Clause ;
-    ActorCan : Actor -> Action -> Kind -> Clause ;
+    WeCan : Action -> Kind -> Clause ;
     WeDone : Action -> Kind -> Clause ;
-    CanDone : Action -> Kind -> Clause ;
-    Done : Action -> Kind -> Clause ;
-    WillDo : Action -> Kind -> Clause ;
-    Doing : Action -> Kind -> Clause ;
-    DoingByItself : Action -> Clause ;
-    DoingAction : Action -> Clause ;
-    NotDone : Action -> Kind -> Clause ;
 }
