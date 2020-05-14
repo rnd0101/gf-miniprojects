@@ -29,9 +29,8 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Done action on_what = mkS pastTense (mkCl (mkNP on_what) (PassV2 action));
     CanDone action on_what = mkS presentTense (mkCl (mkNP on_what) (mkVP can_VV (passiveVP action)));
     NotDone action on_what = mkS pastTense negativePol (mkCl (mkNP on_what) (PassV2 action));
+    SystemCan action on_what = mkS presentTense (mkCl (mkNP system_N) (mkVP can_VV (mkVP action (mkNP on_what) )) );
     SystemDone action on_what = mkS pastTense anteriorAnt (mkCl (mkNP system_N) (mkVP action (mkNP on_what) ));
-    SystemCan action on_what = mkS pastTense anteriorAnt (mkCl (mkNP system_N) (mkVP can_VV (passiveVP action)));
-    -- SystemDone action on_what = mkS pastTense simultaneousAnt (mkCl (mkNP system_N) (mkVP action (mkNP on_what) ));
     WeDone action on_what = mkS pastTense (mkCl we_NP (mkVP action (mkNP on_what) ));
     WillDo action on_what = mkS futureTense simultaneousAnt (mkCl (mkNP on_what) (PassV2 action));
 }
