@@ -69,17 +69,18 @@ def generate_lex_abs(lexicon_structs):
 
 
 mapping = {
-    "V2": ("Action", " = {} ;", ""),
-    "N": ("Kind", " = mkCN {} ;", "A"),  # TODO: Also An
-    "A": ("Property", " = mkAP {} ;", "Prop"),
+    "V2": [("Action", " = {} ;", "")],
+    "N": [("Kind", " = mkCN {} ;", "A"), ("Actor", " = mkNP {} ;", "Actor")],  # TODO: Also An
+    "A": [("Property", " = mkAP {} ;", "Prop")],
 }
 
 
 def lex_item_to_abs_item(lex_item, gr_cat, existing):
-    abs_item = lex_item.split("_", 1)[0].capitalize()
-    if abs_item in existing:
-        abs_item = mapping[gr_cat][2] + abs_item
-    return abs_item, mapping[gr_cat][1].format(lex_item)
+    for item_cat, rhs, disambig_prefix in mapping[gr_cat]:
+        abs_item = lex_item.split("_", 1)[0].capitalize()
+        if abs_item in existing:
+            abs_item = disambig_prefix + abs_item
+        yield abs_item, item_cat, rhs.format(lex_item)
 
 
 def generate_abs(lex_abs):
@@ -88,10 +89,10 @@ def generate_abs(lex_abs):
     abs = {}
     for gr_cat, gr_cat_entries in lex_abs.items():
         for lex_item, _type in gr_cat_entries.items():
-            abs_item, abs_rhs = lex_item_to_abs_item(lex_item, gr_cat, existing)
-            existing.add(abs_item)
-            abs_i.setdefault(mapping[gr_cat][0], {})[abs_item] = "{}".format(abs_rhs)
-            abs.setdefault(mapping[gr_cat][0], {})[abs_item] = " : {} ;".format(mapping[gr_cat][0])
+            for abs_item, abs_item_type, abs_rhs in lex_item_to_abs_item(lex_item, gr_cat, existing):
+                existing.add(abs_item)
+                abs_i.setdefault(abs_item_type, {})[abs_item] = "{}".format(abs_rhs)
+                abs.setdefault(abs_item_type, {})[abs_item] = " : {} ;".format(abs_item_type)
     return abs_i, abs
 
 

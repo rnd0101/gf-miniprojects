@@ -3,6 +3,7 @@ abstract Crud = Numeral ** {
   cat
     Kind ;
     DetKind ;
+    Actor ;
     Property ;
     Action ;
     DoCommand ;
@@ -17,6 +18,7 @@ abstract Crud = Numeral ** {
     NegEvent : Kind -> Status -> Clause ;
     Say : Kind -> Clause ;
     AdjKind : Property -> Kind -> Kind ;
+    --TheActor : Kind -> Actor ;
     NItemsDig : Digits -> Kind -> Clause ;
 
     Add2 : Action ;
@@ -52,6 +54,17 @@ abstract Crud = Numeral ** {
     Time : Kind ;
     User : Kind ;
 
+    ActorGroup : Actor ;
+    ActorMeasurement : Actor ;
+    ActorNote : Actor ;
+    ActorPiece : Actor ;
+    ActorPosition : Actor ;
+    ActorProcess : Actor ;
+    ActorSystem : Actor ;
+    ActorTask : Actor ;
+    ActorTime : Actor ;
+    ActorUser : Actor ;
+
     Additional : Property ;
     Connected : Property ;
     External : Property ;
@@ -60,6 +73,7 @@ abstract Crud = Numeral ** {
     Do : Action -> Kind -> DoCommand ;
     SystemDone : Action -> Kind -> Clause ;
     SystemCan : Action -> Kind -> Clause ;
+    ActorCan : Actor -> Action -> Kind -> Clause ;
     WeDone : Action -> Kind -> Clause ;
     CanDone : Action -> Kind -> Clause ;
     Done : Action -> Kind -> Clause ;

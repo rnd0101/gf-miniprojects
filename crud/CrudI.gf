@@ -2,9 +2,8 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
   lincat
     Kind = CN;
     DetKind = NP;
+    Actor = NP;
     Property = AP;
-    Adjective = A;
-    Complem = Str;
     Status = V;
     Action = V2;
     Clause = S;
@@ -17,6 +16,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Event what status = mkS anteriorAnt (mkCl (mkNP what) status) ;
     NegEvent what status = mkS pastTense negativePol (mkCl (mkNP what) status) ;
     AdjKind prop what = mkCN prop what;
+    --TheActor who = mkNP who ;
     Say phrase = mkS (mkCl phrase);
     NItemsDig num kind = mkS (mkCl (mkNP (mkDet num) kind)) ;
 
@@ -53,6 +53,17 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Time = mkCN time_N ;
     User = mkCN user_N ;
 
+    ActorGroup = mkNP group_N ;
+    ActorMeasurement = mkNP measurement_N ;
+    ActorNote = mkNP note_N ;
+    ActorPiece = mkNP piece_N ;
+    ActorPosition = mkNP position_N ;
+    ActorProcess = mkNP process_N ;
+    ActorSystem = mkNP system_N ;
+    ActorTask = mkNP task_N ;
+    ActorTime = mkNP time_N ;
+    ActorUser = mkNP user_N ;
+
     Additional = mkAP additional_A ;
     Connected = mkAP connected_A ;
     External = mkAP external_A ;
@@ -66,6 +77,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     CanDone action on_what = mkS presentTense (mkCl (mkNP on_what) (mkVP can_VV (passiveVP action)));
     NotDone action on_what = mkS pastTense negativePol (mkCl (mkNP on_what) (PassV2 action));
     SystemCan action on_what = mkS presentTense (mkCl (mkNP system_N) (mkVP can_VV (mkVP action (mkNP on_what) )) );
+    ActorCan actor action on_what = mkS presentTense (mkCl actor (mkVP can_VV (mkVP action (mkNP on_what) )) );
     SystemDone action on_what = mkS pastTense anteriorAnt (mkCl (mkNP system_N) (mkVP action (mkNP on_what) ));
     WeDone action on_what = mkS pastTense (mkCl we_NP (mkVP action (mkNP on_what) ));
     WillDo action on_what = mkS futureTense simultaneousAnt (mkCl (mkNP on_what) (PassV2 action));
