@@ -23,7 +23,9 @@ abstract Crud = Numeral ** {
 
     Do : Action -> Kind -> DoCommand ;
     SystemDone : Action -> Kind -> Clause ;
+    SystemCan : Action -> Kind -> Clause ;
     WeDone : Action -> Kind -> Clause ;
+    CanDone : Action -> Kind -> Clause ;
     Done : Action -> Kind -> Clause ;
     WillDo : Action -> Kind -> Clause ;
     Doing : Action -> Kind -> Clause ;
