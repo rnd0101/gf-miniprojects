@@ -41,6 +41,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Update = update_V2 ;
     Verify2 = verify2_V2 ;
     Verify = verify_V2 ;
+    Can = can_V2 ;
 
     Group = mkCN group_N ;
     Measurement = mkCN measurement_N ;

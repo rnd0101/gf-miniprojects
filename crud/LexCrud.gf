@@ -22,6 +22,7 @@ interface LexCrud = open Syntax in {
     update_V2 : V2 ;
     verify2_V2 : V2 ;
     verify_V2 : V2 ;
+    can_V2 : V2 ;
 
     group_N : N ;
     measurement_N : N ;

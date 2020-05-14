@@ -40,6 +40,7 @@ abstract Crud = Numeral ** {
     Update : Action ;
     Verify2 : Action ;
     Verify : Action ;
+    Can : Action ;
 
     Group : Kind ;
     Measurement : Kind ;

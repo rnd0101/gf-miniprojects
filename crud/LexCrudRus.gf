@@ -1,6 +1,6 @@
 --# -coding=utf-8
 
-instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, ResRus in {
+instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRus, ResRus in {
   oper
     -- -- V2 LEXICON -- --
     add2_V = regV imperfective second "добавля" "ю" "добавлял" "добавляй" "добавлять"  ;
@@ -9,6 +9,8 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, ResRus i
     add_V2 = dirV2 add_V  ;
     arrive_V = regV imperfective first "прибуд" "у" "прибыл" "прибудь" "прибыть" ;
     arrive_V2 = dirV2 arrive_V  ;
+    can_V = verbDeclMoch perfective first "смог" "у" "смог" "смоги" "смочь" "смож";
+    can_V2 = dirV2 can_V  ;
     connect2_V = regV imperfective first "связыва" "ю" "связывал" "связывай" "связывать"  ;
     connect2_V2 = dirV2 connect2_V  ;
     connect_V = regV perfective first "свяж" "у" "связал" "свяжи" "связать"  ;
