@@ -24,6 +24,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Add2 = add2_V2 ;
     Add = add_V2 ;
     Arrive = arrive_V2 ;
+    Become = become_V2 ;
     Connect2 = connect2_V2 ;
     Connect = connect_V2 ;
     Create = create_V2 ;

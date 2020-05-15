@@ -6,6 +6,7 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     add2_V2 = mkV2 (mkV "lisätä")  ;
     add_V2 = mkV2 (mkV "lisätä")  ;
     arrive_V2 = mkV2 (mkV "saapua") ;
+    become_V2 = mkV2 (mkV "tulla") ;  -- not correct
     connect2_V2 = mkV2 "yhdistellä" ;
     connect_V2 = mkV2 "yhdistää" ;
     create_V2 = mkV2 (mkV "luoda")  ;

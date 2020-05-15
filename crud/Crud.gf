@@ -25,6 +25,7 @@ abstract Crud = Numeral ** {
     Add2 : Action ;
     Add : Action ;
     Arrive : Action ;
+    Become : Action ;
     Connect2 : Action ;
     Connect : Action ;
     Create : Action ;
