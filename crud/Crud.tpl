@@ -29,6 +29,7 @@ abstract Crud = Numeral ** {
     ActorDoes : Actor -> Action -> Kind -> Clause ;
     CanDone : Action -> Kind -> Clause ;
     Do : Action -> Kind -> DoCommand ;
+    DoOnMany : Action -> Kind -> DoCommand ;
     Doing : Action -> Kind -> Clause ;
     DoingAction : Action -> Clause ;
     DoingByItself : Action -> Clause ;

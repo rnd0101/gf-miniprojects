@@ -30,7 +30,7 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     verify_V2 = mkV2 "verify" ;
 
     -- -- N LEXICON -- --
-    data_N = mkN "data" ;
+    data_N = mkN "data" "data";
     group_N = mkN "group" ;
     measurement_N = mkN "measurement" ;
     note_N = mkN "note" ;
