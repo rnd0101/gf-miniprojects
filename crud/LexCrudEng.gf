@@ -20,6 +20,8 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     process_V2 = mkV2 "process" ;
     receive2_V2 = mkV2 (mkV "receive") ;
     receive_V2 = mkV2 (mkV "receive") ;
+    retrieve2_V2 = mkV2 (mkV "retrieve") ;
+    retrieve_V2 = mkV2 (mkV "retrieve") ;
     show2_V2 = show_V2 ;
     show_V2 = mkV2 (irregV "show" "showed" (variants {"shown" ; "showed"}) );
     update2_V2 = update_V2;
@@ -28,6 +30,7 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     verify_V2 = mkV2 "verify" ;
 
     -- -- N LEXICON -- --
+    data_N = mkN "data" ;
     group_N = mkN "group" ;
     measurement_N = mkN "measurement" ;
     note_N = mkN "note" ;

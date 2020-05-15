@@ -44,6 +44,8 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Update = update_V2 ;
     Verify2 = verify2_V2 ;
     Verify = verify_V2 ;
+    Retrieve2 = retrieve2_V2 ;
+    Retrieve = retrieve_V2 ;
 
     Group = mkCN group_N ;
     Measurement = mkCN measurement_N ;
@@ -55,6 +57,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Task = mkCN task_N ;
     Time = mkCN time_N ;
     User = mkCN user_N ;
+    Data = mkCN data_N ;
 
     ActorGroup = mkNP group_N ;
     ActorMeasurement = mkNP measurement_N ;
@@ -66,6 +69,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     ActorTask = mkNP task_N ;
     ActorTime = mkNP time_N ;
     ActorUser = mkNP user_N ;
+    ActorData = mkNP data_N ;
 
     Additional = mkAP additional_A ;
     Connected = mkAP connected_A ;

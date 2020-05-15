@@ -45,6 +45,8 @@ abstract Crud = Numeral ** {
     Update : Action ;
     Verify2 : Action ;
     Verify : Action ;
+    Retrieve2 : Action ;
+    Retrieve : Action ;
 
     Group : Kind ;
     Measurement : Kind ;
@@ -56,6 +58,7 @@ abstract Crud = Numeral ** {
     Task : Kind ;
     Time : Kind ;
     User : Kind ;
+    Data : Kind ;
 
     ActorGroup : Actor ;
     ActorMeasurement : Actor ;
@@ -67,6 +70,7 @@ abstract Crud = Numeral ** {
     ActorTask : Actor ;
     ActorTime : Actor ;
     ActorUser : Actor ;
+    ActorData : Actor ;
 
     Additional : Property ;
     Connected : Property ;

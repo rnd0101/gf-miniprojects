@@ -37,6 +37,10 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, ResRus i
     receive2_V2 = dirV2 receive2_V ;
     receive_V = regV imperfective first "получа" "ю" "получил" "получи" "получить"  ;
     receive_V2 = dirV2 receive_V ;
+    retrieve2_V = regV imperfective first "извлека" "ю" "извлекал" "извлекай" "извлекать"  ;
+    retrieve2_V2 = dirV2 retrieve2_V ;
+    retrieve_V = regV perfective first "извлека" "ю" "извлек" "извлеки" "извлечь"  ;
+    retrieve_V2 = dirV2 retrieve_V ;
     show2_V = regV imperfective first "показыва" "ю" "показывал" "показывай" "показывать"  ;
     show2_V2 = dirV2 show2_V ;
     show_V = regV perfective first "покаж" "у" "показал" "покажи" "показать"  ;
@@ -52,6 +56,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, ResRus i
 
     -- -- N LEXICON -- --
     group_N = mkN "группа" ;
+    data_N = mkN "данное" ;
     measurement_N = mkN "измерение" ;
     note_N = mkN "заметка" ;
     piece_N = mkN "штука" ;

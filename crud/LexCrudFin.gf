@@ -20,6 +20,8 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     process_V2 = mkV2 (mkV "käsitellä")  ;
     receive2_V2 = mkV2 (mkV "vastaanottaa") ;
     receive_V2 = mkV2 (mkV "vastaanottaa") ;
+    retrieve2_V2 = mkV2 (mkV "hakea") ;
+    retrieve_V2 = mkV2 (mkV "hakea") ;
     show2_V2 = mkV2 (mkV "näytellä")  ;
     show_V2 = mkV2 (mkV "näyttää")  ;
     update2_V2 = mkV2 (mkV "muokata")  ; -- ?
@@ -28,6 +30,7 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     verify_V2 = mkV2 "varmistaa" ;
 
     -- -- N LEXICON -- --
+    data_N = mkN "tieto" ;
     group_N = mkN "ryhmä" ;
     measurement_N = mkN "mittaus" ;
     note_N = mkN "muistiinpano" ;
