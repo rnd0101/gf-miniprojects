@@ -7,8 +7,9 @@ CRUD - CRUD operations
 To try out:
 
 $ cd crud
+$ gf
 
-i CrudEng.gf CrudFin.gf CrudRus.gf
+> i CrudEng.gf CrudFin.gf CrudRus.gf
 
 Crud> l Done Process Piece
 piece was processed
