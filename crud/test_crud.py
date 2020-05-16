@@ -34,7 +34,7 @@ EXAMPLES = [
     (u"система добавится .", 'Doc (WillDo Add System)', ''),
     (u"группа становит процессом .", 'Doc (ActorDoes ActorGroup Become AProcess)', ''),  # TODO:
     (u"группа извлекает процесс .", 'Doc (ActorDoes ActorGroup Retrieve2 AProcess)', 'l'),
-    (u"группа извлека процесс .", 'Doc (ActorDone ActorGroup Retrieve AProcess)', 'l'),  # TODO: "группа извлека процесс"
+    (u"группа извлекла процесс .", 'Doc (ActorDone ActorGroup Retrieve AProcess)', 'l'),
     (u"извлеки системы .", 'Command (DoOnMany Retrieve System)', ''),
     (u"удаляй данные .", 'Command (DoOnMany Delete2 Data)', ''),
     (u"задание исправляется .", 'Doc (WillDo Update Task)', ''),
