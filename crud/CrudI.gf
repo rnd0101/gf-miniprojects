@@ -99,10 +99,10 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     WeCan action on_what = ActorCan ActorWe action on_what ;
     WeDone action on_what = ActorDone ActorWe action on_what ;
 
-    BeenDone act on_what = mkS pastTense simultaneousAnt (mkCl (mkNP on_what) act.shortPart);
-    NotBeenDone act on_what = mkS pastTense simultaneousAnt negativePol (mkCl (mkNP on_what) act.shortPart);
-    Done2 act on_what = mkS presentTense simultaneousAnt (mkCl (mkNP on_what) act.shortPart);
-    NotDone2 act on_what = mkS presentTense simultaneousAnt negativePol (mkCl (mkNP on_what) act.shortPart);
+    BeenDone act on_what = mkS pastTense anteriorAnt (mkCl (mkNP on_what) act.shortPart);
+    NotBeenDone act on_what = mkS pastTense anteriorAnt negativePol (mkCl (mkNP on_what) act.shortPart);
+    Done2 act on_what = mkS presentTense anteriorAnt (mkCl (mkNP on_what) act.shortPart);
+    NotDone2 act on_what = mkS presentTense anteriorAnt negativePol (mkCl (mkNP on_what) act.shortPart);
     WillBeDone act on_what = mkS futureTense anteriorAnt (mkCl (mkNP on_what) act.shortPart);
     WillNotBeDone act on_what = mkS futureTense anteriorAnt negativePol (mkCl (mkNP on_what) act.shortPart);
 }
