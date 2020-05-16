@@ -15,6 +15,7 @@ Crud> l Done Process Piece
 piece was processed
 kappale käsiteltiin
 штука обработалась
+Crud> gr -number=1000  | l -treebank | wf
 
 Showcase:
 
