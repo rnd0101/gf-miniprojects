@@ -2,7 +2,7 @@ abstract Crud = Numeral ** {
   flags startcat = Document ;
   cat
     Kind ;
-    DetKind ;
+    Term ;
     Actor ;
     Property ;
     Action ;

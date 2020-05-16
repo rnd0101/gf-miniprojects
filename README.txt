@@ -16,6 +16,7 @@ piece was processed
 kappale käsiteltiin
 штука обработалась
 Crud> gr -number=1000  | l -treebank | wf
+Crud> p -lang=Eng "add group ." | pt -number=1 | l -lang=Fin
 
 Showcase:
 

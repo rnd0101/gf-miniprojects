@@ -1,7 +1,7 @@
 incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
   lincat
     Kind = CN;
-    DetKind = NP;
+    Term = NP;
     Actor = NP;
     Property = AP;
     Status = V;
