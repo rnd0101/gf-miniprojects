@@ -3,33 +3,6 @@
 instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRus, ResRus in {
   oper
     -- Extensions to Morho
-    aOnlyShortCase : Str -> Str -> Str -> Str -> IsPostfixAdj -> Adjective = \shortMasc, shortFem, shortNeut, shortPl, postfix ->
-      mkAdjPhrase { s = table {
-        AFShort (GSg Masc) => shortMasc ;
-        AFShort (GSg Fem)  => shortFem ;
-        AFShort (GSg Neut) => shortNeut ;
-        AFShort GPl        => shortPl ;
-        AF _ _ (GSg Masc) => shortMasc ;
-        AF _ _ (GSg Fem)  => shortFem ;
-        AF _ _ (GSg Neut) => shortNeut ;
-        AF _ _ GPl        => shortPl ;
-         _                  => shortPl
-                    }
-        } postfix ;
-    mkAdjShort: Adjective -> Bool -> A = \adj, postfix ->
-      {s = table {
-        Posit => adj.s ;
-        _ => \\dummy => nonExist
-        } ;
-        p = postfix ;
-        preferShort = PrefShort
-      } ** {lock_A = <>};
-    mk3AShort : Str -> Str -> Str -> Str -> IsPostfixAdj -> A = \shortMasc,shortFem,shortNeut,shortPl,postfix  ->
-     mkAdjShort (aOnlyShortCase shortMasc shortFem shortNeut shortPl postfix) postfix ;
-    mkPassPastShortParticiple : Str -> A = \vstem ->
-        mk3AShort (vstem + "н") (vstem + "на") (vstem + "но") (vstem + "ны") True ;
-
-    -- Another way
     presentConjShortPP: Str -> PresentVerb = \del ->
       table {
         PRF GPl _        => del + "ны" ;
@@ -46,23 +19,32 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRu
         PSF  GPl        => "были" ++ del + "ны"
       };
 
+    futureConjShortPP: Str -> PresentVerb = \del ->
+      table {
+        PRF  GPl _        => "будут" ++ del + "ны" ;
+        PRF  (GSg Masc) _ => "будет" ++ del + "н" ;
+        PRF  (GSg Fem)  _ => "будет" ++ del + "на" ;
+        PRF  (GSg Neut) _ => "будет" ++ del + "но"
+      };
+
     ShortPPDecl: Str -> Verbum =
-      \delp ->  -- "сложе"
-      let presentFuture = presentConjShortPP delp in
+      \delp ->  -- E.g. "сложе"
+      let present = presentConjShortPP delp in
+      let future = futureConjShortPP delp in
       let past = pastConjShortPP delp in
         { s = table { VFORM vox vf =>
         case vf of {
    	      VINF  =>  delp ;
-  	      VIMP Sg P1 => "давайте" ++ add_sya vox (presentFuture ! (PRF (GSg Masc) P1));
-	      VIMP Pl P1 => "давайте" ++ add_sya vox (presentFuture ! (PRF GPl P1));
+  	      VIMP Sg P1 => "давайте" ++ add_sya vox (future ! (PRF (GSg Masc) P1));
+	      VIMP Pl P1 => "давайте" ++ add_sya vox (future ! (PRF GPl P1));
 	      VIMP Sg P2 => delp ;
 	      VIMP Pl P2 => delp ;
-	      VIMP Sg P3 => "пусть" ++ add_sya vox (presentFuture ! (PRF (GSg Masc) P3)) ;
-	      VIMP Pl P3 => "пусть" ++ add_sya vox (presentFuture ! (PRF GPl P3)) ;
+	      VIMP Sg P3 => "пусть" ++ add_sya vox (future ! (PRF (GSg Masc) P3)) ;
+	      VIMP Pl P3 => "пусть" ++ add_sya vox (future ! (PRF GPl P3)) ;
    	      VSUB gn => add_sya vox (past ! (PSF gn)) ++ "бы" ;
-	      VIND (GSg g) (VPresent p)  => (presentFuture ! (PRF (GSg g) p));    -- these are not correct,
-   	      VIND GPl     (VPresent p)  => (presentFuture ! (PRF GPl p)) ;       -- but used elsewhere
-	      VIND gn      (VFuture p)   => add_sya vox (presentFuture ! (PRF gn p)) ;
+	      VIND (GSg g) (VPresent p)  => (present ! (PRF (GSg g) p));
+   	      VIND GPl     (VPresent p)  => (present ! (PRF GPl p)) ;
+	      VIND gn      (VFuture p)   => add_sya vox (future ! (PRF gn p)) ;
 	      VIND gn      VPast         => add_sya vox (past ! (PSF gn))
         } } ;
         asp = Perfective ;

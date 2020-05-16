@@ -44,5 +44,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     WeCan action on_what = ActorCan ActorWe action on_what ;
     WeDone action on_what = ActorDone ActorWe action on_what ;
 
-    EnAct act on_what = mkS pastTense simultaneousAnt (mkCl (mkNP on_what) act.shortPart);
+    -- EnAct act on_what = mkS pastTense simultaneousAnt (mkCl (mkNP on_what) act.shortPart);
+    -- EnAct act on_what = mkS presentTense simultaneousAnt (mkCl (mkNP on_what) act.shortPart);
+    EnAct act on_what = mkS futureTense anteriorAnt negativePol (mkCl (mkNP on_what) act.shortPart);
 }
