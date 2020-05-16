@@ -41,7 +41,7 @@ EXAMPLES = [
     (u"связаемая внутренняя система получилась .", 'Doc (Done Get (AdjKind Connected (AdjKind Internal System)))', ''),
     (u"мы можем добавить пользователя .", 'Doc (WeCan Add User)', ''),
     (u"система может добавить пользователя .", 'Doc (SystemCan Add User)', ''),
-    (u"система помогала пользователя .", 'Doc (SystemCan Help2 User)', ''),  # TODO:
+    (u"система может помогать пользователя.", 'Doc (SystemCan Help2 User)', ''),  # TODO:
 ]
 
 
