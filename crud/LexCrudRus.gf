@@ -7,6 +7,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRu
     add2_V2 = dirV2 add2_V  ;
     add_V = regV perfective secondA "добав" "лю" "добавил" "добавь" "добавить"  ;
     add_V2 = dirV2 add_V  ;
+    add_Act = {imp=add2_V2 ; perf=add_V2} ;
     become_V = regV perfective secondA "станов" "лю" "стал" "стань" "стать" ;
     become_V2 = mkV2 become_V "" instructive ;
     arrive_V = regV imperfective first "прибуд" "у" "прибыл" "прибудь" "прибыть" ;

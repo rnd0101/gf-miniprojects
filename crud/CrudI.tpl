@@ -10,6 +10,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Document = Text;
     DoCommand = Imp;
     NumberOf = Str;
+    Action2 = Act ;
   lin
     Doc clause = mkText (mkPhr (mkUtt clause)) ;
     Command imp = mkText (mkPhr (mkUtt imp)) ;
@@ -21,6 +22,8 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     NItemsDig num kind = mkS (mkCl (mkNP (mkDet num) kind)) ;
     ActorWe = we_NP ;
 
+
+    AddAct = add_Act ;
 {ENTRIES}
 
     ActorCan actor action on_what = mkS presentTense (mkCl actor (mkVP can_VV (mkVP action (mkNP on_what) )) );
@@ -40,4 +43,6 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     SystemDone action on_what = ActorDone ActorSystem action on_what ;
     WeCan action on_what = ActorCan ActorWe action on_what ;
     WeDone action on_what = ActorDone ActorWe action on_what ;
+
+    EnAct act on_what = mkS presentTense simultaneousAnt (mkCl (mkNP on_what) (PassV2 act.imp));
 }

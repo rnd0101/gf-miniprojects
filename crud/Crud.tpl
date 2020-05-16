@@ -6,6 +6,7 @@ abstract Crud = Numeral ** {
     Actor ;
     Property ;
     Action ;
+    Action2 ;
     DoCommand ;
     Status ;
     Clause ;
@@ -22,6 +23,7 @@ abstract Crud = Numeral ** {
     NItemsDig : Digits -> Kind -> Clause ;
     ActorWe : Actor ;
 
+    AddAct : Action2 ;
 {ENTRIES}
 
     ActorCan : Actor -> Action -> Kind -> Clause ;
@@ -41,4 +43,6 @@ abstract Crud = Numeral ** {
     SystemCan : Action -> Kind -> Clause ;
     WeCan : Action -> Kind -> Clause ;
     WeDone : Action -> Kind -> Clause ;
+
+    EnAct : Action2 -> Kind -> Clause ;
 }
