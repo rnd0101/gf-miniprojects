@@ -99,5 +99,5 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     WeCan action on_what = ActorCan ActorWe action on_what ;
     WeDone action on_what = ActorDone ActorWe action on_what ;
 
-    EnAct act on_what = mkS presentTense simultaneousAnt (mkCl (mkNP on_what) (PassV2 act.imp));
+    EnAct act on_what = mkS presentTense simultaneousAnt (mkCl (mkCN on_what (mkAP act.shortPart)));
 }

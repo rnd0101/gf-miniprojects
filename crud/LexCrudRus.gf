@@ -2,12 +2,46 @@
 
 instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRus, ResRus in {
   oper
+    -- Extensions to Morho
+    aOnlyShortCase : Str -> Str -> Str -> Str -> IsPostfixAdj -> Adjective = \shortMasc, shortFem, shortNeut, shortPl, postfix ->
+      mkAdjPhrase { s = table {
+        AFShort (GSg Masc) => shortMasc ;
+        AFShort (GSg Fem)  => shortFem ;
+        AFShort (GSg Neut) => shortNeut ;
+        AFShort GPl        => shortPl ;
+        AF _ _ (GSg Masc) => shortMasc ;
+        AF _ _ (GSg Fem)  => shortFem ;
+        AF _ _ (GSg Neut) => shortNeut ;
+        AF _ _ GPl        => shortPl ;
+         _                  => shortPl
+                    }
+        } postfix ;
+    mkAdjShort: Adjective -> Bool -> A = \adj, postfix ->
+      {s = table {
+        Posit => adj.s ;
+        _ => \\dummy => nonExist
+        } ;
+        p = postfix ;
+        preferShort = PrefShort
+      } ** {lock_A = <>};
+    mk3AShort : Str -> Str -> Str -> Str -> IsPostfixAdj -> A = \shortMasc,shortFem,shortNeut,shortPl,postfix  ->
+     mkAdjShort (aOnlyShortCase shortMasc shortFem shortNeut shortPl postfix) postfix ;
+    mkPassPastShortParticiple : Str -> A = \vstem ->
+        mk3AShort (vstem + "н") (vstem + "на") (vstem + "но") (vstem + "ны") True ;
+    -- End of extensions
+
+    buildAct : V2 -> V2 -> Str-> Act  = \impv, perfv, vstem -> {
+      imp=impv ;
+      perf=perfv;
+      shortPart=mkPassPastShortParticiple vstem
+    } ;
+
     -- -- V2 LEXICON -- --
     add2_V = regV imperfective second "добавля" "ю" "добавлял" "добавляй" "добавлять"  ;
     add2_V2 = dirV2 add2_V  ;
-    add_V = regV perfective secondA "добав" "лю" "добавил" "добавь" "добавить"  ;
+    add_V = regV perfective secondA "добав" "лю" "добавил" "добавь" "добавить"  ;  -- добав|лен
     add_V2 = dirV2 add_V  ;
-    add_Act = {imp=add2_V2 ; perf=add_V2} ;
+    add_Act = buildAct add2_V2 add_V2 "добавле";
     become_V = regV perfective secondA "станов" "лю" "стал" "стань" "стать" ;
     become_V2 = mkV2 become_V "" instructive ;
     arrive_V = regV imperfective first "прибуд" "у" "прибыл" "прибудь" "прибыть" ;
