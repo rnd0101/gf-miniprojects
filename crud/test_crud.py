@@ -31,7 +31,7 @@ EXAMPLES = [
     (u"система связала измерение .", 'Doc (SystemDone Connect Measurement)', ''),
     (u"получай данные .", 'Command (DoOnMany Get2 Data)', ''),
     (u"существует штука .", 'Doc (Say Piece)', ''),  # TODO: "штука"
-    (u"система добавдится .", 'Doc (WillDo Add System)', ''),  # TODO: "система добавится"
+    (u"система добавится .", 'Doc (WillDo Add System)', ''),
     (u"группа становит процессом .", 'Doc (ActorDoes ActorGroup Become AProcess)', ''),  # TODO:
     (u"группа извлекает процесс .", 'Doc (ActorDoes ActorGroup Retrieve2 AProcess)', 'l'),
     (u"группа извлека процесс .", 'Doc (ActorDone ActorGroup Retrieve AProcess)', 'l'),  # TODO: "группа извлека процесс"
