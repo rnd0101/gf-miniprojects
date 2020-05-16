@@ -99,5 +99,10 @@ abstract Crud = Numeral ** {
     WeCan : Action -> Kind -> Clause ;
     WeDone : Action -> Kind -> Clause ;
 
-    EnAct : Action2 -> Kind -> Clause ;
+    BeenDone : Action2 -> Kind -> Clause ;
+    NotBeenDone : Action2 -> Kind -> Clause ;
+    Done2 : Action2 -> Kind -> Clause ;
+    NotDone2 : Action2 -> Kind -> Clause ;
+    WillBeDone : Action2 -> Kind -> Clause ;
+    WillNotBeDone : Action2 -> Kind -> Clause ;
 }
