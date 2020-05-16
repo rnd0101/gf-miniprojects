@@ -5,7 +5,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, ResRus i
     -- -- V2 LEXICON -- --
     add2_V = regV imperfective second "добавля" "ю" "добавлял" "добавляй" "добавлять"  ;
     add2_V2 = dirV2 add2_V  ;
-    add_V = regV perfective second "добав" "лю" "добавил" "добавь" "добавить"  ;
+    add_V = regV perfective secondA "добав" "лю" "добавил" "добавь" "добавить"  ;
     add_V2 = dirV2 add_V  ;
     become_V = regV perfective secondA "станов" "лю" "стал" "стань" "стать" ;
     become_V2 = mkV2 become_V "" instructive ;
