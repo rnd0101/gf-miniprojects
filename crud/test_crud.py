@@ -29,10 +29,11 @@ EXAMPLES = [
     (u"штука получилась .", 'Doc (Done Get Piece)', ''),
     (u"мы связали измерение .", 'Doc (WeDone Connect Measurement)', ''),
     (u"получай данные .", 'Command (DoOnMany Get2 Data)', ''),
-    (u"существует штука .", 'Doc (Say Piece)', ''),  # TODO:
+    (u"существует штука .", 'Doc (Say Piece)', ''),  # TODO: "штука"
+    (u"система добавдится", 'WillDo Add System', ''),  # TODO: "система добавится"
     (u"группа становит процессом .", 'Doc (ActorDoes ActorGroup Become AProcess)', ''),  # TODO:
     (u"группа извлекает процесс .", 'Doc (ActorDoes ActorGroup Retrieve2 AProcess)', ''),
-    (u"группа извлека процесс .", 'Doc (ActorDone ActorGroup Retrieve AProcess)', 'l'),  # TODO:
+    (u"группа извлека процесс .", 'Doc (ActorDone ActorGroup Retrieve AProcess)', 'l'),  # TODO: "группа извлека процесс"
     (u"извлеки системы .", 'Command (DoOnMany Retrieve System)', ''),
     (u"удаляй данные .", 'Command (DoOnMany Delete2 Data)', ''),
     (u"задание исправляется .", 'Doc (WillDo Update Task)', ''),
