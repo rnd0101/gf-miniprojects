@@ -30,7 +30,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRu
         mk3AShort (vstem + "н") (vstem + "на") (vstem + "но") (vstem + "ны") True ;
 
     -- Another way
-    presentConjShortPP: Str -> Str -> PresentVerb = \del, sgP1End ->
+    presentConjShortPP: Str -> PresentVerb = \del ->
       table {
         PRF GPl _        => del + "ны" ;
         PRF (GSg Masc) _ => del + "н" ;
@@ -40,23 +40,23 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRu
 
     pastConjShortPP: Str -> PastVerb = \del ->
       table {
-        PSF  (GSg Masc) => ["был "] + del + "н" ;
-        PSF  (GSg Fem)  => ["была "] + del + "на" ;
-        PSF  (GSg Neut)  => ["было "] + del + "но" ;
-        PSF  GPl => ["были "] + del + "ны"
+        PSF  (GSg Masc) => "был"  ++ del + "н" ;
+        PSF  (GSg Fem)  => "была" ++ del + "на" ;
+        PSF  (GSg Neut) => "было" ++ del + "но" ;
+        PSF  GPl        => "были" ++ del + "ны"
       };
 
-    ShortPPDecl: Str -> Str -> Str -> Str -> Verbum =
-      \del, sgP1End, sgMascPast, imperSgP2 ->
-      let presentFuture = presentConjShortPP (Predef.tk 1 sgMascPast) sgP1End in
-      let past = pastConjShortPP (Predef.tk 1 sgMascPast) in
+    ShortPPDecl: Str -> Verbum =
+      \delp ->  -- "сложе"
+      let presentFuture = presentConjShortPP delp in
+      let past = pastConjShortPP delp in
         { s = table { VFORM vox vf =>
         case vf of {
-   	      VINF  =>  del ;
+   	      VINF  =>  delp ;
   	      VIMP Sg P1 => "давайте" ++ add_sya vox (presentFuture ! (PRF (GSg Masc) P1));
 	      VIMP Pl P1 => "давайте" ++ add_sya vox (presentFuture ! (PRF GPl P1));
-	      VIMP Sg P2 => del ;
-	      VIMP Pl P2 => del ;
+	      VIMP Sg P2 => delp ;
+	      VIMP Pl P2 => delp ;
 	      VIMP Sg P3 => "пусть" ++ add_sya vox (presentFuture ! (PRF (GSg Masc) P3)) ;
 	      VIMP Pl P3 => "пусть" ++ add_sya vox (presentFuture ! (PRF GPl P3)) ;
    	      VSUB gn => add_sya vox (past ! (PSF gn)) ++ "бы" ;
@@ -82,8 +82,9 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRu
     add2_V2 = dirV2 add2_V  ;
     add_V = regV perfective secondA "добав" "лю" "добавил" "добавь" "добавить"  ;  -- добав|лен
     add_V2 = dirV2 add_V  ;
-    add_pp = ShortPPDecl "добав" "лю" "добавил" "добавь" ;
+    add_pp = ShortPPDecl "добавле" ;
     add_Act = buildAct add2_V2 add_V2 add_pp;
+
     become_V = regV perfective secondA "станов" "лю" "стал" "стань" "стать" ;
     become_V2 = mkV2 become_V "" instructive ;
     arrive_V = regV imperfective first "прибуд" "у" "прибыл" "прибудь" "прибыть" ;
