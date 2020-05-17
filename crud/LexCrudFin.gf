@@ -2,9 +2,15 @@
 
 instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
   oper
+    buildAct : V2 -> V2 -> V -> Act  = \impv, perfv, shortpp -> {
+      imp=impv ;
+      perf=perfv;
+      shortPart=shortpp
+    } ;
     -- -- V2 LEXICON -- --
     add2_V2 = mkV2 (mkV "lisätä")  ;
     add_V2 = mkV2 (mkV "lisätä")  ;
+    add_Act = buildAct add2_V2 add_V2 (mkV "lisätä");
     arrive_V2 = mkV2 (mkV "saapua") ;
     become_V2 = mkV2 (mkV "tulla") ;  -- not correct
     connect2_V2 = mkV2 "yhdistellä" ;
