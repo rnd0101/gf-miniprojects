@@ -16,8 +16,12 @@ interface LexCrud = open Syntax in {
     get_V2 : V2 ;
     help2_V2 : V2 ;
     help_V2 : V2 ;
+    install2_V2 : V2 ;
+    install_V2 : V2 ;
     process2_V2 : V2 ;
     process_V2 : V2 ;
+    read2_V2 : V2 ;
+    read_V2 : V2 ;
     receive2_V2 : V2 ;
     receive_V2 : V2 ;
     retrieve2_V2 : V2 ;
@@ -28,6 +32,8 @@ interface LexCrud = open Syntax in {
     update_V2 : V2 ;
     verify2_V2 : V2 ;
     verify_V2 : V2 ;
+    write2_V2 : V2 ;
+    write_V2 : V2 ;
 
     data_N : N ;
     group_N : N ;

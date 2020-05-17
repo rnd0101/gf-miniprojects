@@ -37,8 +37,12 @@ abstract Crud = Numeral ** {
     Get : Action ;
     Help2 : Action ;
     Help : Action ;
+    Install2 : Action ;
+    Install : Action ;
     Process2 : Action ;
     Process : Action ;
+    Read2 : Action ;
+    Read : Action ;
     Receive2 : Action ;
     Receive : Action ;
     Retrieve2 : Action ;
@@ -49,6 +53,8 @@ abstract Crud = Numeral ** {
     Update : Action ;
     Verify2 : Action ;
     Verify : Action ;
+    Write2 : Action ;
+    Write : Action ;
 
     Data : Kind ;
     Group : Kind ;

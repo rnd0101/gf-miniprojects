@@ -18,8 +18,12 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     get_V2 = mkV2 IrregEng.get_V ;
     help2_V2 = mkV2 "help" ;
     help_V2 = mkV2 (partV (mkV "help") "out");
+    install2_V2 = mkV2 "install" ;
+    install_V2 = mkV2 "install" ;
     process2_V2 = process_V2 ;
     process_V2 = mkV2 "process" ;
+    read2_V2 = mkV2 (irregV "read" "read" "read") ;
+    read_V2 = mkV2 (irregV "read" "read" "read") ;
     receive2_V2 = mkV2 (mkV "receive") ;
     receive_V2 = mkV2 (mkV "receive") ;
     retrieve2_V2 = mkV2 (mkV "retrieve") ;
@@ -30,6 +34,8 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     update_V2 = mkV2 (mkV "edit" "edits" "edited" "edited" "editing");
     verify2_V2 = mkV2 "verify" ;
     verify_V2 = mkV2 "verify" ;
+    write2_V2 = mkV2 (irregV "write" "wrote" "written") ;
+    write_V2 = mkV2 (irregV "write" "wrote" "written") ;
 
     -- -- N LEXICON -- --
     data_N = mkN "data" "data";
