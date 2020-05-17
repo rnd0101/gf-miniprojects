@@ -26,6 +26,8 @@ abstract Crud = Numeral ** {
     Add : Action ;
     Arrive : Action ;
     Become : Action ;
+    Change2 : Action ;
+    Change : Action ;
     Connect2 : Action ;
     Connect : Action ;
     Create : Action ;
@@ -63,6 +65,7 @@ abstract Crud = Numeral ** {
     Piece : Kind ;
     Position : Kind ;
     AProcess : Kind ;
+    Setting : Kind ;
     System : Kind ;
     Task : Kind ;
     Time : Kind ;
@@ -75,6 +78,7 @@ abstract Crud = Numeral ** {
     ActorPiece : Actor ;
     ActorPosition : Actor ;
     ActorProcess : Actor ;
+    ActorSetting : Actor ;
     ActorSystem : Actor ;
     ActorTask : Actor ;
     ActorTime : Actor ;
