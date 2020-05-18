@@ -11,6 +11,7 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     connect_V2 = mkV2 "yhdistää" ;
     change2_V2 = mkV2 "vaihtaa" ;
     change_V2 = mkV2 "vaihtaa" ;
+    create2_V2 = mkV2 (mkV "luoda")  ;
     create_V2 = mkV2 (mkV "luoda")  ;
     delete_V2 = mkV2 (mkV "poistaa")  ;
     delete2_V2 = mkV2 (mkV "poistaa")  ;

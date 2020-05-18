@@ -46,6 +46,7 @@ EXAMPLES = [
     (u"система будет устанавливаться.", 'Doc (WillDo Install2 System)', ''),
     (u"система установилась.", 'Doc (Done Install System)', ''),
     (u"измени настройки.", 'Command (DoOnMany Change Setting)', ''),
+    (u"система будет создвааться.", 'Doc (WillDo Create2 System)', ''),
 ]
 
 
