@@ -53,6 +53,7 @@ interface LexCrud = open Syntax in {
 
     additional_A : A ;
     connected_A : A ;
+    created_A : A ;
     external_A : A ;
     internal_A : A ;
 }

@@ -57,6 +57,7 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     -- -- A LEXICON -- --
     additional_A = mkA "ylimääräinen";
     connected_A = mkA "liittyvä" ;
+    created_A = mkA "luotu" ;
     external_A = mkA "ulkoinen";
     internal_A = mkA "sisäinen";
 }

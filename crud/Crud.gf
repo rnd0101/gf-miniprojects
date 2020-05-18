@@ -87,6 +87,7 @@ abstract Crud = Numeral ** {
 
     Additional : Property ;
     Connected : Property ;
+    Created : Property ;
     External : Property ;
     Internal : Property ;
 

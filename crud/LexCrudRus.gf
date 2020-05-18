@@ -93,6 +93,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRu
     -- -- A LEXICON -- --
     additional_A = mkA "дополнительный";
     connected_A = mkPassPastParticiple connect_V ;
+    created_A = mkPassPastParticiple create_V ;
     external_A = mkA "внешний";
     internal_A = mkA "внутренний";
 }

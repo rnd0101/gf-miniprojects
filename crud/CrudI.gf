@@ -86,6 +86,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
 
     Additional = mkAP additional_A ;
     Connected = mkAP connected_A ;
+    Created = mkAP created_A ;
     External = mkAP external_A ;
     Internal = mkAP internal_A ;
 

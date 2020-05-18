@@ -57,6 +57,7 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     -- -- A LEXICON -- --
     additional_A = mkA "additional";
     connected_A = mkA "connected";
+    created_A = mkA "created";
     external_A = mkA "external";
     internal_A = mkA "internal";
 }
