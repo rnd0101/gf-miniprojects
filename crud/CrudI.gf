@@ -60,6 +60,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
 
     Data = mkCN data_N ;
     Group = mkCN group_N ;
+    Function = mkCN function_N ;
     Measurement = mkCN measurement_N ;
     Note = mkCN note_N ;
     Piece = mkCN piece_N ;
@@ -73,6 +74,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
 
     ActorData = mkNP data_N ;
     ActorGroup = mkNP group_N ;
+    ActorFunction = mkNP function_N ;
     ActorMeasurement = mkNP measurement_N ;
     ActorNote = mkNP note_N ;
     ActorPiece = mkNP piece_N ;

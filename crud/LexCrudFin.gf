@@ -43,6 +43,7 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     -- -- N LEXICON -- --
     data_N = mkN "tieto" ;
     group_N = mkN "ryhmä" ;
+    function_N = mkN "tominto" ;
     measurement_N = mkN "mittaus" ;
     note_N = mkN "muistiinpano" ;
     piece_N = mkN "kappale" ;

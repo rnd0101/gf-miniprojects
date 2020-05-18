@@ -40,6 +40,7 @@ interface LexCrud = open Syntax in {
 
     data_N : N ;
     group_N : N ;
+    function_N : N ;
     measurement_N : N ;
     note_N : N ;
     piece_N : N ;

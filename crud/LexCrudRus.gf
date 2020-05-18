@@ -79,6 +79,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRu
     -- -- N LEXICON -- --
     group_N = mkN "группа" ;
     data_N = mkN "данное" ;
+    function_N = mkN "функция" ;
     measurement_N = mkN "измерение" ;
     note_N = mkN "заметка" ;
     piece_N = mkN "штука" ;
