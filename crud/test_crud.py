@@ -42,10 +42,10 @@ EXAMPLES = [
     (u"мы можем добавить пользователя .", 'Doc (WeCan Add User)', ''),
     (u"система может добавить пользователя .", 'Doc (SystemCan Add User)', ''),
     (u"система может помогать пользователя.", 'Doc (SystemCan Help2 User)', ''),  # TODO:
-    (u"система установлится.", 'Doc (WillDo Install System)', ''),  # TODO:
+    (u"система установится.", 'Doc (WillDo Install System)', ''),
     (u"система будет устанавливаться.", 'Doc (WillDo Install2 System)', ''),
     (u"система установилась.", 'Doc (Done Install System)', ''),
-    (u"измени настройки.", 'Doc (DoOnMany Change Setting', ''),
+    (u"измени настройки.", 'Command (DoOnMany Change Setting)', ''),
 ]
 
 
