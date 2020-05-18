@@ -25,7 +25,9 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
 
     ActorCan actor action on_what = mkS presentTense (mkCl actor (mkVP can_VV (mkVP action (mkNP on_what) )) );
     ActorDone actor action on_what = mkS pastTense (mkCl actor (mkVP action (mkNP on_what) ));
+    -- == DoOn actor action on_what = mkS pastTense (mkCl actor action (mkNP on_what));
     ActorDoes actor action on_what = mkS presentTense simultaneousAnt (mkCl actor (mkVP action (mkNP on_what) ));
+    ActorWillDo actor action on_what = mkS futureTense simultaneousAnt (mkCl actor (mkVP action (mkNP on_what) ));
     CanDone action on_what = mkS presentTense (mkCl (mkNP on_what) (mkVP can_VV (passiveVP action)));
     Do action on_what = mkImp action (mkNP on_what);
     DoOnMany action on_what = mkImp action (mkNP aPl_Det on_what);

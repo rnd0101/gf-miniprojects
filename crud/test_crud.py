@@ -32,21 +32,22 @@ EXAMPLES = [
     (u"получай данные .", 'Command (DoOnMany Get2 Data)', ''),
     (u"существует штука .", 'Doc (Say Piece)', ''),  # TODO: "штука"
     (u"система добавится .", 'Doc (WillDo Add System)', ''),
-    (u"группа становит процессом .", 'Doc (ActorDoes ActorGroup Become AProcess)', ''),  # TODO:
+    (u"группа становит процессом .", 'Doc (ActorDoes ActorGroup Become AProcess)', 'l'),  # TODO:
     (u"группа извлекает процесс .", 'Doc (ActorDoes ActorGroup Retrieve2 AProcess)', 'l'),
     (u"группа извлекла процесс .", 'Doc (ActorDone ActorGroup Retrieve AProcess)', 'l'),
     (u"извлеки системы .", 'Command (DoOnMany Retrieve System)', ''),
     (u"удаляй данные .", 'Command (DoOnMany Delete2 Data)', ''),
-    (u"задание исправляется .", 'Doc (WillDo Update Task)', ''),
+    (u"задание исправляется .", 'Doc (WillDo Update Task)', 'l'),
     (u"связаемая внутренняя система получилась .", 'Doc (Done Get (AdjKind Connected (AdjKind Internal System)))', ''),
     (u"мы можем добавить пользователя .", 'Doc (WeCan Add User)', ''),
     (u"система может добавить пользователя .", 'Doc (SystemCan Add User)', ''),
-    (u"система может помогать пользователя.", 'Doc (SystemCan Help2 User)', ''),  # TODO:
+    (u"система может помогать пользователю.", 'Doc (SystemCan Help2 User)', ''),
     (u"система установится.", 'Doc (WillDo Install System)', ''),
     (u"система будет устанавливаться.", 'Doc (WillDo Install2 System)', ''),
     (u"система установилась.", 'Doc (Done Install System)', ''),
     (u"измени настройки.", 'Command (DoOnMany Change Setting)', ''),
     (u"система будет создвааться.", 'Doc (WillDo Create2 System)', ''),
+    (u"система будет помогать пользователю.", 'Doc (ActorWillDo ActorSystem Help2 User)', ''),
 ]
 
 
