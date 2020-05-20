@@ -31,6 +31,8 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     receive_V2 = mkV2 (mkV "vastaanottaa") ;
     retrieve2_V2 = mkV2 (mkV "hakea") ;
     retrieve_V2 = mkV2 (mkV "hakea") ;
+    send2_V2 = mkV2 "lähettää" ;
+    send_V2 = mkV2 "lähettää" ;
     show2_V2 = mkV2 (mkV "näytellä")  ;
     show_V2 = mkV2 (mkV "näyttää")  ;
     update2_V2 = mkV2 (mkV "muokata")  ; -- ?
@@ -42,13 +44,14 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
 
     -- -- N LEXICON -- --
     data_N = mkN "tieto" ;
-    group_N = mkN "ryhmä" ;
     function_N = mkN "tominto" ;
+    group_N = mkN "ryhmä" ;
     measurement_N = mkN "mittaus" ;
     note_N = mkN "muistiinpano" ;
     piece_N = mkN "kappale" ;
     position_N = mkN "positio" ;
     process_N = mkN "prosessi" ;
+    role_N = mkN "rooli" ;
     setting_N = mkN "asetus" ;
     system_N = mkN "järjestelmä" ;
     task_N = mkN "tehtävä" ;
@@ -56,9 +59,11 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     user_N = mkN "käyttäjä" ;
 
     -- -- A LEXICON -- --
+    active_A = mkA "aktiivinen";
     additional_A = mkA "ylimääräinen";
     connected_A = mkA "liittyvä" ;
     created_A = mkA "luotu" ;
     external_A = mkA "ulkoinen";
     internal_A = mkA "sisäinen";
+    passive_A = mkA "passiivinen";
 }

@@ -59,6 +59,10 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRu
     retrieve2_V2 = dirV2 retrieve2_V ;
     retrieve_V = verbDeclMoch perfective firstE "извлек" "у" "извлек" "извлеки" "извлечь" "извлек" ;
     retrieve_V2 = dirV2 retrieve_V ;
+    send2_V = regV imperfective first "отправля" "ю" "отправлял" "отправляй" "отправлять"  ;
+    send2_V2 = dirV2 send2_V ;
+    send_V = regV perfective first "отправ" "лю" "отправил" "отправь" "отправить"  ;
+    send_V2 = dirV2 send_V ;
     show2_V = regV imperfective first "показыва" "ю" "показывал" "показывай" "показывать"  ;
     show2_V2 = dirV2 show2_V ;
     show_V = regV perfective first "покаж" "у" "показал" "покажи" "показать"  ;
@@ -77,14 +81,15 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRu
     write_V2 = dirV2 write_V  ;
 
     -- -- N LEXICON -- --
-    group_N = mkN "группа" ;
     data_N = mkN "данное" ;
     function_N = mkN "функция" ;
+    group_N = mkN "группа" ;
     measurement_N = mkN "измерение" ;
     note_N = mkN "заметка" ;
     piece_N = mkN "штука" ;
     position_N = mkN "позиция" ;
     process_N = mkN "процесс" ;
+    role_N = mkN "роль" "роли" "роли" "роль" "ролью" "роли" "ролями" "роли" "ролей" "ролям" "роли" "ролями" "ролях" Fem Inanimate ;
     setting_N = mkN "настройка" ;
     system_N = mkN "система" ;
     task_N = mkN "задание" ;
@@ -92,9 +97,11 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRu
     user_N = mkN "пользователь" "пользователя" "пользователю" "пользователя" "пользователем" "пользователе" "пользователями" "пользователи" "пользователей" "пользователям" "пользователей" "пользователями" "пользователях" Masc Animate ;
 
     -- -- A LEXICON -- --
+    active_A = mkA "активный";
     additional_A = mkA "дополнительный";
     connected_A = mkPassPastParticiple connect_V ;
     created_A = mkPassPastParticiple create_V ;
     external_A = mkA "внешний";
     internal_A = mkA "внутренний";
+    passive_A = mkA "пассивный";
 }

@@ -11,8 +11,8 @@ interface LexCrud = open Syntax in {
     connect_V2 : V2 ;
     create2_V2 : V2 ;
     create_V2 : V2 ;
-    delete_V2 : V2 ;
     delete2_V2 : V2 ;
+    delete_V2 : V2 ;
     end2_V2 : V2 ;
     end_V2 : V2 ;
     get2_V2 : V2 ;
@@ -29,6 +29,8 @@ interface LexCrud = open Syntax in {
     receive_V2 : V2 ;
     retrieve2_V2 : V2 ;
     retrieve_V2 : V2 ;
+    send2_V2 : V2 ;
+    send_V2 : V2 ;
     show2_V2 : V2 ;
     show_V2 : V2 ;
     update2_V2 : V2 ;
@@ -39,22 +41,25 @@ interface LexCrud = open Syntax in {
     write_V2 : V2 ;
 
     data_N : N ;
-    group_N : N ;
     function_N : N ;
+    group_N : N ;
     measurement_N : N ;
     note_N : N ;
     piece_N : N ;
     position_N : N ;
     process_N : N ;
+    role_N : N ;
     setting_N : N ;
     system_N : N ;
     task_N : N ;
     time_N : N ;
     user_N : N ;
 
+    active_A : A ;
     additional_A : A ;
     connected_A : A ;
     created_A : A ;
     external_A : A ;
     internal_A : A ;
+    passive_A : A ;
 }

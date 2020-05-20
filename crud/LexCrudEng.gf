@@ -13,8 +13,8 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     connect_V2 = mkV2 "connect" ;
     create2_V2 = mkV2 "create" ;
     create_V2 = mkV2 "create" ;
-    delete_V2 = mkV2 "delete" ;
     delete2_V2 = mkV2 "delete" ;
+    delete_V2 = mkV2 "delete" ;
     end2_V2 = mkV2 "end" ;
     end_V2 = mkV2 "end" ;
     get2_V2 = mkV2 IrregEng.get_V ;
@@ -31,6 +31,8 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     receive_V2 = mkV2 (mkV "receive") ;
     retrieve2_V2 = mkV2 (mkV "retrieve") ;
     retrieve_V2 = mkV2 (mkV "retrieve") ;
+    send2_V2 = mkV2 (IrregEng.send_V);
+    send_V2 = mkV2 (IrregEng.send_V);
     show2_V2 = show_V2 ;
     show_V2 = mkV2 (irregV "show" "showed" (variants {"shown" ; "showed"}) );
     update2_V2 = update_V2;
@@ -42,13 +44,14 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
 
     -- -- N LEXICON -- --
     data_N = mkN "data" "data";
-    group_N = mkN "group" ;
     function_N = mkN "function" ;
+    group_N = mkN "group" ;
     measurement_N = mkN "measurement" ;
     note_N = mkN "note" ;
     piece_N = mkN "piece" ;
     position_N = mkN "position" ;
     process_N = mkN "process" ;
+    role_N = mkN "role" ;
     setting_N = mkN "setting" ;
     system_N = mkN "system" ;
     task_N = mkN "task" ;
@@ -56,9 +59,11 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     user_N = mkN "user" ;
 
     -- -- A LEXICON -- --
+    active_A = mkA "active";
     additional_A = mkA "additional";
     connected_A = mkA "connected";
     created_A = mkA "created";
     external_A = mkA "external";
     internal_A = mkA "internal";
+    passive_A = mkA "passive";
 }
