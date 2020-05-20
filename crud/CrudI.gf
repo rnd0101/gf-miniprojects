@@ -2,6 +2,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
   lincat
     Kind = CN;
     Term = NP;
+    Rel = Prep;
     Actor = NP;
     Property = AP;
     Status = V;
@@ -16,10 +17,26 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Event what status = mkS anteriorAnt (mkCl (mkNP what) status) ;
     NegEvent what status = mkS pastTense negativePol (mkCl (mkNP what) status) ;
     AdjKind prop what = mkCN prop what;
-    --TheActor who = mkNP who ;
+    RelKind what how what2 = mkCN what (mkAdv how (mkNP what2)) ;
     Say phrase = mkS (mkCl phrase);
     NItemsDig num kind = mkS (mkCl (mkNP (mkDet num) kind)) ;
     ActorWe = we_NP ;
+
+    Above = above_Prep ;
+    After = after_Prep ;
+    Before = before_Prep ;
+    Between = between_Prep ;
+    During = during_Prep ;
+    For = for_Prep ;
+    From = from_Prep ;
+    In = in_Prep ;
+    Of = part_Prep ;
+    On = on_Prep ;
+    Through = through_Prep ;
+    To = to_Prep ;
+    With = with_Prep ;
+    WithHelpOf = by8agent_Prep ;
+    Without = without_Prep ;
 
     Add2 = add2_V2 ;
     Add = add_V2 ;

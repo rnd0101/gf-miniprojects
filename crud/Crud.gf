@@ -11,6 +11,7 @@ abstract Crud = Numeral ** {
     Clause ;
     NumberOf ;
     Document ;
+    Rel ;
   fun
     Doc : Clause -> Document ;
     Command : DoCommand -> Document;
@@ -18,9 +19,26 @@ abstract Crud = Numeral ** {
     NegEvent : Kind -> Status -> Clause ;
     Say : Kind -> Clause ;
     AdjKind : Property -> Kind -> Kind ;
-    --TheActor : Kind -> Actor ;
+    RelKind : Kind -> Rel -> Kind -> Kind ;
     NItemsDig : Digits -> Kind -> Clause ;
     ActorWe : Actor ;
+
+    Above : Rel ;
+    After : Rel ;
+    Before : Rel ;
+    Between : Rel ;
+    During : Rel ;
+    For : Rel ;
+    From : Rel ;
+    In : Rel ;
+    Of : Rel ;
+    On : Rel ;
+    Through : Rel ;
+    To : Rel ;
+    With : Rel ;
+    WithHelpOf : Rel ;
+    Without : Rel ;
+
 
     Add2 : Action ;
     Add : Action ;

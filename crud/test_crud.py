@@ -50,6 +50,7 @@ EXAMPLES = [
     (u"создай функции.", 'Command (DoOnMany Create Function)', ''),
     (u"система будет помогать пользователю.", 'Doc (ActorWillDo ActorSystem Help2 User)', ''),
     (u"система будет помогать создаемому пользователю.", 'Doc (ActorWillDo ActorSystem Help2 (AdjKind Created User))', ''),  # TODO:
+    (u"добавь роль для задания к позиции.", 'Command (Do Add (RelKind (RelKind Role For Task) To Position))', ''),
 ]
 
 
