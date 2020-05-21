@@ -54,6 +54,7 @@ EXAMPLES = [
     (u"система установилась.", 'Doc (Done Install System)', ''),
     (u"изменить настройки.", 'Command (DoOnMany Change Setting)', ''),
     (u"система будет создвааться.", 'Doc (WillDo Create2 System)', ''),
+    (u"задание не искалось.", 'Doc (NotDone Search2 Task)', ''),
     (u"создать функции.", 'Command (DoOnMany Create Function)', ''),
     (u"система будет помогать пользователю.", 'Doc (ActorWillDo ActorSystem Help2 User)', ''),
     (u"система будет помогать создаемому пользователю.", 'Doc (ActorWillDo ActorSystem Help2 (AdjKind Created User))', ''),  # TODO:
