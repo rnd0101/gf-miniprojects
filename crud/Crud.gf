@@ -13,6 +13,7 @@ abstract Crud = Numeral ** {
     Rel ;
     Sentence ;
     Status ;
+    Utterance ;
     Term ;
   fun
     Doc : Sentence -> Document ;
@@ -20,6 +21,7 @@ abstract Crud = Numeral ** {
     Event : Kind -> Status -> Sentence ;
     NegEvent : Kind -> Status -> Sentence ;
     Say : Kind -> Sentence ;
+    Utter : Kind -> Utterance ;
     AdjKind : Property -> Kind -> Kind ;
     RelKind : Kind -> Rel -> Kind -> Kind ;
     NItemsDig : Digits -> Kind -> Sentence ;
