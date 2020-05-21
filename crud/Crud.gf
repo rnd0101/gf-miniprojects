@@ -1,27 +1,28 @@
 abstract Crud = Numeral ** {
   flags startcat = Document ;
   cat
-    Kind ;
-    Term ;
-    Actor ;
-    Property ;
     Action ;
     Action3 ;
-    DoCommand ;
-    Status ;
+    Actor ;
     Clause ;
-    NumberOf ;
+    DoCommand ;
     Document ;
+    Kind ;
+    NumberOf ;
+    Property ;
     Rel ;
+    Sentence ;
+    Status ;
+    Term ;
   fun
-    Doc : Clause -> Document ;
+    Doc : Sentence -> Document ;
     Command : DoCommand -> Document;
-    Event : Kind -> Status -> Clause ;
-    NegEvent : Kind -> Status -> Clause ;
-    Say : Kind -> Clause ;
+    Event : Kind -> Status -> Sentence ;
+    NegEvent : Kind -> Status -> Sentence ;
+    Say : Kind -> Sentence ;
     AdjKind : Property -> Kind -> Kind ;
     RelKind : Kind -> Rel -> Kind -> Kind ;
-    NItemsDig : Digits -> Kind -> Clause ;
+    NItemsDig : Digits -> Kind -> Sentence ;
     ActorWe : Actor ;
 
     Above : Rel ;
@@ -131,25 +132,25 @@ abstract Crud = Numeral ** {
     Internal : Property ;
     Passive : Property ;
 
-    ActorCan : Actor -> Action -> Kind -> Clause ;
-    ActorMust : Actor -> Action -> Kind -> Clause ;
-    ActorDone : Actor -> Action -> Kind -> Clause ;
-    ActorDoes : Actor -> Action -> Kind -> Clause ;
-    -- == DoOn : Actor -> Action -> Kind -> Clause ;
-    ActorDoes3 : Actor -> Action3 -> Kind -> Kind -> Clause ;
-    ActorWillDo : Actor -> Action -> Kind -> Clause ;
-    CanDone : Action -> Kind -> Clause ;
+    ActorCan : Actor -> Action -> Kind -> Sentence ;
+    ActorMust : Actor -> Action -> Kind -> Sentence ;
+    ActorDone : Actor -> Action -> Kind -> Sentence ;
+    ActorDoes : Actor -> Action -> Kind -> Sentence ;
+    -- == DoOn : Actor -> Action -> Kind -> Sentence ;
+    ActorDoes3 : Actor -> Action3 -> Kind -> Kind -> Sentence ;
+    ActorWillDo : Actor -> Action -> Kind -> Sentence ;
+    CanDone : Action -> Kind -> Sentence ;
     Do : Action -> Kind -> DoCommand ;
     DoOnMany : Action -> Kind -> DoCommand ;
-    Doing : Action -> Kind -> Clause ;
-    DoingAction : Action -> Clause ;
-    DoingByItself : Action -> Clause ;
-    Done : Action -> Kind -> Clause ;
-    NotDone : Action -> Kind -> Clause ;
-    WillDo : Action -> Kind -> Clause ;
+    Doing : Action -> Kind -> Sentence ;
+    DoingAction : Action -> Sentence ;
+    DoingByItself : Action -> Sentence ;
+    Done : Action -> Kind -> Sentence ;
+    NotDone : Action -> Kind -> Sentence ;
+    WillDo : Action -> Kind -> Sentence ;
 
-    SystemDone : Action -> Kind -> Clause ;
-    SystemCan : Action -> Kind -> Clause ;
-    WeCan : Action -> Kind -> Clause ;
-    WeDone : Action -> Kind -> Clause ;
+    SystemDone : Action -> Kind -> Sentence ;
+    SystemCan : Action -> Kind -> Sentence ;
+    WeCan : Action -> Kind -> Sentence ;
+    WeDone : Action -> Kind -> Sentence ;
 }

@@ -1,17 +1,18 @@
 incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
   lincat
-    Kind = CN;
-    Term = NP;
-    Rel = Prep;
-    Actor = NP;
-    Property = AP;
-    Status = V;
     Action = V2;
     Action3 = V3;
-    Clause = S;
-    Document = Text;
+    Actor = NP;
+    Clause = Cl;
     DoCommand = Imp;
+    Document = Text;
+    Kind = CN;
     NumberOf = Str;
+    Property = AP;
+    Rel = Prep;
+    Sentence = S;
+    Status = V;
+    Term = NP;
   lin
     Doc clause = mkText (mkPhr (mkUtt clause)) ;
     Command imp = mkText (mkPhr (mkUtt imp)) ;
@@ -19,7 +20,8 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     NegEvent what status = mkS pastTense negativePol (mkCl (mkNP what) status) ;
     AdjKind prop what = mkCN prop what;
     RelKind what how what2 = mkCN what (mkAdv how (mkNP what2)) ;
-    Say phrase = mkS (mkCl phrase);
+    -- Say phrase = mkS (mkCl phrase);
+    Say phrase = mkS (makeKindClause phrase);
     NItemsDig num kind = mkS (mkCl (mkNP (mkDet num) kind)) ;
     ActorWe = we_NP ;
 
