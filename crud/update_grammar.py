@@ -70,6 +70,7 @@ def generate_lex_abs(lexicon_structs):
 
 mapping = {
     "V2": [("Action", " = {} ;", "")],
+    "V3": [("Action3", " = {} ;", "")],
     "N": [("Kind", " = mkCN {} ;", "A"), ("Actor", " = mkNP {} ;", "Actor")],  # TODO: Also An
     "A": [("Property", " = mkAP {} ;", "Prop")],
 }

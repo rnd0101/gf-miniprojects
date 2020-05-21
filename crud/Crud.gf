@@ -6,6 +6,7 @@ abstract Crud = Numeral ** {
     Actor ;
     Property ;
     Action ;
+    Action3 ;
     DoCommand ;
     Status ;
     Clause ;
@@ -79,10 +80,13 @@ abstract Crud = Numeral ** {
     Write2 : Action ;
     Write : Action ;
 
+    Send3 : Action3 ;
+
     Data : Kind ;
     Function : Kind ;
     Group : Kind ;
     Measurement : Kind ;
+    Message : Kind ;
     Note : Kind ;
     Piece : Kind ;
     Position : Kind ;
@@ -98,6 +102,7 @@ abstract Crud = Numeral ** {
     ActorFunction : Actor ;
     ActorGroup : Actor ;
     ActorMeasurement : Actor ;
+    ActorMessage : Actor ;
     ActorNote : Actor ;
     ActorPiece : Actor ;
     ActorPosition : Actor ;
@@ -121,6 +126,7 @@ abstract Crud = Numeral ** {
     ActorDone : Actor -> Action -> Kind -> Clause ;
     ActorDoes : Actor -> Action -> Kind -> Clause ;
     -- == DoOn : Actor -> Action -> Kind -> Clause ;
+    ActorDoes3 : Actor -> Action3 -> Kind -> Kind -> Clause ;
     ActorWillDo : Actor -> Action -> Kind -> Clause ;
     CanDone : Action -> Kind -> Clause ;
     Do : Action -> Kind -> DoCommand ;

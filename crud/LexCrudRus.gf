@@ -80,11 +80,15 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRu
     write_V = regV perfective first "записыва" "ю" "записал" "запиши" "записать"  ;
     write_V2 = dirV2 write_V  ;
 
+    -- -- V3 LEXICON -- --
+    send3_V3 = mkV3 send_V "" "" accusative dative ;
+
     -- -- N LEXICON -- --
     data_N = mkN "данное" ;
     function_N = mkN "функция" ;
     group_N = mkN "группа" ;
     measurement_N = mkN "измерение" ;
+    message_N = mkN "сообщение" ;
     note_N = mkN "заметка" ;
     piece_N = mkN "штука" ;
     position_N = mkN "позиция" ;

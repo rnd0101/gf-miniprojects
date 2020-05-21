@@ -42,11 +42,15 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     write2_V2 = mkV2 "kirjoittaa" ;
     write_V2 = mkV2 "kirjoittaa" ;
 
+    -- -- V3 LEXICON -- --
+    send3_V3 = mkV3 (mkV "lähettää") accusative for_Prep ;
+
     -- -- N LEXICON -- --
     data_N = mkN "tieto" ;
     function_N = mkN "tominto" ;
     group_N = mkN "ryhmä" ;
     measurement_N = mkN "mittaus" ;
+    message_N = mkN "viesti" ;
     note_N = mkN "muistiinpano" ;
     piece_N = mkN "kappale" ;
     position_N = mkN "positio" ;

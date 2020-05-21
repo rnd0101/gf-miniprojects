@@ -7,6 +7,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Property = AP;
     Status = V;
     Action = V2;
+    Action3 = V3;
     Clause = S;
     Document = Text;
     DoCommand = Imp;
@@ -77,10 +78,13 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Write2 = write2_V2 ;
     Write = write_V2 ;
 
+    Send3 = send3_V3 ;
+
     Data = mkCN data_N ;
     Function = mkCN function_N ;
     Group = mkCN group_N ;
     Measurement = mkCN measurement_N ;
+    Message = mkCN message_N ;
     Note = mkCN note_N ;
     Piece = mkCN piece_N ;
     Position = mkCN position_N ;
@@ -96,6 +100,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     ActorFunction = mkNP function_N ;
     ActorGroup = mkNP group_N ;
     ActorMeasurement = mkNP measurement_N ;
+    ActorMessage = mkNP message_N ;
     ActorNote = mkNP note_N ;
     ActorPiece = mkNP piece_N ;
     ActorPosition = mkNP position_N ;
@@ -119,6 +124,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     ActorDone actor action on_what = mkS pastTense (mkCl actor (mkVP action (mkNP on_what) ));
     -- == DoOn actor action on_what = mkS pastTense (mkCl actor action (mkNP on_what));
     ActorDoes actor action on_what = mkS presentTense simultaneousAnt (mkCl actor (mkVP action (mkNP on_what) ));
+    ActorDoes3 actor action on_what on_what2 = mkS presentTense simultaneousAnt (mkCl actor (mkVP action (mkNP on_what) (mkNP on_what2)));
     ActorWillDo actor action on_what = mkS futureTense simultaneousAnt (mkCl actor (mkVP action (mkNP on_what) ));
     CanDone action on_what = mkS presentTense (mkCl (mkNP on_what) (mkVP can_VV (passiveVP action)));
     Do action on_what = mkImp action (mkNP on_what);

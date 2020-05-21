@@ -42,11 +42,15 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     write2_V2 = mkV2 (irregV "write" "wrote" "written") ;
     write_V2 = mkV2 (irregV "write" "wrote" "written") ;
 
+    -- -- V3 LEXICON -- --
+    send3_V3 = mkV3 (IrregEng.send_V) to_Prep ;
+
     -- -- N LEXICON -- --
     data_N = mkN "data" "data";
     function_N = mkN "function" ;
     group_N = mkN "group" ;
     measurement_N = mkN "measurement" ;
+    message_N = mkN "message" ;
     note_N = mkN "note" ;
     piece_N = mkN "piece" ;
     position_N = mkN "position" ;
