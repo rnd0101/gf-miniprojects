@@ -57,6 +57,7 @@ interface LexCrud = open Syntax in {
     position_N : N ;
     process_N : N ;
     role_N : N ;
+    sender_N : N ;
     setting_N : N ;
     system_N : N ;
     task_N : N ;

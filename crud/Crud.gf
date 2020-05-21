@@ -95,6 +95,7 @@ abstract Crud = Numeral ** {
     Position : Kind ;
     AProcess : Kind ;
     Role : Kind ;
+    Sender : Kind ;
     Setting : Kind ;
     System : Kind ;
     Task : Kind ;
@@ -112,6 +113,7 @@ abstract Crud = Numeral ** {
     ActorPosition : Actor ;
     ActorProcess : Actor ;
     ActorRole : Actor ;
+    ActorSender : Actor ;
     ActorSetting : Actor ;
     ActorSystem : Actor ;
     ActorTask : Actor ;

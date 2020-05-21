@@ -107,6 +107,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRu
     position_N = mkN "позиция" ;
     process_N = mkN "процесс" ;
     role_N = mkN "роль" "роли" "роли" "роль" "ролью" "роли" "ролями" "роли" "ролей" "ролям" "роли" "ролями" "ролях" Fem Inanimate ;
+    sender_N = mkN "отправитель" ;
     setting_N = mkN "настройка" ;
     system_N = mkN "система" ;
     task_N = mkN "задание" ;

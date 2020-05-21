@@ -60,6 +60,7 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     position_N = mkN "positio" ;
     process_N = mkN "prosessi" ;
     role_N = mkN "rooli" ;
+    sender_N = mkN "lähettäjä" ;
     setting_N = mkN "asetus" ;
     system_N = mkN "järjestelmä" ;
     task_N = mkN "tehtävä" ;
