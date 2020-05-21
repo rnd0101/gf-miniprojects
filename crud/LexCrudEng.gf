@@ -50,6 +50,7 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
 
     -- -- N LEXICON -- --
     data_N = mkN "data" "data";
+    file_N = mkN "file" ;
     function_N = mkN "function" ;
     group_N = mkN "group" ;
     measurement_N = mkN "measurement" ;

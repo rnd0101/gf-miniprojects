@@ -32,6 +32,8 @@ EXAMPLES = [
     (u"получай данные .", 'Command (DoOnMany Get2 Data)', ''),
     (u"существует штука .", 'Doc (Say Piece)', ''),  # TODO: "штука"
     (u"отправить задание.", 'Command (Do Send Task)', ''),
+    (u"сохранить файл.", 'Command (Do Save File)', ''),
+    (u"сохранить файлы.", 'Command (DoOnMany Save File)', ''),
     (u"отправить внутреннее задание.", 'Command (Do Send (AdjKind Internal Task))', ''),
     (u"система добавится .", 'Doc (WillDo Add System)', ''),
     (u"группа становит процессом .", 'Doc (ActorDoes ActorGroup Become AProcess)', 'l'),  # TODO:

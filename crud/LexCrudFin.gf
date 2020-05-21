@@ -51,6 +51,7 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     -- -- N LEXICON -- --
     data_N = mkN "tieto" ;
     function_N = mkN "tominto" ;
+    file_N = mkN "tiedosto" ;
     group_N = mkN "ryhmä" ;
     measurement_N = mkN "mittaus" ;
     message_N = mkN "viesti" ;

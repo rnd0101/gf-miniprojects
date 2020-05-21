@@ -83,6 +83,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Send3 = send3_V3 ;
 
     Data = mkCN data_N ;
+    File = mkCN file_N ;
     Function = mkCN function_N ;
     Group = mkCN group_N ;
     Measurement = mkCN measurement_N ;
@@ -99,6 +100,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     User = mkCN user_N ;
 
     ActorData = mkNP data_N ;
+    ActorFile = mkNP file_N ;
     ActorFunction = mkNP function_N ;
     ActorGroup = mkNP group_N ;
     ActorMeasurement = mkNP measurement_N ;
@@ -131,7 +133,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     ActorWillDo actor action on_what = mkS futureTense simultaneousAnt (mkCl actor (mkVP action (mkNP on_what) ));
     CanDone action on_what = mkS presentTense (mkCl (mkNP on_what) (mkVP can_VV (passiveVP action)));
     Do action on_what = makeImpoliteImp action (mkNP on_what);
-    DoOnMany action on_what = mkImp action (mkNP aPl_Det on_what);
+    DoOnMany action on_what = makeImpoliteImp action (mkNP aPl_Det on_what);
     Doing action on_what = mkS presentTense simultaneousAnt (mkCl (mkNP on_what) (PassV2 action));
     DoingAction action = mkS presentTense simultaneousAnt (mkCl (passiveVP action));
     DoingByItself action = mkS presentTense simultaneousAnt (mkCl (reflexiveVP action));
