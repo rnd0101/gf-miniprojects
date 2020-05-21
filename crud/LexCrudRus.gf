@@ -2,6 +2,13 @@
 
 instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRus, ResRus in {
   oper
+
+    verbNULL : Str -> Verbum = \a  -> {
+         s = table {_ => a} ;
+         asp = perfective ;
+       } ;
+    verb_NULL = verbNULL "";
+
     -- -- V2 LEXICON -- --
     add2_V = regV imperfective second "добавля" "ю" "добавлял" "добавляй" "добавлять"  ;
     add2_V2 = dirV2 add2_V  ;
