@@ -57,6 +57,8 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Get = get_V2 ;
     Help2 = help2_V2 ;
     Help = help_V2 ;
+    Insert2 = insert2_V2 ;
+    Insert = insert_V2 ;
     Install2 = install2_V2 ;
     Install = install_V2 ;
     Process2 = process2_V2 ;
@@ -120,6 +122,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
 
     Active = mkAP active_A ;
     Additional = mkAP additional_A ;
+    Automatic = mkAP automatic_A ;
     Connected = mkAP connected_A ;
     Created = mkAP created_A ;
     External = mkAP external_A ;

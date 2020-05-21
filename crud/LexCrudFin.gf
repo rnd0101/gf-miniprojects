@@ -22,6 +22,8 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     get_V2 = mkV2 (mkV "saada") ;
     help2_V2 = mkV2 (mkV "auttaa") ;
     help_V2 = mkV2 (mkV "auttaa") ;
+    insert2_V2 = mkV2 "lisätä" ;
+    insert_V2 = mkV2 "lisätä" ;
     install2_V2 = mkV2 "asentaa" ;
     install_V2 = mkV2 "asentaa" ;
     process2_V2 = process_V2  ;
@@ -70,6 +72,7 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     -- -- A LEXICON -- --
     active_A = mkA "aktiivinen";
     additional_A = mkA "ylimääräinen";
+    automatic_A = mkA "automaattinen";
     connected_A = mkA "liittyvä" ;
     created_A = mkA "luotu" ;
     external_A = mkA "ulkoinen";

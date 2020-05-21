@@ -22,6 +22,8 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     get_V2 = mkV2 IrregEng.get_V ;
     help2_V2 = mkV2 "help" ;
     help_V2 = mkV2 (partV (mkV "help") "out");
+    insert2_V2 = mkV2 "insert" ;
+    insert_V2 = mkV2 "insert" ;
     install2_V2 = mkV2 "install" ;
     install_V2 = mkV2 "install" ;
     process2_V2 = process_V2 ;
@@ -70,6 +72,7 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     -- -- A LEXICON -- --
     active_A = mkA "active";
     additional_A = mkA "additional";
+    automatic_A = mkA "automatic";
     connected_A = mkA "connected";
     created_A = mkA "created";
     external_A = mkA "external";

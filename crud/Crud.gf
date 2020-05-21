@@ -59,6 +59,8 @@ abstract Crud = Numeral ** {
     Get : Action ;
     Help2 : Action ;
     Help : Action ;
+    Insert2 : Action ;
+    Insert : Action ;
     Install2 : Action ;
     Install : Action ;
     Process2 : Action ;
@@ -122,6 +124,7 @@ abstract Crud = Numeral ** {
 
     Active : Property ;
     Additional : Property ;
+    Automatic : Property ;
     Connected : Property ;
     Created : Property ;
     External : Property ;
