@@ -71,6 +71,8 @@ abstract Crud = Numeral ** {
     Retrieve : Action ;
     Send2 : Action ;
     Send : Action ;
+    Save2 : Action ;
+    Save : Action ;
     Show2 : Action ;
     Show : Action ;
     Update2 : Action ;

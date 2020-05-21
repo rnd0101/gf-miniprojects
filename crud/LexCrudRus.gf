@@ -3,6 +3,7 @@
 instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRus, ResRus in {
   oper
 
+    -- This is a workaround to get just an infinitive for impolite imperative
     verbNULL : Str -> Verbum = \a  -> {
          s = table {_ => a} ;
          asp = perfective ;
@@ -66,6 +67,10 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRu
     retrieve2_V2 = dirV2 retrieve2_V ;
     retrieve_V = verbDeclMoch perfective firstE "извлек" "у" "извлек" "извлеки" "извлечь" "извлек" ;
     retrieve_V2 = dirV2 retrieve_V ;
+    save2_V = regV imperfective first "сохран" "ю" "сохранял" "сохраняй" "сохранять"  ;
+    save2_V2 = dirV2 save2_V ;
+    save_V = regV perfective secondA "сохран" "ю" "сохранил" "сохрани" "сохранить"  ;
+    save_V2 = dirV2 save_V ;
     send2_V = regV imperfective first "отправля" "ю" "отправлял" "отправляй" "отправлять"  ;
     send2_V2 = dirV2 send2_V ;
     send_V = regV perfective secondA "отправ" "лю" "отправил" "отправь" "отправить"  ;
