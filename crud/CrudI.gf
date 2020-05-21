@@ -121,6 +121,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Passive = mkAP passive_A ;
 
     ActorCan actor action on_what = mkS presentTense (mkCl actor (mkVP can_VV (mkVP action (mkNP on_what) )) );
+    ActorMust actor action on_what = mkS presentTense (mkCl actor (mkVP must_VV (mkVP action (mkNP on_what) )) );
     ActorDone actor action on_what = mkS pastTense (mkCl actor (mkVP action (mkNP on_what) ));
     -- == DoOn actor action on_what = mkS pastTense (mkCl actor action (mkNP on_what));
     ActorDoes actor action on_what = mkS presentTense simultaneousAnt (mkCl actor (mkVP action (mkNP on_what) ));

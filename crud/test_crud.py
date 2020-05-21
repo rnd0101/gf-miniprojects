@@ -42,6 +42,7 @@ EXAMPLES = [
     (u"мы можем добавить пользователя .", 'Doc (WeCan Add User)', ''),
     (u"система может добавить пользователя .", 'Doc (SystemCan Add User)', ''),
     (u"система может помогать пользователю.", 'Doc (SystemCan Help2 User)', ''),
+    (u"система должен отправить задание.", 'Doc (ActorMust ActorSystem Send Task)', ''),  # TODO:
     (u"система установится.", 'Doc (WillDo Install System)', ''),
     (u"система будет устанавливаться.", 'Doc (WillDo Install2 System)', ''),
     (u"система установилась.", 'Doc (Done Install System)', ''),
