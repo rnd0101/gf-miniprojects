@@ -26,11 +26,12 @@ def rus():
 
 
 EXAMPLES = [
+    (u"файл.", 'Label File', ''),
+    (u"активный файл.", 'Label (AdjKind Active File)', ''),
     (u"штука получилась .", 'Doc (Done Get Piece)', ''),
     (u"мы связали измерение .", 'Doc (WeDone Connect Measurement)', ''),
     (u"система связала измерение .", 'Doc (SystemDone Connect Measurement)', ''),
     (u"получать данные .", 'Command (DoOnMany Get2 Data)', ''),
-    (u"существует штука .", 'Doc (Say Piece)', ''),  # TODO: "штука"
     (u"отправить задание.", 'Command (Do Send Task)', ''),
     (u"сохранить файл.", 'Command (Do Save File)', ''),
     (u"сохранить файлы.", 'Command (DoOnMany Save File)', ''),
@@ -47,7 +48,7 @@ EXAMPLES = [
     (u"мы можем добавить пользователя .", 'Doc (WeCan Add User)', ''),
     (u"система может добавить пользователя .", 'Doc (SystemCan Add User)', ''),
     (u"система может помогать пользователю.", 'Doc (SystemCan Help2 User)', ''),
-    (u"система должен отправить задание.", 'Doc (ActorMust ActorSystem Send Task)', ''),  # TODO:
+    (u"система должна отправить задание.", 'Doc (ActorMust ActorSystem Send Task)', ''),
     (u"система установится.", 'Doc (WillDo Install System)', ''),
     (u"система будет устанавливаться.", 'Doc (WillDo Install2 System)', ''),
     (u"система установилась.", 'Doc (Done Install System)', ''),

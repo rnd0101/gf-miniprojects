@@ -11,19 +11,17 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Property = AP;
     Rel = Prep;
     Sentence = S;
-    Utterance = Utt;
     Status = V;
     Term = NP;
   lin
     Doc clause = mkText (mkPhr (mkUtt clause)) ;
     Command imp = mkText (mkPhr (mkUtt imp)) ;
+    Label what = mkText (mkPhr (mkUtt what)) ;
     Event what status = mkS anteriorAnt (mkCl (mkNP what) status) ;
     NegEvent what status = mkS pastTense negativePol (mkCl (mkNP what) status) ;
     AdjKind prop what = mkCN prop what;
     RelKind what how what2 = mkCN what (mkAdv how (mkNP what2)) ;
-    -- Say phrase = mkS (mkCl phrase);
-    Say phrase = mkS (makeKindClause phrase);
-    Utter phrase = mkUtt phrase;
+    Say phrase = mkS (mkCl phrase);
     NItemsDig num kind = mkS (mkCl (mkNP (mkDet num) kind)) ;
     ActorWe = we_NP ;
 

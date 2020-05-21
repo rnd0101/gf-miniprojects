@@ -3,7 +3,6 @@
 instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng in {
   oper
     makeImpoliteImp : V2 -> NP -> Imp = mkImp ;
-    makeKindClause : CN -> Cl = \cn -> mkCl cn ;
     -- -- V2 LEXICON -- --
     add2_V2 = mkV2 "add" ;
     add_V2 = mkV2 "add" ;

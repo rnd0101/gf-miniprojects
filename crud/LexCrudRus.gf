@@ -9,9 +9,6 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRu
          asp = perfective ;
        } ;
     makeImpoliteImp : V2 -> NP -> Imp = \v2, np -> mkImp (mkVP (verbNULL "") (mkVP v2 np)) ;
-    -- makeKindClause : CN -> Cl = \cn -> mkCl (mkNP cn) (verbNULL "");
-    --makeKindClause : CN -> Cl = \cn -> mkCl (mkNP sender_N) (verbNULL "");
-    makeKindClause : CN -> Cl = \cn -> mkCl cn;
 
     -- -- V2 LEXICON -- --
     add2_V = regV imperfective first "добавля" "ю" "добавлял" "добавляй" "добавлять"  ;
