@@ -2,6 +2,7 @@
 
 instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
   oper
+    makeImpoliteImp : V2 -> NP -> Imp = mkImp ;
     -- -- V2 LEXICON -- --
     add2_V2 = mkV2 (mkV "lisätä")  ;
     add_V2 = mkV2 (mkV "lisätä")  ;

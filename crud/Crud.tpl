@@ -45,7 +45,6 @@ abstract Crud = Numeral ** {
 
     ActorCan : Actor -> Action -> Kind -> Clause ;
     ActorMust : Actor -> Action -> Kind -> Clause ;
-    DoDo : Action -> Kind -> DoCommand ;
     ActorDone : Actor -> Action -> Kind -> Clause ;
     ActorDoes : Actor -> Action -> Kind -> Clause ;
     -- == DoOn : Actor -> Action -> Kind -> Clause ;

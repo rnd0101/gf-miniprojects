@@ -7,7 +7,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRu
          s = table {_ => a} ;
          asp = perfective ;
        } ;
-    verb_NULL = verbNULL "";
+    makeImpoliteImp : V2 -> NP -> Imp = \v2, np -> mkImp (mkVP (verbNULL "") (mkVP v2 np)) ;
 
     -- -- V2 LEXICON -- --
     add2_V = regV imperfective second "добавля" "ю" "добавлял" "добавляй" "добавлять"  ;

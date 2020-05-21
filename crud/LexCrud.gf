@@ -2,7 +2,7 @@
 interface LexCrud = open Syntax in {
   oper
 
-    verb_NULL : VV ;
+    makeImpoliteImp : V2 -> NP -> Imp ;
     add2_V2 : V2 ;
     add_V2 : V2 ;
     arrive_V2 : V2 ;
