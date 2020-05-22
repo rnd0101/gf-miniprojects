@@ -131,27 +131,27 @@ FIN_EXAMPLES = [
     (u'tallenna tiedostot.', 'Command (DoOnMany Save File)', ''),
     (u'lähetä sisäinen tehtävä.', 'Command (Do Send (AdjKind Internal Task))', ''),
     (u'järjestelmä lisätään.', 'Doc (WillDo Add System)', ''),
-    (u'ryhmä tulee prosessin.', 'Doc (ActorDoes ActorGroup Become AProcess)', ''),
-    (u'ryhmä hakee prosessin.', 'Doc (ActorDoes ActorGroup Retrieve2 AProcess)', ''),
-    (u'ryhmä haki prosessin.', 'Doc (ActorDone ActorGroup Retrieve AProcess)', ''),
-    (u'hae järjestelmät.', 'Command (DoOnMany Retrieve System)', ''),
+    (u'ryhmä tulee prosessin.', 'Doc (ActorDoes ActorGroup Become AProcess)', ''),  # TODO:
+    (u'ryhmä hakee prosessin.', 'Doc (ActorDoes ActorGroup Retrieve2 AProcess)', ''),  # TODO:
+    (u'ryhmä haki prosessin.', 'Doc (ActorDone ActorGroup Retrieve AProcess)', ''),  # TODO:
+    (u'hae järjestelmät.', 'Command (DoOnMany Retrieve System)', ''),  # TODO:
     (u'poista tiedot.', 'Command (DoOnMany Delete Data)', ''),
     (u'lisää tiedot.', 'Command (DoOnMany Insert Data)', ''),
     (u'tehtävä muokataan.', 'Doc (WillDo Update Task)', ''),
-    (u'liittyvä sisäinen järjestelmä saatiin.', 'Doc (Done Get (AdjKind Connected (AdjKind Internal System)))', ''),
+    (u'liittyvä sisäinen järjestelmä saatiin.', 'Doc (Done Get (AdjKind Connected (AdjKind Internal System)))', ''),  # TODO:
     (u'me voimme lisätä käyttäjän.', 'Doc (WeCan Add User)', ''),
     (u'järjestelmä voi lisätä käyttäjän.', 'Doc (SystemCan Add User)', ''),
-    (u'järjestelmä voi auttaa käyttäjän.', 'Doc (SystemCan Help2 User)', ''),
+    (u'järjestelmä voi auttaa käyttäjän.', 'Doc (SystemCan Help2 User)', ''),  # TODO:
     (u'järjestelmän täytyy lähettää tehtävä.', 'Doc (ActorMust ActorSystem Send Task)', ''),
     (u'järjestelmä asennetaan.', 'Doc (WillDo Install System)', ''),
     (u'järjestelmä asennetaan.', 'Doc (WillDo Install2 System)', ''),
     (u'järjestelmä asennettiin.', 'Doc (Done Install System)', ''),
     (u'vaihda asetukset.', 'Command (DoOnMany Change Setting)', ''),
-    (u'järjestelmä luodaan.', 'Doc (WillDo Create2 System)', ''),
-    (u'tehtävä ei haettu.', 'Doc (NotDone Search2 Task)', ''),
+    (u'järjestelmä luodaan.', 'Doc (WillDo Create2 System)', ''),  # TODO:
+    (u'tehtävä ei haettu.', 'Doc (NotDone Search2 Task)', ''),  # TODO:
     (u'luo tominnot.', 'Command (DoOnMany Create Function)', ''),
-    (u'järjestelmä auttaa käyttäjän.', 'Doc (ActorWillDo ActorSystem Help2 User)', ''),
-    (u'järjestelmä auttaa luodun käyttäjän.', 'Doc (ActorWillDo ActorSystem Help2 (AdjKind Created User))', ''),
+    (u'järjestelmä auttaa käyttäjän.', 'Doc (ActorWillDo ActorSystem Help2 User)', ''),  # TODO:
+    (u'järjestelmä auttaa luodun käyttäjän.', 'Doc (ActorWillDo ActorSystem Help2 (AdjKind Created User))', ''),  # TODO:
     (u'lisää rooli tehtävälle positioon.', 'Command (Do Add (RelKind (RelKind Role For Task) To Position))', ''),
     (u'positio lähettää tominnon ryhmään.', 'Doc (ActorWillDo ActorPosition Send (RelKind Function To Group))', ''),
     (u'positio lähetti tominnon ryhmään.', 'Doc (ActorDone ActorPosition Send2 (RelKind Function To Group))', ''),
