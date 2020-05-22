@@ -12,22 +12,34 @@ def read_gf(filepath):
 
 
 @pytest.fixture
-def rus():
+def grammar():
     print("Making pgf")
     os.system("gf --make CrudRus.gf CrudFin.gf CrudEng.gf ")
 
-    gr = read_gf(PORTABLE_GRAMMAR_FILE)
-
-    print("Languages: {}".format(", ".join(gr.languages.keys())))
-
-    eng = gr.languages["CrudEng"]
-    fin = gr.languages["CrudFin"]
-    return gr.languages["CrudRus"]
+    grammar = read_gf(PORTABLE_GRAMMAR_FILE)
+    print("Languages: {}".format(", ".join(grammar.languages.keys())))
+    return grammar
 
 
-EXAMPLES = [
+@pytest.fixture
+def rus(grammar):
+    return grammar.languages["CrudRus"]
+
+
+@pytest.fixture
+def fin(grammar):
+    return grammar.languages["CrudFin"]
+
+
+@pytest.fixture
+def eng(grammar):
+    return grammar.languages["CrudEng"]
+
+
+RUS_EXAMPLES = [
     (u"файл.", 'Label File', ''),
     (u"активный файл.", 'Label (AdjKind Active File)', ''),
+    (u"основной файл.", 'Label (AdjKind Main File)', ''),
     (u"штука получилась .", 'Doc (Done Get Piece)', ''),
     (u"мы связали измерение .", 'Doc (WeDone Connect Measurement)', ''),
     (u"система связала измерение .", 'Doc (SystemDone Connect Measurement)', ''),
@@ -65,20 +77,129 @@ EXAMPLES = [
     (u"отправитель отправит системе автоматическое сообщение с заданием.", 'Doc (ActorDoes3 ActorSender Send3 (RelKind (AdjKind Automatic Message) With Task) System)', ''),
 ]
 
+ENG_EXAMPLES = [
+    (u'file.', 'Label File', ''),
+    (u'active file.', 'Label (AdjKind Active File)', ''),
+    (u"main file.", 'Label (AdjKind Main File)', ''),
+    (u'piece was gotten.', 'Doc (Done Get Piece)', ''),
+    (u'we connected measurement.', 'Doc (WeDone Connect Measurement)', ''),
+    (u'system connected measurement.', 'Doc (SystemDone Connect Measurement)', ''),
+    (u'get data.', 'Command (DoOnMany Get2 Data)', ''),
+    (u'send task.', 'Command (Do Send Task)', ''),
+    (u'save file.', 'Command (Do Save File)', ''),
+    (u'save files.', 'Command (DoOnMany Save File)', ''),
+    (u'send internal task.', 'Command (Do Send (AdjKind Internal Task))', ''),
+    (u'system will be added.', 'Doc (WillDo Add System)', ''),
+    (u'group becomes process.', 'Doc (ActorDoes ActorGroup Become AProcess)', ''),
+    (u'group retrieves process.', 'Doc (ActorDoes ActorGroup Retrieve2 AProcess)', ''),
+    (u'group retrieved process.', 'Doc (ActorDone ActorGroup Retrieve AProcess)', ''),
+    (u'retrieve systems.', 'Command (DoOnMany Retrieve System)', ''),
+    (u'delete data.', 'Command (DoOnMany Delete Data)', ''),
+    (u'insert data.', 'Command (DoOnMany Insert Data)', ''),
+    (u'task will be edited.', 'Doc (WillDo Update Task)', ''),
+    (u'connected internal system was gotten.', 'Doc (Done Get (AdjKind Connected (AdjKind Internal System)))', ''),
+    (u'we can add user.', 'Doc (WeCan Add User)', ''),
+    (u'system can add user.', 'Doc (SystemCan Add User)', ''),
+    (u'system can help user.', 'Doc (SystemCan Help2 User)', ''),
+    (u'system must send task.', 'Doc (ActorMust ActorSystem Send Task)', ''),
+    (u'system will be installed.', 'Doc (WillDo Install System)', ''),
+    (u'system will be installed.', 'Doc (WillDo Install2 System)', ''),
+    (u'system was installed.', 'Doc (Done Install System)', ''),
+    (u'change settings.', 'Command (DoOnMany Change Setting)', ''),
+    (u'system will be created.', 'Doc (WillDo Create2 System)', ''),
+    (u"task wasn't searched.", 'Doc (NotDone Search2 Task)', ''),
+    (u'create functions.', 'Command (DoOnMany Create Function)', ''),
+    (u'system will help user.', 'Doc (ActorWillDo ActorSystem Help2 User)', ''),
+    (u'system will help created user.', 'Doc (ActorWillDo ActorSystem Help2 (AdjKind Created User))', ''),
+    (u'add role for task to position.', 'Command (Do Add (RelKind (RelKind Role For Task) To Position))', ''),
+    (u'position will send function to group.', 'Doc (ActorWillDo ActorPosition Send (RelKind Function To Group))', ''),
+    (u'position sent function to group.', 'Doc (ActorDone ActorPosition Send2 (RelKind Function To Group))', ''),
+    (u'system sends message to user.', 'Doc (ActorDoes3 ActorSystem Send3 Message User)', ''),
+    (u'sender sends automatic message with task to system.', 'Doc (ActorDoes3 ActorSender Send3 (RelKind (AdjKind Automatic Message) With Task) System)', '')
+]
 
-@pytest.mark.parametrize("linearized, parsed, only", EXAMPLES)
-def test_parse(rus, linearized, parsed, only):
-    if only and "p" not in only:
-        return
+FIN_EXAMPLES = [
+    (u'tiedosto.', 'Label File', ''),
+    (u'aktiivinen tiedosto.', 'Label (AdjKind Active File)', ''),
+    (u"pää- tiedosto.", 'Label (AdjKind Main File)', ''),  # TODO: päätiedosto.
+    (u'kappale saatiin.', 'Doc (Done Get Piece)', ''),
+    (u'me yhdistimme mittauksen.', 'Doc (WeDone Connect Measurement)', ''),
+    (u'järjestelmä yhdisti mittauksen.', 'Doc (SystemDone Connect Measurement)', ''),
+    (u'saa tiedot.', 'Command (DoOnMany Get2 Data)', ''),
+    (u'lähetä tehtävä.', 'Command (Do Send Task)', ''),
+    (u'tallenna tiedosto.', 'Command (Do Save File)', ''),
+    (u'tallenna tiedostot.', 'Command (DoOnMany Save File)', ''),
+    (u'lähetä sisäinen tehtävä.', 'Command (Do Send (AdjKind Internal Task))', ''),
+    (u'järjestelmä lisätään.', 'Doc (WillDo Add System)', ''),
+    (u'ryhmä tulee prosessin.', 'Doc (ActorDoes ActorGroup Become AProcess)', ''),
+    (u'ryhmä hakee prosessin.', 'Doc (ActorDoes ActorGroup Retrieve2 AProcess)', ''),
+    (u'ryhmä haki prosessin.', 'Doc (ActorDone ActorGroup Retrieve AProcess)', ''),
+    (u'hae järjestelmät.', 'Command (DoOnMany Retrieve System)', ''),
+    (u'poista tiedot.', 'Command (DoOnMany Delete Data)', ''),
+    (u'lisää tiedot.', 'Command (DoOnMany Insert Data)', ''),
+    (u'tehtävä muokataan.', 'Doc (WillDo Update Task)', ''),
+    (u'liittyvä sisäinen järjestelmä saatiin.', 'Doc (Done Get (AdjKind Connected (AdjKind Internal System)))', ''),
+    (u'me voimme lisätä käyttäjän.', 'Doc (WeCan Add User)', ''),
+    (u'järjestelmä voi lisätä käyttäjän.', 'Doc (SystemCan Add User)', ''),
+    (u'järjestelmä voi auttaa käyttäjän.', 'Doc (SystemCan Help2 User)', ''),
+    (u'järjestelmän täytyy lähettää tehtävä.', 'Doc (ActorMust ActorSystem Send Task)', ''),
+    (u'järjestelmä asennetaan.', 'Doc (WillDo Install System)', ''),
+    (u'järjestelmä asennetaan.', 'Doc (WillDo Install2 System)', ''),
+    (u'järjestelmä asennettiin.', 'Doc (Done Install System)', ''),
+    (u'vaihda asetukset.', 'Command (DoOnMany Change Setting)', ''),
+    (u'järjestelmä luodaan.', 'Doc (WillDo Create2 System)', ''),
+    (u'tehtävä ei haettu.', 'Doc (NotDone Search2 Task)', ''),
+    (u'luo tominnot.', 'Command (DoOnMany Create Function)', ''),
+    (u'järjestelmä auttaa käyttäjän.', 'Doc (ActorWillDo ActorSystem Help2 User)', ''),
+    (u'järjestelmä auttaa luodun käyttäjän.', 'Doc (ActorWillDo ActorSystem Help2 (AdjKind Created User))', ''),
+    (u'lisää rooli tehtävälle positioon.', 'Command (Do Add (RelKind (RelKind Role For Task) To Position))', ''),
+    (u'positio lähettää tominnon ryhmään.', 'Doc (ActorWillDo ActorPosition Send (RelKind Function To Group))', ''),
+    (u'positio lähetti tominnon ryhmään.', 'Doc (ActorDone ActorPosition Send2 (RelKind Function To Group))', ''),
+    (u'järjestelmä lähettää viestin käyttäjälle.', 'Doc (ActorDoes3 ActorSystem Send3 Message User)', ''),
+    (u'lähettäjä lähettää automaattisen viestin tehtävän kanssa järjestelmälle.', 'Doc (ActorDoes3 ActorSender Send3 (RelKind (AdjKind Automatic Message) With Task) System)', ''),
+]
+
+
+@pytest.mark.parametrize("linearized, parsed, only", RUS_EXAMPLES)
+def test_parse_rus(rus, linearized, parsed, only):
     parse_iter = rus.parse(linearized.encode("utf-8"))
-    expr = [k for k in parse_iter][0][1]
+    expr = set(str(k[1]) for k in parse_iter)
+    assert parsed in expr
 
-    assert str(expr) == parsed
 
-
-@pytest.mark.parametrize("linearized, parsed, only", EXAMPLES)
-def test_linearize(rus, linearized, parsed, only):
+@pytest.mark.parametrize("linearized, parsed, only", RUS_EXAMPLES)
+def test_linearize_rus(rus, linearized, parsed, only):
     if only and "l" not in only:
         return
     e = pgf.readExpr(parsed)
     assert unicode(rus.linearize(e), "utf-8") == linearized.replace(" .", ".")
+
+
+@pytest.mark.parametrize("linearized, parsed, only", FIN_EXAMPLES)
+def test_parse_fin(fin, linearized, parsed, only):
+    parse_iter = fin.parse(linearized.encode("utf-8"))
+    expr = set(str(k[1]) for k in parse_iter)
+    assert parsed in expr
+
+
+@pytest.mark.parametrize("linearized, parsed, only", FIN_EXAMPLES)
+def test_linearize_fin(fin, linearized, parsed, only):
+    if only and "l" not in only:
+        return
+    e = pgf.readExpr(parsed)
+    assert unicode(fin.linearize(e), "utf-8") == linearized.replace(" .", ".")
+
+
+@pytest.mark.parametrize("linearized, parsed, only", ENG_EXAMPLES)
+def test_parse_eng(eng, linearized, parsed, only):
+    parse_iter = eng.parse(linearized.encode("utf-8"))
+    expr = set(str(k[1]) for k in parse_iter)
+    assert parsed in expr
+
+
+@pytest.mark.parametrize("linearized, parsed, only", ENG_EXAMPLES)
+def test_linearize_eng(eng, linearized, parsed, only):
+    if only and "l" not in only:
+        return
+    e = pgf.readExpr(parsed)
+    assert unicode(eng.linearize(e), "utf-8") == linearized.replace(" .", ".")

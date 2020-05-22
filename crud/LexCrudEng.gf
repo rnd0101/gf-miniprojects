@@ -79,5 +79,6 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     created_A = mkA "created";
     external_A = mkA "external";
     internal_A = mkA "internal";
+    main_A = mkA "main";
     passive_A = mkA "passive";
 }

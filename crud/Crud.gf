@@ -134,6 +134,7 @@ abstract Crud = Numeral ** {
     Created : Property ;
     External : Property ;
     Internal : Property ;
+    Main : Property ;
     Passive : Property ;
 
     ActorCan : Actor -> Action -> Kind -> Sentence ;

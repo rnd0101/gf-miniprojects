@@ -79,5 +79,6 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     created_A = mkA "luotu" ;
     external_A = mkA "ulkoinen";
     internal_A = mkA "sisäinen";
+    main_A = mkA "pää-";   -- TODO: this should be in the compound. How?
     passive_A = mkA "passiivinen";
 }

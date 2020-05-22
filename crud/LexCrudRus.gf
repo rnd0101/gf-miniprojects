@@ -129,5 +129,6 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRu
     created_A = mkPassPastParticiple create_V ;
     external_A = mkA "внешний";
     internal_A = mkA "внутренний";
+    main_A = mkA "основной";
     passive_A = mkA "пассивный";
 }
