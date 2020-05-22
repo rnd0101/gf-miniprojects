@@ -1,3 +1,6 @@
+--# -coding=utf-8
+-- THIS FILE HAS BEEN GENERATED AUTOMATICALLY. EDIT .tpl FILES --
+
 abstract Crud = Numeral ** {
   flags startcat = Document ;
   cat

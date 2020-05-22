@@ -13,6 +13,7 @@ import sys
 SECTION_RE = re.compile("^\s+-- --\s+([A-Za-z0-9]+)\s([A-Za-z0-9]+)\s+-- --\s+$")
 ASSIGN_RE = re.compile("^\s*([a-zA-Z0-9_]+)(\s*=\s*.+;)\s*$")
 TYPE_RE = re.compile("^\s*([a-zA-Z0-9_]+)(\s*:\s*.+;)\s*$")
+AUTO_GENERATED_WARNING = "--# -coding=utf-8\n-- THIS FILE HAS BEEN GENERATED AUTOMATICALLY. EDIT .tpl FILES --\n\n"
 
 
 def parse_parts(file_path, re_pattern):
@@ -129,16 +130,19 @@ def main(abs_grammar_path):
     lex_abs_out = output_lex_abs(lex_abs)
     lex_i_contents = open(lexicon_i_template, "r").read().replace("{ENTRIES}", lex_abs_out)
     with open(lexicon_i, "w", encoding="utf-8") as fh:
+        fh.write(AUTO_GENERATED_WARNING)
         fh.write(lex_i_contents)
 
     abs_i_out = output_abs_i(abs_i)
     abs_i_contents = open(abstract_i_template, "r").read().replace("{ENTRIES}", abs_i_out)
     with open(abstract_i, "w", encoding="utf-8") as fh:
+        fh.write(AUTO_GENERATED_WARNING)
         fh.write(abs_i_contents)
 
     abs_out = output_abs(abs)
     abs_contents = open(abstract_template, "r").read().replace("{ENTRIES}", abs_out)
     with open(abs_grammar_path, "w", encoding="utf-8") as fh:
+        fh.write(AUTO_GENERATED_WARNING)
         fh.write(abs_contents)
 
 

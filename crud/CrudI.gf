@@ -1,3 +1,6 @@
+--# -coding=utf-8
+-- THIS FILE HAS BEEN GENERATED AUTOMATICALLY. EDIT .tpl FILES --
+
 incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
   lincat
     Action = V2;
