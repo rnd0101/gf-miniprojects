@@ -52,6 +52,7 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     send3_V3 = mkV3 (mkV "lähettää") accusative for_Prep ;
 
     -- -- N LEXICON -- --
+    access_N = mkN "pääsy" ;
     data_N = mkN "tieto" ;
     function_N = mkN "tominto" ;
     file_N = mkN "tiedosto" ;
@@ -62,6 +63,7 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     piece_N = mkN "kappale" ;
     position_N = mkN "positio" ;
     process_N = mkN "prosessi" ;
+    resource_N = mkN "resurssi" ;
     role_N = mkN "rooli" ;
     search_N = mkN "haku" ;
     sender_N = mkN "lähettäjä" ;

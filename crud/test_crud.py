@@ -44,6 +44,8 @@ RUS_EXAMPLES = [
     (u"мы связали измерение .", 'Doc (WeDone Connect Measurement)', ''),
     (u"система связала измерение .", 'Doc (SystemDone Connect Measurement)', ''),
     (u"получать данные .", 'Command (DoOnMany Get2 Data)', ''),
+    (u"пользователь получает доступ.", 'Doc (ActorDoes ActorUser Get Access)', ''),
+    (u"доступ к ресурсу получился.", 'Doc (Done Get (RelKind Access To Resource))', ''),  # TODO
     (u"отправить задание.", 'Command (Do Send Task)', ''),
     (u"сохранить файл.", 'Command (Do Save File)', ''),
     (u"сохранить файлы.", 'Command (DoOnMany Save File)', ''),
@@ -85,6 +87,8 @@ ENG_EXAMPLES = [
     (u'we connected measurement.', 'Doc (WeDone Connect Measurement)', ''),
     (u'system connected measurement.', 'Doc (SystemDone Connect Measurement)', ''),
     (u'get data.', 'Command (DoOnMany Get2 Data)', ''),
+    (u"user gets access.", 'Doc (ActorDoes ActorUser Get Access)', ''),
+    (u"access to resource was gotten .", 'Doc (Done Get (RelKind Access To Resource))', ''),  # TODO
     (u'send task.', 'Command (Do Send Task)', ''),
     (u'save file.', 'Command (Do Save File)', ''),
     (u'save files.', 'Command (DoOnMany Save File)', ''),
@@ -126,6 +130,8 @@ FIN_EXAMPLES = [
     (u'me yhdistimme mittauksen.', 'Doc (WeDone Connect Measurement)', ''),
     (u'järjestelmä yhdisti mittauksen.', 'Doc (SystemDone Connect Measurement)', ''),
     (u'saa tiedot.', 'Command (DoOnMany Get2 Data)', ''),
+    (u"käyttäjä saa pääsyn.", 'Doc (ActorDoes ActorUser Get Access)', ''),  # TODO: is this good?
+    (u"pääsy resurssiin saatiin.", 'Doc (Done Get (RelKind Access To Resource))', ''),  # TODO: ?
     (u'lähetä tehtävä.', 'Command (Do Send Task)', ''),
     (u'tallenna tiedosto.', 'Command (Do Save File)', ''),
     (u'tallenna tiedostot.', 'Command (DoOnMany Save File)', ''),

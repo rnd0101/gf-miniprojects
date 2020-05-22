@@ -50,6 +50,7 @@ interface LexCrud = open Syntax in {
 
     send3_V3 : V3 ;
 
+    access_N : N ;
     data_N : N ;
     file_N : N ;
     function_N : N ;
@@ -60,6 +61,7 @@ interface LexCrud = open Syntax in {
     piece_N : N ;
     position_N : N ;
     process_N : N ;
+    resource_N : N ;
     role_N : N ;
     search_N : N ;
     sender_N : N ;

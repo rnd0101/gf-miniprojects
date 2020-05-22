@@ -52,6 +52,7 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     send3_V3 = mkV3 (IrregEng.send_V) to_Prep ;
 
     -- -- N LEXICON -- --
+    access_N = mkN "access" ;
     data_N = mkN "data" "data";
     file_N = mkN "file" ;
     function_N = mkN "function" ;
@@ -62,6 +63,7 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     piece_N = mkN "piece" ;
     position_N = mkN "position" ;
     process_N = mkN "process" ;
+    resource_N = mkN "resource" ;
     role_N = mkN "role" ;
     search_N = mkN "search" ;
     sender_N = mkN "sender" ;

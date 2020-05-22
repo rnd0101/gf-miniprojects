@@ -103,6 +103,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRu
 
     -- -- N LEXICON -- --
     data_N = mkN "данное" ;
+    access_N = mkN "доступ" ;
     file_N = mkN "файл" ;
     function_N = mkN "функция" ;
     group_N = mkN "группа" ;
@@ -112,6 +113,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRu
     piece_N = mkN "штука" ;
     position_N = mkN "позиция" ;
     process_N = mkN "процесс" ;
+    resource_N = mkN "ресурс" ;
     role_N = mkN "роль" "роли" "роли" "роль" "ролью" "роли" "ролями" "роли" "ролей" "ролям" "роли" "ролями" "ролях" Fem Inanimate ;
     search_N = mkN "поиск" ;
     sender_N = mkN "отправитель" ;
