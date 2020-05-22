@@ -1,0 +1,12 @@
+File
+Save file.
+Delete data.
+Delete
+System has been installed.
+Change settings
+Send message to user.
+System received message from user.
+Send message to group of users.
+Send message to user group.
+Edit file
+Edit system settings

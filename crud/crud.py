@@ -5,10 +5,12 @@ Hints taken from: http://www.grammaticalframework.org/doc/python-api.html
 """
 
 import os
+import sys
 
 import pgf
 
 PORTABLE_GRAMMAR_FILE = __file__.replace(".py", ".pgf").capitalize()
+TYPICAL_PHRASES_FILE = __file__.replace("crud.py", "typical_phrases.txt")
 
 crud_gr = pgf.readPGF(PORTABLE_GRAMMAR_FILE)
 
@@ -64,3 +66,34 @@ if __name__ == "__main__":
 
     print("")
     print("Func by cat Kind: {}".format(", ".join(f for f in gr.functionsByCat("Kind"))))
+
+    print("")
+    try:
+        file_path = sys.argv[1]
+    except:
+        file_path = TYPICAL_PHRASES_FILE
+    successful_cnt = total_cnt = 0
+    for line in open(file_path).readlines():
+        try:
+            parse_msg = u"Parse: {}".format(line.strip())
+        except UnicodeError:
+            continue
+        text = line.strip().lower()
+        if not text:
+            continue
+        total_cnt += 1
+        if text[-1] not in "!?.":
+            text = text + "."
+        try:
+            parse_iter = eng.parse(text.encode("utf-8"))
+            print(parse_msg)
+            print("\n  " + "\n  ".join(sorted(set(str(k[1]) for k in parse_iter))))
+            print("")
+            successful_cnt += 1
+        except pgf.ParseError:
+            if len(text) < 40:
+                print(parse_msg)
+            continue
+            print("ERROR\n")
+
+    print("Success: {} of {}".format(successful_cnt, total_cnt))
