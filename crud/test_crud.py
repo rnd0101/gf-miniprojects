@@ -42,6 +42,7 @@ RUS_EXAMPLES = [
     (u"основной файл.", 'Label (AdjKind Main File)', ''),
     (u"штука получилась .", 'Doc (Done Get Piece)', ''),
     (u"мы связали измерение .", 'Doc (WeDone Connect Measurement)', ''),
+    (u"пользователь выбрал активный процесс .", 'Doc (ActorDone ActorUser Select (AdjKind Active AProcess))', ''),
     (u"система связала измерение .", 'Doc (SystemDone Connect Measurement)', ''),
     (u"получать данные .", 'Command (DoOnMany Get2 Data)', ''),
     (u"пользователь получает доступ.", 'Doc (ActorDoes ActorUser Get Access)', ''),
@@ -86,6 +87,7 @@ ENG_EXAMPLES = [
     (u"main file.", 'Label (AdjKind Main File)', ''),
     (u'piece was gotten.', 'Doc (Done Get Piece)', ''),
     (u'we connected measurement.', 'Doc (WeDone Connect Measurement)', ''),
+    (u"user selected active process .", 'Doc (ActorDone ActorUser Select (AdjKind Active AProcess))', ''),
     (u'system connected measurement.', 'Doc (SystemDone Connect Measurement)', ''),
     (u'get data.', 'Command (DoOnMany Get2 Data)', ''),
     (u"user gets access.", 'Doc (ActorDoes ActorUser Get Access)', ''),
@@ -130,6 +132,7 @@ FIN_EXAMPLES = [
     (u"pää- tiedosto.", 'Label (AdjKind Main File)', ''),  # TODO: päätiedosto.
     (u'kappale saatiin.', 'Doc (Done Get Piece)', ''),
     (u'me yhdistimme mittauksen.', 'Doc (WeDone Connect Measurement)', ''),
+    (u"käyttäjä valitsi aktiivisen prosessin .", 'Doc (ActorDone ActorUser Select (AdjKind Active AProcess))', ''),
     (u'järjestelmä yhdisti mittauksen.', 'Doc (SystemDone Connect Measurement)', ''),
     (u'saa tiedot.', 'Command (DoOnMany Get2 Data)', ''),
     (u"käyttäjä saa pääsyn.", 'Doc (ActorDoes ActorUser Get Access)', ''),  # TODO: is this good?
