@@ -51,7 +51,7 @@ RUS_EXAMPLES = [
     (u"сохранить файлы.", 'Command (DoOnMany Save File)', ''),
     (u"отправить внутреннее задание.", 'Command (Do Send (AdjKind Internal Task))', ''),
     (u"система добавится .", 'Doc (WillDo Add System)', ''),
-    (u"группа становит процессом .", 'Doc (ActorDoes ActorGroup Become AProcess)', 'l'),  # TODO:
+    (u"группа станет процессом.", 'Doc (ActorDoes ActorGroup Become AProcess)', 'l'),  # TODO:
     (u"группа извлекает процесс .", 'Doc (ActorDoes ActorGroup Retrieve2 AProcess)', 'l'),
     (u"группа извлекла процесс .", 'Doc (ActorDone ActorGroup Retrieve AProcess)', 'l'),
     (u"извлечь системы .", 'Command (DoOnMany Retrieve System)', ''),
@@ -61,13 +61,14 @@ RUS_EXAMPLES = [
     (u"связаемая внутренняя система получилась .", 'Doc (Done Get (AdjKind Connected (AdjKind Internal System)))', ''),
     (u"мы можем добавить пользователя .", 'Doc (WeCan Add User)', ''),
     (u"система может добавить пользователя .", 'Doc (SystemCan Add User)', ''),
+    (u"заметка используется.", 'Doc (Doing Use Note)', ''),
     (u"система может помогать пользователю.", 'Doc (SystemCan Help2 User)', ''),
     (u"система должна отправить задание.", 'Doc (ActorMust ActorSystem Send Task)', ''),
     (u"система установится.", 'Doc (WillDo Install System)', ''),
     (u"система будет устанавливаться.", 'Doc (WillDo Install2 System)', ''),
     (u"система установилась.", 'Doc (Done Install System)', ''),
     (u"изменить настройки.", 'Command (DoOnMany Change Setting)', ''),
-    (u"система будет создвааться.", 'Doc (WillDo Create2 System)', ''),
+    (u"система будет создаваться.", 'Doc (WillDo Create2 System)', ''),
     (u"задание не искалось.", 'Doc (NotDone Search2 Task)', ''),
     (u"создать функции.", 'Command (DoOnMany Create Function)', ''),
     (u"система будет помогать пользователю.", 'Doc (ActorWillDo ActorSystem Help2 User)', ''),
@@ -104,6 +105,7 @@ ENG_EXAMPLES = [
     (u'connected internal system was gotten.', 'Doc (Done Get (AdjKind Connected (AdjKind Internal System)))', ''),
     (u'we can add user.', 'Doc (WeCan Add User)', ''),
     (u'system can add user.', 'Doc (SystemCan Add User)', ''),
+    (u'note is used.', 'Doc (Doing Use Note)', ''),
     (u'system can help user.', 'Doc (SystemCan Help2 User)', ''),
     (u'system must send task.', 'Doc (ActorMust ActorSystem Send Task)', ''),
     (u'system will be installed.', 'Doc (WillDo Install System)', ''),
@@ -147,6 +149,7 @@ FIN_EXAMPLES = [
     (u'liittyvä sisäinen järjestelmä saatiin.', 'Doc (Done Get (AdjKind Connected (AdjKind Internal System)))', ''),  # TODO:
     (u'me voimme lisätä käyttäjän.', 'Doc (WeCan Add User)', ''),
     (u'järjestelmä voi lisätä käyttäjän.', 'Doc (SystemCan Add User)', ''),
+    (u"muistiinpano käytetään.", 'Doc (Doing Use Note)', ''),
     (u'järjestelmä voi auttaa käyttäjän.', 'Doc (SystemCan Help2 User)', ''),  # TODO:
     (u'järjestelmän täytyy lähettää tehtävä.', 'Doc (ActorMust ActorSystem Send Task)', ''),
     (u'järjestelmä asennetaan.', 'Doc (WillDo Install System)', ''),

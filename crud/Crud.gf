@@ -83,6 +83,8 @@ abstract Crud = Numeral ** {
     Save : Action ;
     Show2 : Action ;
     Show : Action ;
+    Use2 : Action ;
+    Use : Action ;
     Update2 : Action ;
     Update : Action ;
     Verify2 : Action ;
