@@ -95,6 +95,7 @@ abstract Crud = Numeral ** {
     Send3 : Action3 ;
 
     Access : Kind ;
+    Child : Kind ;
     Data : Kind ;
     File : Kind ;
     Function : Kind ;
@@ -116,6 +117,7 @@ abstract Crud = Numeral ** {
     User : Kind ;
 
     ActorAccess : Actor ;
+    ActorChild : Actor ;
     ActorData : Actor ;
     ActorFile : Actor ;
     ActorFunction : Actor ;

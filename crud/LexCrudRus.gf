@@ -106,8 +106,9 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRu
     send3_V3 = mkV3 send_V "" "" accusative dative ;
 
     -- -- N LEXICON -- --
-    data_N = mkN "данное" ;
     access_N = mkN "доступ" ;
+    child_N = mkN "ребёнок" "ребёнка" "ребёнку" "ребёнка" "ребёнком" "ребёнке" "ребёнке" "дети" "детей" "детям" "детей" "детьми" "детях" masculine animate ;
+    data_N = mkN "данное" ;
     file_N = mkN "файл" ;
     function_N = mkN "функция" ;
     group_N = mkN "группа" ;

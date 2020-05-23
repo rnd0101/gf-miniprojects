@@ -93,6 +93,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Send3 = send3_V3 ;
 
     Access = mkCN access_N ;
+    Child = mkCN child_N ;
     Data = mkCN data_N ;
     File = mkCN file_N ;
     Function = mkCN function_N ;
@@ -114,6 +115,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     User = mkCN user_N ;
 
     ActorAccess = mkNP access_N ;
+    ActorChild = mkNP child_N ;
     ActorData = mkNP data_N ;
     ActorFile = mkNP file_N ;
     ActorFunction = mkNP function_N ;
