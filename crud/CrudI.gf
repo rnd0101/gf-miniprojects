@@ -44,6 +44,8 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     WithHelpOf = by8agent_Prep ;
     Without = without_Prep ;
 
+    Abandon = abandon_1_V2 ;
+
     Add2 = add2_V2 ;
     Add = add_V2 ;
     Arrive = arrive_V2 ;

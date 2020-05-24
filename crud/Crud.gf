@@ -45,6 +45,8 @@ abstract Crud = Numeral ** {
     WithHelpOf : Rel ;
     Without : Rel ;
 
+    Abandon : Action ;
+
 
     Add2 : Action ;
     Add : Action ;

@@ -41,6 +41,8 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     WithHelpOf = by8agent_Prep ;
     Without = without_Prep ;
 
+    Abandon = abandon_1_V2 ;
+
 {ENTRIES}
 
     ActorCan actor action on_what = mkS presentTense (mkCl actor (mkVP can_VV (mkVP action (mkNP on_what) )) );
