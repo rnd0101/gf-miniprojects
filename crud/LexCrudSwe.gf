@@ -1,6 +1,6 @@
 --# -coding=utf-8
 
-instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng in {
+instance LexCrudSwe of LexCrud = open Prelude, SyntaxSwe, ParadigmsSwe in {
   oper
     makeImpoliteImp : V2 -> NP -> Imp = mkImp ;
     -- -- V2 LEXICON -- --

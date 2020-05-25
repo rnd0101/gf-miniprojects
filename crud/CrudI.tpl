@@ -43,7 +43,112 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
 
     Abandon = abandon_1_V2 ;
 
-{ENTRIES}
+    Add2 = add_1_V2 ;
+    Add = add_1_V2 ;
+    Arrive = get_to_5_V2 ;
+    Become = become_2_V2 ;
+    Change2 = change_1_V2 ;
+    Change = change_1_V2 ;
+    Connect2 = connect_3_V2 ;
+    Connect = connect_3_V2 ;
+    Create2 = create_6_V2 ;
+    Create = create_6_V2 ;
+    Delete2 = delete_2_V2 ;
+    Delete = delete_2_V2 ;
+    End2 = end_2_V2 ;
+    End = end_2_V2 ;
+    Get2 = get_1_V2 ;
+    Get = get_1_V2 ;
+    Help2 = help_2_V2 ;  -- ???
+    Help = help_2_V2 ;
+    Insert2 = insert_1_V2 ;
+    Insert = insert_1_V2 ;
+    Install2 = install_1_V2 ;
+    Install = install_1_V2 ;
+    Process2 = process_2_V2 ;
+    Process = process_2_V2 ;
+    Read2 = read_4_V2 ;
+    Read = read_4_V2 ;
+    Receive2 = receive_1_V2 ;
+    Receive = receive_1_V2 ;
+    Retrieve2 = retrieve_2_V2 ;
+    Retrieve = retrieve_2_V2 ;
+    Search2 = search_4_V2 ;   -- ???
+    Send2 = send_2_V2 ;
+    Send = send_2_V2 ;
+    Save2 = save_11_V2 ;
+    Save = save_11_V2 ;
+    Select2 = select_V2 ;
+    Select = select_V2 ;
+    Show2 = show_9_V2 ;
+    Show = show_9_V2 ;
+    Use2 = use_1_V2 ;
+    Use = use_1_V2 ;
+    Update2 = update_1_V2 ;
+    Update = update_1_V2 ;
+    Verify2 = verify_1_V2 ;
+    Verify = verify_1_V2 ;
+    Write2 = write_3_V2 ; -- ?
+    Write = write_3_V2 ;
+
+    Send3 = send_V3 ;
+
+     Access = mkCN access_1_N ;
+     Child = mkCN child_2_N ;
+     Data = mkCN data_N;
+     File = mkCN file_1_N ;
+     Function = mkCN function_7_N ;
+     Group = mkCN group_1_N;
+     Measurement = mkCN measurement_N ;
+     Message = mkCN message_2_N ;  -- fin ?
+     Note = mkCN note_7_N ;
+     Piece = mkCN piece_2_N ;
+     Position = mkCN position_1_N ;
+     AProcess = mkCN process_2_N ; --?
+     Resource = mkCN resource_2_N ;
+     Role = mkCN role_3_N ;
+     Search = mkCN search_3_N ;
+     Sender = mkCN sender_1_N ;
+     Setting = mkCN setting_5_N ;
+     System = mkCN system_1_N ;
+     Task = mkCN task_1_N ;
+     Time = mkCN time_5_N ;
+     User = mkCN userMasc_1_N ;
+
+    ActorAccess = mkNP access_1_N ;
+    ActorChild = mkNP child_2_N ;
+    ActorData = mkNP data_N ;
+    ActorFile = mkNP file_1_N ;
+    ActorFunction = mkNP function_7_N ;
+    ActorGroup = mkNP group_1_N ;
+    ActorMeasurement = mkNP measurement_N ;
+    ActorMessage = mkNP message_2_N ;
+    ActorNote = mkNP note_7_N ;
+    ActorPiece = mkNP piece_2_N ;
+    ActorPosition = mkNP position_1_N ;
+    ActorProcess = mkNP process_2_N ;
+    ActorResource = mkNP resource_2_N ;
+    ActorRole = mkNP role_3_N ;
+    ActorSearch = mkNP search_3_N ;
+    ActorSender = mkNP sender_1_N ;
+    ActorSetting = mkNP setting_5_N ;
+    ActorSystem = mkNP system_1_N ;
+    ActorTask = mkNP task_1_N ;
+    ActorTime = mkNP time_5_N ;
+    ActorUser = mkNP userMasc_1_N ;
+
+    Active = mkAP active_4_A ; -- ?
+    Additional = mkAP additional_A ;
+    Automatic = mkAP automatic_2_A ;
+    Connected = mkAP connected_5_A ;
+    --Created = mkAP created_A ;
+    External = mkAP external_1_A ;
+    Internal = mkAP internal_1_A ;
+    Main = mkAP main_2_A ;
+    Passive = mkAP passive_1_A ;
+
+
+--
 
     ActorCan actor action on_what = mkS presentTense (mkCl actor (mkVP can_VV (mkVP action (mkNP on_what) )) );
     ActorMust actor action on_what = mkS presentTense (mkCl actor (mkVP must_VV (mkVP action (mkNP on_what) )) );

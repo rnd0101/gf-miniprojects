@@ -4,5 +4,10 @@ interface LexCrud = open Syntax in {
 
     makeImpoliteImp : V2 -> NP -> Imp ;
 
-{ENTRIES}
+
+
+
+
+
+
 }
