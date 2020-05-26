@@ -1,3 +1,5 @@
 *.gfo
+*.pgf
+*.tmp
 _*
 .idea
