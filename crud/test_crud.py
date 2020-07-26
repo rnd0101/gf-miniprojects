@@ -187,7 +187,7 @@ def test_linearize_rus(rus, linearized, parsed, only):
     if only and "l" not in only:
         return
     e = pgf.readExpr(parsed)
-    assert unicode(rus.linearize(e), "utf-8") == linearized.replace(" .", ".")
+    assert unicode(rus.linearize(e), "utf-8").replace(" .", ".") == linearized.replace(" .", ".")
 
 
 @pytest.mark.parametrize("linearized, parsed, only", FIN_EXAMPLES)
