@@ -52,7 +52,7 @@ RUS_EXAMPLES = [
     (u"сохранить файлы.", 'Command (DoOnMany Save File)', ''),
     (u"отправить внутреннее задание.", 'Command (Do Send (AdjKind Internal Task))', ''),
     (u"система добавится .", 'Doc (WillDo Add System)', ''),
-    (u"группа станет процессом.", 'Doc (ActorDoes ActorGroup Become AProcess)', 'l'),  # TODO:
+    (u"группа станет процессом.", 'Doc (ActorDoes ActorGroup Become AProcess)', 'l'),
     (u"группа извлекает процесс .", 'Doc (ActorDoes ActorGroup Retrieve2 AProcess)', 'l'),
     (u"группа извлекла процесс .", 'Doc (ActorDone ActorGroup Retrieve AProcess)', 'l'),
     (u"извлечь системы .", 'Command (DoOnMany Retrieve System)', ''),
@@ -73,8 +73,8 @@ RUS_EXAMPLES = [
     (u"задание не искалось.", 'Doc (NotDone Search2 Task)', ''),
     (u"создать функции.", 'Command (DoOnMany Create Function)', ''),
     (u"система будет помогать пользователю.", 'Doc (ActorWillDo ActorSystem Help2 User)', ''),
-    (u"система будет помогать создаемому пользователю.", 'Doc (ActorWillDo ActorSystem Help2 (AdjKind Created User))', ''),  # TODO:
-    (u"пользователь выбрал связаемую систему.", 'Doc (ActorDone ActorUser Select (AdjKind Connected System))', ''),  # TODO:
+    (u"система будет помогать созданному пользователю.", 'Doc (ActorWillDo ActorSystem Help2 (AdjKind Created User))', ''),
+    (u"пользователь выбрал связанную систему.", 'Doc (ActorDone ActorUser Select (AdjKind Connected System))', ''),
     (u"добавить роль для задания к позиции.", 'Command (Do Add (RelKind (RelKind Role For Task) To Position))', 'l'),
     (u"позиция отправит функцию к группе.", 'Doc (ActorWillDo ActorPosition Send (RelKind Function To Group))', 'l'),
     (u"позиция отправляла функцию к группе.", 'Doc (ActorDone ActorPosition Send2 (RelKind Function To Group))', ''),
