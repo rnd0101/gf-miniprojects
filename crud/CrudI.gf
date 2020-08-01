@@ -7,7 +7,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Action3 = V3;
     Actor = NP;
     Clause = Cl;
-    DoCommand = Imp;
+    DoCommand = Utt;
     Document = Text;
     Kind = CN;
     NumberOf = Str;
@@ -18,7 +18,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Term = NP;
   lin
     Doc clause = mkText (mkPhr (mkUtt clause)) ;
-    Command imp = mkText (mkPhr (mkUtt imp)) ;
+    Command imp = mkText (mkPhr imp) ;
     Label what = mkText (mkPhr (mkUtt what)) ;
     Event what status = mkS anteriorAnt (mkCl (mkNP what) status) ;
     NegEvent what status = mkS pastTense negativePol (mkCl (mkNP what) status) ;

@@ -4,8 +4,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRu
   oper
 
     -- This is a workaround to get just an infinitive for impolite imperative
-    verbNULL = nullVerb;
-    makeImpoliteImp : V2 -> NP -> Imp = \v2, np -> mkImp (mkVP v2 np) ;
+    makeImpoliteImp : V2 -> NP -> Utt = \v2, np -> mkUtt (mkVP v2 np) ;
 
     -- -- V2 LEXICON -- --
     add2_V = mkV imperfective "добавлять" "добавляю" "добавит"   ;
