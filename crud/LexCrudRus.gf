@@ -1,10 +1,10 @@
 --# -coding=utf-8
 
-instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, MorphoRus, ResRus in {
+instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, (X=ExtraRus), MorphoRus, ResRus in {
   oper
 
     -- This is a workaround to get just an infinitive for impolite imperative
-    makeImpoliteImp : V2 -> NP -> Utt = \v2, np -> mkUtt (mkVP v2 np) ;
+    makeImpoliteImp : V2 -> NP -> Utt = \v2, np -> X.UttImpImm positivePol (mkImp (mkVP v2 np)) ;
 
     -- -- V2 LEXICON -- --
     add2_V = mkV imperfective "добавлять" "добавляю" "добавит"   ;
