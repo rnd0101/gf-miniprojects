@@ -78,8 +78,8 @@ RUS_EXAMPLES = [
     (u"добавить роль для задания к позиции .", 'Command (Do Add (RelKind (RelKind Role For Task) To Position))', 'l'),
     (u"позиция отправит функцию к группе .", 'Doc (ActorWillDo ActorPosition Send (RelKind Function To Group))', 'l'),
     (u"позиция отправляла функцию к группе .", 'Doc (ActorDone ActorPosition Send2 (RelKind Function To Group))', ''),
-    (u"система отправит пользователю сообщение .", 'Doc (ActorDoes3 ActorSystem Send3 Message User)', ''),
-    (u"отправитель отправит системе автоматическое сообщение с заданием .", 'Doc (ActorDoes3 ActorSender Send3 (RelKind (AdjKind Automatic Message) With Task) System)', ''),
+    (u"система отправит сообщение пользователю .", 'Doc (ActorDoes3 ActorSystem Send3 Message User)', ''),
+    (u"отправитель отправит автоматическое сообщение с заданием системе .", 'Doc (ActorDoes3 ActorSender Send3 (RelKind (AdjKind Automatic Message) With Task) System)', ''),
 ]
 
 ENG_EXAMPLES = [
