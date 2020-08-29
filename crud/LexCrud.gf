@@ -78,6 +78,7 @@ interface LexCrud = open Syntax in {
     task_N : N ;
     time_N : N ;
     user_N : N ;
+    ring_N : N ;
 
     active_A : A ;
     additional_A : A ;

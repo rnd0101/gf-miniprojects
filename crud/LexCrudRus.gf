@@ -119,6 +119,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, (X=Extra
     position_N = mkN "позиция" ;
     process_N = mkN "процесс" ;
     resource_N = mkN "ресурс" ;
+    ring_N = (mkNplus (mkN "кольцо" Neut Inanimate "5*d")) ** {pgen="колец"} ;
     role_N = mkN "роль" "роли" "роли" "роль" "ролью" "роли" "ролями" "роли" "ролей" "ролям" "роли" "ролями" "ролях" Fem Inanimate ;
     search_N = mkN "поиск" ;
     sender_N = mkN "отправитель" ;

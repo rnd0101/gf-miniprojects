@@ -115,6 +115,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Task = mkCN task_N ;
     Time = mkCN time_N ;
     User = mkCN user_N ;
+    Ring = mkCN ring_N ;
 
     ActorAccess = mkNP access_N ;
     ActorChild = mkNP child_N ;
@@ -137,6 +138,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     ActorTask = mkNP task_N ;
     ActorTime = mkNP time_N ;
     ActorUser = mkNP user_N ;
+    ActorRing = mkNP ring_N ;
 
     Active = mkAP active_A ;
     Additional = mkAP additional_A ;
