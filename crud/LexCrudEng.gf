@@ -69,6 +69,7 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     position_N = mkN "position" ;
     process_N = mkN "process" ;
     resource_N = mkN "resource" ;
+    ring_N = mkN "ring" ;
     role_N = mkN "role" ;
     search_N = mkN "search" ;
     sender_N = mkN "sender" ;

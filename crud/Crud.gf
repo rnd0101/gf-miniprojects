@@ -109,6 +109,7 @@ abstract Crud = Numeral ** {
     Position : Kind ;
     AProcess : Kind ;
     Resource : Kind ;
+    Ring : Kind ;
     Role : Kind ;
     Search : Kind ;
     Sender : Kind ;
@@ -117,7 +118,6 @@ abstract Crud = Numeral ** {
     Task : Kind ;
     Time : Kind ;
     User : Kind ;
-    Ring : Kind ;
 
     ActorAccess : Actor ;
     ActorChild : Actor ;
@@ -132,6 +132,7 @@ abstract Crud = Numeral ** {
     ActorPosition : Actor ;
     ActorProcess : Actor ;
     ActorResource : Actor ;
+    ActorRing : Actor ;
     ActorRole : Actor ;
     ActorSearch : Actor ;
     ActorSender : Actor ;
@@ -140,7 +141,6 @@ abstract Crud = Numeral ** {
     ActorTask : Actor ;
     ActorTime : Actor ;
     ActorUser : Actor ;
-    ActorRing : Actor ;
 
     Active : Property ;
     Additional : Property ;

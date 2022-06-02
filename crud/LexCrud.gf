@@ -70,6 +70,7 @@ interface LexCrud = open Syntax in {
     position_N : N ;
     process_N : N ;
     resource_N : N ;
+    ring_N : N ;
     role_N : N ;
     search_N : N ;
     sender_N : N ;
@@ -78,7 +79,6 @@ interface LexCrud = open Syntax in {
     task_N : N ;
     time_N : N ;
     user_N : N ;
-    ring_N : N ;
 
     active_A : A ;
     additional_A : A ;
