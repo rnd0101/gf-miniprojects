@@ -44,6 +44,8 @@ interface LexCrud = open Syntax in {
     save_V2 : V2 ;
     select2_V2 : V2 ;
     select_V2 : V2 ;
+    start2_V2 : V2 ;
+    start_V2 : V2 ;
     show2_V2 : V2 ;
     show_V2 : V2 ;
     use2_V2 : V2 ;
@@ -73,6 +75,7 @@ interface LexCrud = open Syntax in {
     ring_N : N ;
     role_N : N ;
     search_N : N ;
+    size_N : N ;
     sender_N : N ;
     setting_N : N ;
     system_N : N ;

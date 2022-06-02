@@ -83,6 +83,8 @@ abstract Crud = Numeral ** {
     Save : Action ;
     Select2 : Action ;
     Select : Action ;
+    Start2 : Action ;
+    Start : Action ;
     Show2 : Action ;
     Show : Action ;
     Use2 : Action ;
@@ -112,6 +114,7 @@ abstract Crud = Numeral ** {
     Ring : Kind ;
     Role : Kind ;
     Search : Kind ;
+    Size : Kind ;
     Sender : Kind ;
     Setting : Kind ;
     System : Kind ;
@@ -135,6 +138,7 @@ abstract Crud = Numeral ** {
     ActorRing : Actor ;
     ActorRole : Actor ;
     ActorSearch : Actor ;
+    ActorSize : Actor ;
     ActorSender : Actor ;
     ActorSetting : Actor ;
     ActorSystem : Actor ;

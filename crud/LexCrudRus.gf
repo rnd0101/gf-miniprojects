@@ -85,6 +85,10 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, (X=Extra
     show2_V2 = dirV2 show2_V ;
     show_V = regV perfective first "покаж" "у" "показал" "покажи" "показать"  ;
     show_V2 = dirV2 show_V ;
+    start_V = mkV imperfective "запустить" "запущу" "запустит"   ;
+    start_V2 = dirV2 start_V  ;
+    start2_V = mkV imperfective "запускать" "запускаю" "запускает"   ;
+    start2_V2 = dirV2 start2_V  ;
     update2_V = mkV imperfective "исправлять" "исправляю" ;
     update2_V2 = dirV2 update2_V  ;
     update_V = mkV perfective "исправить" "исправлю" "исправит" ;
@@ -122,6 +126,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, (X=Extra
     ring_N = (mkNplus (mkN "кольцо" Neut Inanimate "5*d")) ** {pgen="колец"} ;
     role_N = mkN "роль" "роли" "роли" "роль" "ролью" "роли" "ролями" "роли" "ролей" "ролям" "роли" "ролями" "ролях" Fem Inanimate ;
     search_N = mkN "поиск" ;
+    size_N = mkN "размер" ;
     sender_N = mkN "отправитель" ;
     setting_N = mkN "настройка" ;
     system_N = mkN "система" ;
