@@ -6,6 +6,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Action = V2;
     Action3 = V3;
     Actor = NP;
+    Obj = NP;
     Clause = Cl;
     DoCommand = Utt;
     Document = Text;
@@ -25,8 +26,10 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     AdjKind prop what = mkCN prop what;
     RelKind what how what2 = mkCN what (mkAdv how (mkNP what2)) ;
     Say phrase = mkS (mkCl phrase);
-    NItemsDig num kind = mkS (mkCl (mkNP (mkDet num) kind)) ;
+    Nof num kind = mkNP (mkDet num) kind ;
     ActorWe = we_NP ;
+    One what = mkNP what ;
+    Many what =  mkNP aPl_Det what;
 
     Above = above_Prep ;
     After = after_Prep ;
@@ -156,22 +159,21 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     Main = mkAP main_A ;
     Passive = mkAP passive_A ;
 
-    ActorCan actor action on_what = mkS presentTense (mkCl actor (mkVP can_VV (mkVP action (mkNP on_what) )) );
-    ActorMust actor action on_what = mkS presentTense (mkCl actor (mkVP must_VV (mkVP action (mkNP on_what) )) );
-    ActorDone actor action on_what = mkS pastTense (mkCl actor (mkVP action (mkNP on_what) ));
-    -- == DoOn actor action on_what = mkS pastTense (mkCl actor action (mkNP on_what));
-    ActorDoes actor action on_what = mkS presentTense simultaneousAnt (mkCl actor (mkVP action (mkNP on_what) ));
-    ActorDoes3 actor action on_what on_what2 = mkS presentTense simultaneousAnt (mkCl actor (mkVP action (mkNP on_what) (mkNP on_what2)));
-    ActorWillDo actor action on_what = mkS futureTense simultaneousAnt (mkCl actor (mkVP action (mkNP on_what) ));
-    CanDone action on_what = mkS presentTense (mkCl (mkNP on_what) (mkVP can_VV (passiveVP action)));
-    Do action on_what = makeImpoliteImp action (mkNP on_what);
-    DoOnMany action on_what = makeImpoliteImp action (mkNP aPl_Det on_what);
-    Doing action on_what = mkS presentTense simultaneousAnt (mkCl (mkNP on_what) (PassV2 action));
+    ActorCan actor action on_what = mkS presentTense (mkCl actor (mkVP can_VV (mkVP action on_what )) );
+    ActorMust actor action on_what = mkS presentTense (mkCl actor (mkVP must_VV (mkVP action on_what )) );
+    ActorDone actor action on_what = mkS pastTense (mkCl actor (mkVP action on_what ));
+    -- == DoOn actor action on_what = mkS pastTense (mkCl actor action on_what);
+    ActorDoes actor action on_what = mkS presentTense simultaneousAnt (mkCl actor (mkVP action on_what ));
+    ActorDoes3 actor action on_what on_what2 = mkS presentTense simultaneousAnt (mkCl actor (mkVP action on_what on_what2));
+    ActorWillDo actor action on_what = mkS futureTense simultaneousAnt (mkCl actor (mkVP action on_what ));
+    CanDone action on_what = mkS presentTense (mkCl on_what (mkVP can_VV (passiveVP action)));
+    Do action on_what = makeImpoliteImp action on_what;
+    Doing action on_what = mkS presentTense simultaneousAnt (mkCl on_what (PassV2 action));
     DoingAction action = mkS presentTense simultaneousAnt (mkCl (passiveVP action));
     DoingByItself action = mkS presentTense simultaneousAnt (mkCl (reflexiveVP action));
-    Done action on_what = mkS pastTense (mkCl (mkNP on_what) (PassV2 action));
-    NotDone action on_what = mkS pastTense negativePol (mkCl (mkNP on_what) (PassV2 action));
-    WillDo action on_what = mkS futureTense simultaneousAnt (mkCl (mkNP on_what) (PassV2 action));
+    Done action on_what = mkS pastTense (mkCl on_what (PassV2 action));
+    NotDone action on_what = mkS pastTense negativePol (mkCl on_what (PassV2 action));
+    WillDo action on_what = mkS futureTense simultaneousAnt (mkCl on_what (PassV2 action));
 
     SystemCan action on_what = ActorCan ActorSystem action on_what;
     SystemDone action on_what = ActorDone ActorSystem action on_what ;

@@ -12,6 +12,7 @@ abstract Crud = Numeral ** {
     Document ;
     Kind ;
     NumberOf ;
+    Obj ;
     Property ;
     Rel ;
     Sentence ;
@@ -26,7 +27,9 @@ abstract Crud = Numeral ** {
     Say : Kind -> Sentence ;
     AdjKind : Property -> Kind -> Kind ;
     RelKind : Kind -> Rel -> Kind -> Kind ;
-    NItemsDig : Digits -> Kind -> Sentence ;
+    Nof : Digits -> Kind -> Obj ;
+    One : Kind -> Obj ;
+    Many : Kind -> Obj ;
     ActorWe : Actor ;
 
     Above : Rel ;
@@ -158,25 +161,24 @@ abstract Crud = Numeral ** {
     Main : Property ;
     Passive : Property ;
 
-    ActorCan : Actor -> Action -> Kind -> Sentence ;
-    ActorMust : Actor -> Action -> Kind -> Sentence ;
-    ActorDone : Actor -> Action -> Kind -> Sentence ;
-    ActorDoes : Actor -> Action -> Kind -> Sentence ;
-    -- == DoOn : Actor -> Action -> Kind -> Sentence ;
-    ActorDoes3 : Actor -> Action3 -> Kind -> Kind -> Sentence ;
-    ActorWillDo : Actor -> Action -> Kind -> Sentence ;
-    CanDone : Action -> Kind -> Sentence ;
-    Do : Action -> Kind -> DoCommand ;
-    DoOnMany : Action -> Kind -> DoCommand ;
-    Doing : Action -> Kind -> Sentence ;
+    ActorCan : Actor -> Action -> Obj -> Sentence ;
+    ActorMust : Actor -> Action -> Obj -> Sentence ;
+    ActorDone : Actor -> Action -> Obj -> Sentence ;
+    ActorDoes : Actor -> Action -> Obj -> Sentence ;
+    -- == DoOn : Actor -> Action -> Obj -> Sentence ;
+    ActorDoes3 : Actor -> Action3 -> Obj -> Obj -> Sentence ;
+    ActorWillDo : Actor -> Action -> Obj -> Sentence ;
+    CanDone : Action -> Obj -> Sentence ;
+    Do : Action -> Obj -> DoCommand ;
+    Doing : Action -> Obj -> Sentence ;
     DoingAction : Action -> Sentence ;
     DoingByItself : Action -> Sentence ;
-    Done : Action -> Kind -> Sentence ;
-    NotDone : Action -> Kind -> Sentence ;
-    WillDo : Action -> Kind -> Sentence ;
+    Done : Action -> Obj -> Sentence ;
+    NotDone : Action -> Obj -> Sentence ;
+    WillDo : Action -> Obj -> Sentence ;
 
-    SystemDone : Action -> Kind -> Sentence ;
-    SystemCan : Action -> Kind -> Sentence ;
-    WeCan : Action -> Kind -> Sentence ;
-    WeDone : Action -> Kind -> Sentence ;
+    SystemDone : Action -> Obj -> Sentence ;
+    SystemCan : Action -> Obj -> Sentence ;
+    WeCan : Action -> Obj -> Sentence ;
+    WeDone : Action -> Obj -> Sentence ;
 }
