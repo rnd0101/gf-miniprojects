@@ -114,6 +114,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, (X=Extra
     child_N = mkN "ребёнок" "ребёнка" "ребёнку" "ребёнка" "ребёнком" "ребёнке" "ребёнке" "дети" "детей" "детям" "детей" "детьми" "детях" masculine animate ;
     data_N = mkN (mkA "данный") masculine inanimate ;
     file_N = mkN "файл" ;
+    filter_N = mkN "фильтр" ;
     function_N = mkN "функция" ;
     group_N = mkN "группа" ;
     measurement_N = mkN "измерение" ;

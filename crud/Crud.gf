@@ -102,6 +102,7 @@ abstract Crud = Numeral ** {
     Child : Kind ;
     Data : Kind ;
     File : Kind ;
+    Filter : Kind ;
     Function : Kind ;
     Group : Kind ;
     Measurement : Kind ;
@@ -126,6 +127,7 @@ abstract Crud = Numeral ** {
     ActorChild : Actor ;
     ActorData : Actor ;
     ActorFile : Actor ;
+    ActorFilter : Actor ;
     ActorFunction : Actor ;
     ActorGroup : Actor ;
     ActorMeasurement : Actor ;

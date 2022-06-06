@@ -62,6 +62,7 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     child_N = mk2N "child" "children" ;
     data_N = mkN "data" "data";
     file_N = mkN "file" ;
+    filter_N = mkN "filter" ;
     function_N = mkN "function" ;
     group_N = mkN "group" ;
     measurement_N = mkN "measurement" ;

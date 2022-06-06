@@ -62,6 +62,7 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     child_N = mkN "lapsi" "lapsen" "lasta" "lapsena" "lapseen" "lasten" "lapsia" "lapsina" "lapsissa" "lapsiin" ;
     data_N = mkN "tieto" ;
     file_N = mkN "tiedosto" ;
+    filter_N = mkN "suodatin" ;
     function_N = mkN "tominto" ;
     group_N = mkN "ryhmä" ;
     measurement_N = mkN "mittaus" ;

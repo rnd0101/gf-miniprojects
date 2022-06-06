@@ -63,6 +63,7 @@ interface LexCrud = open Syntax in {
     child_N : N ;
     data_N : N ;
     file_N : N ;
+    filter_N : N ;
     function_N : N ;
     group_N : N ;
     measurement_N : N ;
