@@ -1,4 +1,4 @@
-incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
+incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, LexCrud in {
   lincat
     Action = V2;
     Action3 = V3;
@@ -24,9 +24,19 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, LexCrud in {
     RelKind what how what2 = mkCN what (mkAdv how (mkNP what2)) ;
     Say phrase = mkS (mkCl phrase);
     Nof num kind = mkNP (mkDet num) kind ;
+    All what = PredetNP all_Predet (mkNP aPl_Det what) ;
+    -- Most what = PredetNP most_Predet (mkNP aPl_Det what) ;
+    -- Only what = PredetNP only_Predet (mkNP aSg_Det what) ;
+    Not what = PredetNP not_Predet (mkNP aPl_Det what) ;
+    Some what = mkNP someSg_Det what ;
     ActorWe = we_NP ;
     One what = mkNP what ;
-    Many what =  mkNP aPl_Det what;
+    M what =  mkNP aPl_Det what ;
+    Many what =  mkNP many_Det what ;
+    Few what =  mkNP few_Det what ;
+    This what =  mkNP this_Det what ;
+    That what =  mkNP that_Det what ;
+    Every what =  mkNP every_Det what ;
 
     Above = above_Prep ;
     After = after_Prep ;

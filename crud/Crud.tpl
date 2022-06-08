@@ -27,6 +27,16 @@ abstract Crud = Numeral ** {
     Nof : Digits -> Kind -> Obj ;
     One : Kind -> Obj ;
     Many : Kind -> Obj ;
+    Some : Kind -> Obj ;
+    M : Kind -> Obj ;
+    Few : Kind -> Obj ;
+    This : Kind -> Obj ;
+    That : Kind -> Obj ;
+    Every : Kind -> Obj ;
+    All : Kind -> Obj ;
+    -- Most : Kind -> Obj ;
+    -- Only : Kind -> Obj ;
+    Not : Kind -> Obj ;
     ActorWe : Actor ;
 
     Above : Rel ;
