@@ -34,7 +34,7 @@ abstract Crud = Numeral ** {
     That : Kind -> Obj ;
     Every : Kind -> Obj ;
     All : Kind -> Obj ;
-    -- Most : Kind -> Obj ;
+    Most : Kind -> Obj ;
     -- Only : Kind -> Obj ;
     Not : Kind -> Obj ;
     ActorWe : Actor ;

@@ -26,7 +26,8 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, (X=Extra
     create2_V = mkV imperfective "создаю" "создаёшь" "создаёт" "создаём" "создаёте" "создают" "создавал" "создавай" "создавать" ;  -- wikt: гл ru 13b
     create2_V2 = dirV2 create2_V  ;
     create_V = regV perfective first "созда" "ю" "создал" "создай" "создать" ;  -- *
-    create_V2 = dirV2 create_V  ;
+    -- create_V2 = dirV2 create_V  ;
+    create_V2 = mkV2 create_V X.from2_Prep ;
     delete2_V = regV imperfective first "удаля" "ю" "удалял" "удаляй" "удалять"  ;  -- wikt: гл ru 1a
     delete2_V2 = dirV2 delete2_V  ;
     delete_V = regV perfective secondA "удал" "ю" "удалил" "удали" "удалить" ;  -- wikt: гл ru 4bСВ
