@@ -144,5 +144,9 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, (X=Extra
     external_A = mkA "внешний";
     internal_A = mkA "внутренний";
     main_A = mkA "основной";
+    new_A = mkA "новый";
+    old_A = mkA "старый";
     passive_A = mkA "пассивный";
+    correct_A = mkA "правильный";
+    wrong_A = mkA "неправильный";
 }

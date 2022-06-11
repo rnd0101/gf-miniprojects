@@ -92,5 +92,9 @@ interface LexCrud = open Syntax in {
     external_A : A ;
     internal_A : A ;
     main_A : A ;
+    new_A : A ;
+    old_A : A ;
     passive_A : A ;
+    correct_A : A ;
+    wrong_A : A ;
 }

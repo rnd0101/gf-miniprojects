@@ -167,7 +167,11 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, LexCrud in
     External = mkAP external_A ;
     Internal = mkAP internal_A ;
     Main = mkAP main_A ;
+    New = mkAP new_A ;
+    Old = mkAP old_A ;
     Passive = mkAP passive_A ;
+    Correct = mkAP correct_A ;
+    Wrong = mkAP wrong_A ;
 
     ActorCan actor action on_what = mkS presentTense (mkCl actor (mkVP can_VV (mkVP action on_what )) );
     ActorMust actor action on_what = mkS presentTense (mkCl actor (mkVP must_VV (mkVP action on_what )) );

@@ -169,7 +169,11 @@ abstract Crud = Numeral ** {
     External : Property ;
     Internal : Property ;
     Main : Property ;
+    New : Property ;
+    Old : Property ;
     Passive : Property ;
+    Correct : Property ;
+    Wrong : Property ;
 
     ActorCan : Actor -> Action -> Obj -> Sentence ;
     ActorMust : Actor -> Action -> Obj -> Sentence ;
