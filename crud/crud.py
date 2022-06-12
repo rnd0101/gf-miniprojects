@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 """
 Hints taken from: http://www.grammaticalframework.org/doc/python-api.html
@@ -35,18 +35,18 @@ if __name__ == "__main__":
 
     PARSE_EXAMPLE = u"штука получилась ."
     print(u"Parse: {}".format(PARSE_EXAMPLE))
-    parse_iter = rus.parse(PARSE_EXAMPLE.encode("utf-8"))
+    parse_iter = rus.parse(PARSE_EXAMPLE)
     expr = [k for k in parse_iter][0][1]
 
     expr_str = str(expr)
     e = pgf.readExpr(expr_str)
 
-    print(u"Linearized: {}".format(unicode(eng.linearize(e), "utf-8")))
+    print(u"Linearized: {}".format(eng.linearize(e)))
 
     PARSE_EXAMPLE_2 = u"штука получилась"
     print(u"Parse: {}".format(PARSE_EXAMPLE_2))
     try:
-        parse_iter = rus.parse(PARSE_EXAMPLE_2.encode("utf-8"))
+        parse_iter = rus.parse(PARSE_EXAMPLE_2)
     except pgf.ParseError as x:
         print("expected ERROR: {}".format(x))
 
@@ -85,7 +85,7 @@ if __name__ == "__main__":
         if text[-1] not in "!?.":
             text = text + "."
         try:
-            parse_iter = eng.parse(text.encode("utf-8"))
+            parse_iter = eng.parse(text)
             print(parse_msg)
             print("\n  " + "\n  ".join(sorted(set(str(k[1]) for k in parse_iter))))
             print("")
