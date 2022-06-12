@@ -74,8 +74,10 @@ mapping = {
     "V3": [("Action3", " = {} ;", "")],
     "N": [
         ("Kind", " = mkCN {} ;", "A"),
-        ("Actor", " = mkNP {} ;", "Actor")
-        ("NomMod", " = mkNP {} ;", "-Of")
+        ("Actor", " = mkNP {} ;", "Actor"),
+    ],  # TODO: Also An
+    "N2": [
+        ("NomMod", " = {} ;", "-Of"),
     ],  # TODO: Also An
     "A": [("Property", " = mkAP {} ;", "Prop")],
 }

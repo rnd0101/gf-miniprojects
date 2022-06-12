@@ -84,8 +84,6 @@ interface LexCrud = open Syntax in {
     time_N : N ;
     user_N : N ;
 
-    user_N2 : N2 ;
-
     active_A : A ;
     additional_A : A ;
     automatic_A : A ;
@@ -99,4 +97,6 @@ interface LexCrud = open Syntax in {
     passive_A : A ;
     correct_A : A ;
     wrong_A : A ;
+
+    user_N2 : N2 ;
 }

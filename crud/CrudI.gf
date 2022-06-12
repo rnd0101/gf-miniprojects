@@ -10,9 +10,9 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, LexCrud in
     Clause = Cl;
     DoCommand = Utt;
     Document = Text;
+    NomMod = N2;
     Kind = CN;
     NumberOf = Str;
-    NomMod = N2;
     Property = AP;
     Rel = Prep;
     Sentence = S;
@@ -161,8 +161,6 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, LexCrud in
     ActorTime = mkNP time_N ;
     ActorUser = mkNP user_N ;
 
-    UserOf = user_N2  ;
-
     Active = mkAP active_A ;
     Additional = mkAP additional_A ;
     Automatic = mkAP automatic_A ;
@@ -176,6 +174,8 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, LexCrud in
     Passive = mkAP passive_A ;
     Correct = mkAP correct_A ;
     Wrong = mkAP wrong_A ;
+
+    UserOf = user_N2 ;
 
     ActorCan actor action on_what = mkS presentTense (mkCl actor (mkVP can_VV (mkVP action on_what )) );
     ActorMust actor action on_what = mkS presentTense (mkCl actor (mkVP must_VV (mkVP action on_what )) );

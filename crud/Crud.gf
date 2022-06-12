@@ -11,8 +11,8 @@ abstract Crud = Numeral ** {
     DoCommand ;
     Document ;
     Kind ;
-    NumberOf ;
     NomMod ;
+    NumberOf ;
     Obj ;
     Property ;
     Rel ;
@@ -163,8 +163,6 @@ abstract Crud = Numeral ** {
     ActorTime : Actor ;
     ActorUser : Actor ;
 
-    UserOf : NomMod ;
-
     Active : Property ;
     Additional : Property ;
     Automatic : Property ;
@@ -178,6 +176,8 @@ abstract Crud = Numeral ** {
     Passive : Property ;
     Correct : Property ;
     Wrong : Property ;
+
+    UserOf : NomMod ;
 
     ActorCan : Actor -> Action -> Obj -> Sentence ;
     ActorMust : Actor -> Action -> Obj -> Sentence ;
