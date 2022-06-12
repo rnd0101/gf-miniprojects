@@ -12,6 +12,7 @@ abstract Crud = Numeral ** {
     Document ;
     Kind ;
     NumberOf ;
+    NomMod ;
     Obj ;
     Property ;
     Rel ;
@@ -25,6 +26,7 @@ abstract Crud = Numeral ** {
     Event : Kind -> Status -> Sentence ;
     NegEvent : Kind -> Status -> Sentence ;
     Say : Kind -> Sentence ;
+    NomKind : NomMod -> Obj -> Kind ;
     AdjKind : Property -> Kind -> Kind ;
     RelKind : Kind -> Rel -> Kind -> Kind ;
     Nof : Digits -> Kind -> Obj ;
@@ -160,6 +162,8 @@ abstract Crud = Numeral ** {
     ActorTask : Actor ;
     ActorTime : Actor ;
     ActorUser : Actor ;
+
+    UserOf : NomMod ;
 
     Active : Property ;
     Additional : Property ;

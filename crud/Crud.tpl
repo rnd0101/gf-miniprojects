@@ -8,6 +8,7 @@ abstract Crud = Numeral ** {
     DoCommand ;
     Document ;
     Kind ;
+    NomMod ;
     NumberOf ;
     Obj ;
     Property ;
@@ -22,6 +23,7 @@ abstract Crud = Numeral ** {
     Event : Kind -> Status -> Sentence ;
     NegEvent : Kind -> Status -> Sentence ;
     Say : Kind -> Sentence ;
+    NomKind : NomMod -> Obj -> Kind ;
     AdjKind : Property -> Kind -> Kind ;
     RelKind : Kind -> Rel -> Kind -> Kind ;
     Nof : Digits -> Kind -> Obj ;

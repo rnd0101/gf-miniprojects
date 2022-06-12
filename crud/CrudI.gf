@@ -12,6 +12,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, LexCrud in
     Document = Text;
     Kind = CN;
     NumberOf = Str;
+    NomMod = N2;
     Property = AP;
     Rel = Prep;
     Sentence = S;
@@ -23,6 +24,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, LexCrud in
     Label what = mkText (mkPhr (mkUtt what)) ;
     Event what status = mkS anteriorAnt (mkCl (mkNP what) status) ;
     NegEvent what status = mkS pastTense negativePol (mkCl (mkNP what) status) ;
+    NomKind nommod np = ComplN2 nommod np ;
     AdjKind prop what = mkCN prop what;
     RelKind what how what2 = mkCN what (mkAdv how (mkNP what2)) ;
     Say phrase = mkS (mkCl phrase);
@@ -158,6 +160,8 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, LexCrud in
     ActorTask = mkNP task_N ;
     ActorTime = mkNP time_N ;
     ActorUser = mkNP user_N ;
+
+    UserOf = user_N2  ;
 
     Active = mkAP active_A ;
     Additional = mkAP additional_A ;

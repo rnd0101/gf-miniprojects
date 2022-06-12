@@ -72,7 +72,11 @@ def generate_lex_abs(lexicon_structs):
 mapping = {
     "V2": [("Action", " = {} ;", "")],
     "V3": [("Action3", " = {} ;", "")],
-    "N": [("Kind", " = mkCN {} ;", "A"), ("Actor", " = mkNP {} ;", "Actor")],  # TODO: Also An
+    "N": [
+        ("Kind", " = mkCN {} ;", "A"),
+        ("Actor", " = mkNP {} ;", "Actor")
+        ("NomMod", " = mkNP {} ;", "-Of")
+    ],  # TODO: Also An
     "A": [("Property", " = mkAP {} ;", "Prop")],
 }
 
@@ -81,7 +85,7 @@ def lex_item_to_abs_item(lex_item, gr_cat, existing):
     for item_cat, rhs, disambig_prefix in mapping[gr_cat]:
         abs_item = lex_item.split("_", 1)[0].capitalize()
         if abs_item in existing:
-            abs_item = disambig_prefix + abs_item
+            abs_item = abs_item + disambig_prefix.strip("-") if disambig_prefix.startswith("-") else disambig_prefix + abs_item
         yield abs_item, item_cat, rhs.format(lex_item)
 
 
