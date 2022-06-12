@@ -163,6 +163,31 @@ abstract Crud = Numeral ** {
     ActorTime : Actor ;
     ActorUser : Actor ;
 
+    AccessOf : NomMod ;
+    ChildOf : NomMod ;
+    DataOf : NomMod ;
+    FileOf : NomMod ;
+    FilterOf : NomMod ;
+    FunctionOf : NomMod ;
+    GroupOf : NomMod ;
+    MeasurementOf : NomMod ;
+    MessageOf : NomMod ;
+    NoteOf : NomMod ;
+    PieceOf : NomMod ;
+    PositionOf : NomMod ;
+    ProcessOf : NomMod ;
+    ResourceOf : NomMod ;
+    RingOf : NomMod ;
+    RoleOf : NomMod ;
+    SearchOf : NomMod ;
+    SizeOf : NomMod ;
+    SenderOf : NomMod ;
+    SettingOf : NomMod ;
+    SystemOf : NomMod ;
+    TaskOf : NomMod ;
+    TimeOf : NomMod ;
+    UserOf : NomMod ;
+
     Active : Property ;
     Additional : Property ;
     Automatic : Property ;
@@ -176,8 +201,6 @@ abstract Crud = Numeral ** {
     Passive : Property ;
     Correct : Property ;
     Wrong : Property ;
-
-    UserOf : NomMod ;
 
     ActorCan : Actor -> Action -> Obj -> Sentence ;
     ActorMust : Actor -> Action -> Obj -> Sentence ;

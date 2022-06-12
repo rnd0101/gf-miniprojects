@@ -161,6 +161,31 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, LexCrud in
     ActorTime = mkNP time_N ;
     ActorUser = mkNP user_N ;
 
+    AccessOf = access_N2 ;
+    ChildOf = child_N2 ;
+    DataOf = data_N2 ;
+    FileOf = file_N2 ;
+    FilterOf = filter_N2 ;
+    FunctionOf = function_N2 ;
+    GroupOf = group_N2 ;
+    MeasurementOf = measurement_N2 ;
+    MessageOf = message_N2 ;
+    NoteOf = note_N2 ;
+    PieceOf = piece_N2 ;
+    PositionOf = position_N2 ;
+    ProcessOf = process_N2 ;
+    ResourceOf = resource_N2 ;
+    RingOf = ring_N2 ;
+    RoleOf = role_N2 ;
+    SearchOf = search_N2 ;
+    SizeOf = size_N2 ;
+    SenderOf = sender_N2 ;
+    SettingOf = setting_N2 ;
+    SystemOf = system_N2 ;
+    TaskOf = task_N2 ;
+    TimeOf = time_N2 ;
+    UserOf = user_N2 ;
+
     Active = mkAP active_A ;
     Additional = mkAP additional_A ;
     Automatic = mkAP automatic_A ;
@@ -174,8 +199,6 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, LexCrud in
     Passive = mkAP passive_A ;
     Correct = mkAP correct_A ;
     Wrong = mkAP wrong_A ;
-
-    UserOf = user_N2 ;
 
     ActorCan actor action on_what = mkS presentTense (mkCl actor (mkVP can_VV (mkVP action on_what )) );
     ActorMust actor action on_what = mkS presentTense (mkCl actor (mkVP must_VV (mkVP action on_what )) );

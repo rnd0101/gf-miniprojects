@@ -83,6 +83,32 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     time_N = mkN "time" ;
     user_N = mkN "user" ;
 
+    -- -- N2 LEXICON -- --
+    access_N2 = mkN2 access_N ;
+    child_N2 = mkN2 child_N ;
+    data_N2 = mkN2 data_N ;
+    file_N2 = mkN2 file_N ;
+    filter_N2 = mkN2 filter_N ;
+    function_N2 = mkN2 function_N ;
+    group_N2 = mkN2 group_N ;
+    measurement_N2 = mkN2 measurement_N ;
+    message_N2 = mkN2 message_N ;
+    note_N2 = mkN2 note_N ;
+    piece_N2 = mkN2 piece_N ;
+    position_N2 = mkN2 position_N ;
+    process_N2 = mkN2 process_N ;
+    resource_N2 = mkN2 resource_N ;
+    ring_N2 = mkN2 ring_N ;
+    role_N2 = mkN2 role_N ;
+    search_N2 = mkN2 search_N ;
+    size_N2 = mkN2 size_N ;
+    sender_N2 = mkN2 sender_N ;
+    setting_N2 = mkN2 setting_N ;
+    system_N2 = mkN2 system_N ;
+    task_N2 = mkN2 task_N ;
+    time_N2 = mkN2 time_N ;
+    user_N2 = mkN2 user_N ;
+
     -- -- A LEXICON -- --
     active_A = mkA "active";
     additional_A = mkA "additional";

@@ -84,6 +84,31 @@ interface LexCrud = open Syntax in {
     time_N : N ;
     user_N : N ;
 
+    access_N2 : N2 ;
+    child_N2 : N2 ;
+    data_N2 : N2 ;
+    file_N2 : N2 ;
+    filter_N2 : N2 ;
+    function_N2 : N2 ;
+    group_N2 : N2 ;
+    measurement_N2 : N2 ;
+    message_N2 : N2 ;
+    note_N2 : N2 ;
+    piece_N2 : N2 ;
+    position_N2 : N2 ;
+    process_N2 : N2 ;
+    resource_N2 : N2 ;
+    ring_N2 : N2 ;
+    role_N2 : N2 ;
+    search_N2 : N2 ;
+    size_N2 : N2 ;
+    sender_N2 : N2 ;
+    setting_N2 : N2 ;
+    system_N2 : N2 ;
+    task_N2 : N2 ;
+    time_N2 : N2 ;
+    user_N2 : N2 ;
+
     active_A : A ;
     additional_A : A ;
     automatic_A : A ;
@@ -97,6 +122,4 @@ interface LexCrud = open Syntax in {
     passive_A : A ;
     correct_A : A ;
     wrong_A : A ;
-
-    user_N2 : N2 ;
 }
