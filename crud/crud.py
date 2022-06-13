@@ -88,12 +88,12 @@ if __name__ == "__main__":
             parse_iter = eng.parse(text)
             print(parse_msg)
             print("\n  " + "\n  ".join(sorted(set(str(k[1]) for k in parse_iter))))
-            print("")
+            #print("")
             successful_cnt += 1
         except pgf.ParseError as e:
-            if len(text) < 40:
-                print(parse_msg)
-            print(f"ERROR {e}\n")
+            #if len(text) < 40:
+            #    print(parse_msg)
+            #print(f"ERROR {e}\n")
             continue
 
     print("Success: {} of {}".format(successful_cnt, total_cnt))
