@@ -40,6 +40,13 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, LexCrud in
     That what =  mkNP that_Det what ;
     Every what =  mkNP every_Det what ;
 
+    Everything = everything_NP ;
+    Everybody = everybody_NP ;
+    ActorEverybody = everybody_NP ;
+    Something = something_NP ;
+    Somebody = somebody_NP ;
+    ActorSomebody = somebody_NP ;
+
     Above = above_Prep ;
     After = after_Prep ;
     Before = before_Prep ;

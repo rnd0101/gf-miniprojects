@@ -60,6 +60,13 @@ abstract Crud = Numeral ** {
     WithHelpOf : Rel ;
     Without : Rel ;
 
+    Everything : Obj ;
+    Everybody : Obj ;
+    ActorEverybody : Actor ;
+    Something : Obj ;
+    Somebody : Obj ;
+    ActorSomebody : Actor ;
+
 
     Add2 : Action ;
     Add : Action ;
