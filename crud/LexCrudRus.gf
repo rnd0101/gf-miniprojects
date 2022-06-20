@@ -63,6 +63,10 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, (X=Extra
     receive2_V2 = dirV2 receive2_V ;
     receive_V = regV perfective second "получ" "у" "получил" "получи" "получить" ;
     receive_V2 = dirV2 receive_V ;
+    remove_V = mkV perfective transitive "удалить" "удалю" "удалит" "4b" ;
+    remove_V2 = dirV2 remove_V ;
+    remove2_V = mkV imperfective transitive "удалять" "удаляю" "удаляет" "1a" ;
+    remove2_V2 = dirV2 remove2_V ;
     retrieve2_V = regV imperfective first "извлека" "ю" "извлекал" "извлекай" "извлекать"  ;
     retrieve2_V2 = dirV2 retrieve2_V ;
     retrieve_V = mkV "извлечь" "извлеку" "извлечёт" ;

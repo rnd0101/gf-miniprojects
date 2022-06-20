@@ -35,6 +35,8 @@ interface LexCrud = open Syntax in {
     read_V2 : V2 ;
     receive2_V2 : V2 ;
     receive_V2 : V2 ;
+    remove2_V2 : V2 ;
+    remove_V2 : V2 ;
     retrieve2_V2 : V2 ;
     retrieve_V2 : V2 ;
     search2_V2 : V2 ;

@@ -96,6 +96,8 @@ abstract Crud = Numeral ** {
     Read : Action ;
     Receive2 : Action ;
     Receive : Action ;
+    Remove2 : Action ;
+    Remove : Action ;
     Retrieve2 : Action ;
     Retrieve : Action ;
     Search2 : Action ;
