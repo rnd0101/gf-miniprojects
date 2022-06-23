@@ -69,6 +69,7 @@ interface LexCrud = open Syntax in {
     data_N : N ;
     file_N : N ;
     filter_N : N ;
+    folder_N : N ;
     function_N : N ;
     group_N : N ;
     measurement_N : N ;
@@ -94,6 +95,7 @@ interface LexCrud = open Syntax in {
     data_N2 : N2 ;
     file_N2 : N2 ;
     filter_N2 : N2 ;
+    folder_N2 : N2 ;
     function_N2 : N2 ;
     group_N2 : N2 ;
     measurement_N2 : N2 ;
