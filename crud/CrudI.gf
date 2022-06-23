@@ -74,6 +74,8 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, LexCrud in
     Change = change_V2 ;
     Connect2 = connect2_V2 ;
     Connect = connect_V2 ;
+    Copy = copy_V2 ;
+    Copy2 = copy2_V2 ;
     Create2 = create2_V2 ;
     Create = create_V2 ;
     Delete2 = delete2_V2 ;
@@ -119,6 +121,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, LexCrud in
     Write = write_V2 ;
 
     Send3 = send3_V3 ;
+    Copy3 = copy3_V3 ;
 
     Access = mkCN access_N ;
     Child = mkCN child_N ;

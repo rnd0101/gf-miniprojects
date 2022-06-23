@@ -76,6 +76,8 @@ abstract Crud = Numeral ** {
     Change : Action ;
     Connect2 : Action ;
     Connect : Action ;
+    Copy : Action ;
+    Copy2 : Action ;
     Create2 : Action ;
     Create : Action ;
     Delete2 : Action ;
@@ -121,6 +123,7 @@ abstract Crud = Numeral ** {
     Write : Action ;
 
     Send3 : Action3 ;
+    Copy3 : Action3 ;
 
     Access : Kind ;
     Child : Kind ;

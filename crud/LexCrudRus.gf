@@ -23,6 +23,10 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, (X=Extra
     connect2_V2 = dirV2 connect2_V  ;
     connect_V = mkV perfective "связать" "свяжу" "свяжет"  ;
     connect_V2 = dirV2 connect_V  ;
+    copy_V = mkV imperfective transitive "копировать" "копирую" "копирует" "2a" ;
+    copy_V2 = dirV2 copy_V ;
+    copy2_V = mkV perfective transitive "скопировать" "скопирую" "скопирует" "2a" ;
+    copy2_V2 = dirV2 copy2_V ;
     create2_V = mkV imperfective "создаю" "создаёшь" "создаёт" "создаём" "создаёте" "создают" "создавал" "создавай" "создавать" ;  -- wikt: гл ru 13b
     create2_V2 = dirV2 create2_V  ;
     create_V = regV perfective first "созда" "ю" "создал" "создай" "создать" ;  -- *
@@ -111,7 +115,8 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, (X=Extra
     write_V2 = dirV2 write_V  ;
 
     -- -- V3 LEXICON -- --
-    send3_V3 = mkV3 send_V "" "" accusative dative ;
+    send3_V3 = mkV3 send_V X.obj_no_Prep X.to_dat_Prep ;
+    copy3_V3 = mkV3 copy_V X.obj_no_Prep X.to2_Prep ;
 
     -- -- N LEXICON -- --
     access_N = mkN "доступ" ;

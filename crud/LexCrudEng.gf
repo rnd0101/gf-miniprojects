@@ -12,6 +12,8 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     change_V2 = mkV2 "change" ;
     connect2_V2 = mkV2 "connect" ;
     connect_V2 = mkV2 "connect" ;
+    copy_V2 = mkV2 "copy" ;
+    copy2_V2 = copy_V2 ;
     create2_V2 = mkV2 "create" ;
     create_V2 = mkV2 "create" ;
     delete2_V2 = mkV2 "delete" ;
@@ -58,6 +60,7 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
 
     -- -- V3 LEXICON -- --
     send3_V3 = mkV3 (IrregEng.send_V) to_Prep ;
+    copy3_V3 = mkV3 (mkV "copy") to_Prep ;
 
     -- -- N LEXICON -- --
     access_N = mkN "access" ;

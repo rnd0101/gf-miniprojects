@@ -12,6 +12,9 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     connect_V2 = mkV2 "yhdistää" ;
     change2_V2 = mkV2 "vaihtaa" ;
     change_V2 = mkV2 "vaihtaa" ;
+    copy_V = mkV "kopioida" ;
+    copy2_V2 = mkV2 copy_V ;
+    copy_V2 = mkV2 copy_V ;
     create2_V2 = mkV2 (mkV "luoda")  ;
     create_V2 = mkV2 (mkV "luoda")  ;
     delete_V2 = mkV2 (mkV "poistaa")  ;
@@ -58,6 +61,7 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
 
     -- -- V3 LEXICON -- --
     send3_V3 = mkV3 (mkV "lähettää") accusative for_Prep ;
+    copy3_V3 = mkV3 copy_V accPrep (casePrep illative) ;
 
     -- -- N LEXICON -- --
     access_N = mkN "pääsy" ;
