@@ -6,4 +6,5 @@ concrete CrudEng of Crud = NumeralEng ** CrudI with
   (Numeral = NumeralEng),
   (Verb = VerbEng),
   (Noun = NounEng),
+  (Conjunction = ConjunctionEng),
   (LexCrud = LexCrudEng) ;

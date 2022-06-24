@@ -6,4 +6,5 @@ concrete CrudFin of Crud = NumeralFin ** CrudI with
   (Numeral = NumeralFin),
   (Verb = VerbFin),
   (Noun = NounFin),
+  (Conjunction = ConjunctionFin),
   (LexCrud = LexCrudFin) ;

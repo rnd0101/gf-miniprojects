@@ -6,4 +6,5 @@ concrete CrudRus of Crud = NumeralRus ** CrudI with
   (Numeral = NumeralRus),
   (Verb = VerbRus),
   (Noun = NounRus),
+  (Conjunction = ConjunctionRus),
   (LexCrud = LexCrudRus) ;

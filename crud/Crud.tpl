@@ -37,6 +37,11 @@ abstract Crud = Numeral ** {
     Not : Kind -> Obj ;
     ActorWe : Actor ;
 
+    And : Obj -> Obj -> Obj;
+    Or : Obj -> Obj -> Obj;
+    And3 : Obj -> Obj -> Obj -> Obj;
+    Or3 : Obj -> Obj -> Obj -> Obj;
+
     Above : Rel ;
     After : Rel ;
     Before : Rel ;

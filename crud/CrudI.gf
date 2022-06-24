@@ -1,7 +1,7 @@
 --# -coding=utf-8
 -- THIS FILE HAS BEEN GENERATED AUTOMATICALLY. EDIT .tpl FILES --
 
-incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, LexCrud in {
+incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, Conjunction, LexCrud in {
   lincat
     Action = V2;
     Action3 = V3;
@@ -20,6 +20,10 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, LexCrud in
     Doc clause = mkText (mkPhr (mkUtt clause)) ;
     Command imp = mkText (mkPhr imp) ;
     Label what = mkText (mkPhr (mkUtt what)) ;
+    And obj1 obj2 = ConjNP and_Conj (BaseNP obj1 obj2) ;
+    Or obj1 obj2 = ConjNP or_Conj (BaseNP obj1 obj2) ;
+    And3 obj1 obj2 obj3 = ConjNP and_Conj (ConsNP obj1 (BaseNP obj2 obj3)) ;
+    Or3 obj1 obj2 obj3 = ConjNP or_Conj (ConsNP obj1 (BaseNP obj2 obj3)) ;
     NomKind nommod np = ComplN2 nommod np ;
     AdjKind prop what = mkCN prop what;
     RelKind what how what2 = mkCN what (mkAdv how (mkNP what2)) ;
