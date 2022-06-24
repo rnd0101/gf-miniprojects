@@ -16,14 +16,10 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, LexCrud in
     Property = AP;
     Rel = Prep;
     Sentence = S;
-    Status = V;
-    Term = NP;
   lin
     Doc clause = mkText (mkPhr (mkUtt clause)) ;
     Command imp = mkText (mkPhr imp) ;
     Label what = mkText (mkPhr (mkUtt what)) ;
-    Event what status = mkS anteriorAnt (mkCl (mkNP what) status) ;
-    NegEvent what status = mkS pastTense negativePol (mkCl (mkNP what) status) ;
     NomKind nommod np = ComplN2 nommod np ;
     AdjKind prop what = mkCN prop what;
     RelKind what how what2 = mkCN what (mkAdv how (mkNP what2)) ;

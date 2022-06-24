@@ -17,14 +17,10 @@ abstract Crud = Numeral ** {
     Property ;
     Rel ;
     Sentence ;
-    Status ;
-    Term ;
   fun
     Doc : Sentence -> Document ;
     Command : DoCommand -> Document;
     Label : Kind -> Document;
-    Event : Kind -> Status -> Sentence ;
-    NegEvent : Kind -> Status -> Sentence ;
     Say : Kind -> Sentence ;
     NomKind : NomMod -> Obj -> Kind ;
     AdjKind : Property -> Kind -> Kind ;
