@@ -21,7 +21,7 @@ abstract Crud = Numeral ** {
     Say : Kind -> Sentence ;
     NomKind : NomMod -> Obj -> Kind ;
     AdjKind : Property -> Kind -> Kind ;
-    RelKind : Kind -> Rel -> Kind -> Kind ;
+    RelKind : Kind -> Rel -> Obj -> Kind ;
     Nof : Digits -> Kind -> Obj ;
     One : Kind -> Obj ;
     Many : Kind -> Obj ;
