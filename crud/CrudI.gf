@@ -36,6 +36,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, Conjunctio
     Some what = mkNP someSg_Det what ;
     ActorWe = we_NP ;
     One what = mkNP what ;
+    A what =  mkNP aSg_Det what ;
     M what =  mkNP aPl_Det what ;
     Many what =  mkNP many_Det what ;
     Few what =  mkNP few_Det what ;

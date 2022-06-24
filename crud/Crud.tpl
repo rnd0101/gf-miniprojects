@@ -26,6 +26,7 @@ abstract Crud = Numeral ** {
     One : Kind -> Obj ;
     Many : Kind -> Obj ;
     Some : Kind -> Obj ;
+    A : Kind -> Obj ;
     M : Kind -> Obj ;
     Few : Kind -> Obj ;
     This : Kind -> Obj ;
