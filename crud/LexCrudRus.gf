@@ -127,6 +127,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, (X=Extra
     folder_N = mkN "папка" ;
     function_N = mkN "функция" ;
     group_N = mkN "группа" ;
+    instruction_N = mkN "инструкция" ;
     measurement_N = mkN "измерение" ;
     message_N = mkN "сообщение" ;
     note_N = mkN "заметка" ;
@@ -154,6 +155,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, (X=Extra
     folder_N2 = mkN2 folder_N ;
     function_N2 = mkN2 function_N ;
     group_N2 = mkN2 group_N ;
+    instruction_N2 = mkN2 instruction_N ;
     measurement_N2 = mkN2 measurement_N ;
     message_N2 = mkN2 message_N ;
     note_N2 = mkN2 note_N ;

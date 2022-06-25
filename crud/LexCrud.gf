@@ -72,6 +72,7 @@ interface LexCrud = open Syntax in {
     folder_N : N ;
     function_N : N ;
     group_N : N ;
+    instruction_N : N ;
     measurement_N : N ;
     message_N : N ;
     note_N : N ;
@@ -98,6 +99,7 @@ interface LexCrud = open Syntax in {
     folder_N2 : N2 ;
     function_N2 : N2 ;
     group_N2 : N2 ;
+    instruction_N2 : N2 ;
     measurement_N2 : N2 ;
     message_N2 : N2 ;
     note_N2 : N2 ;

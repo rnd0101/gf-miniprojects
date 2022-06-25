@@ -135,6 +135,7 @@ abstract Crud = Numeral ** {
     Folder : Kind ;
     Function : Kind ;
     Group : Kind ;
+    Instruction : Kind ;
     Measurement : Kind ;
     Message : Kind ;
     Note : Kind ;
@@ -161,6 +162,7 @@ abstract Crud = Numeral ** {
     ActorFolder : Actor ;
     ActorFunction : Actor ;
     ActorGroup : Actor ;
+    ActorInstruction : Actor ;
     ActorMeasurement : Actor ;
     ActorMessage : Actor ;
     ActorNote : Actor ;
@@ -187,6 +189,7 @@ abstract Crud = Numeral ** {
     FolderOf : NomMod ;
     FunctionOf : NomMod ;
     GroupOf : NomMod ;
+    InstructionOf : NomMod ;
     MeasurementOf : NomMod ;
     MessageOf : NomMod ;
     NoteOf : NomMod ;
