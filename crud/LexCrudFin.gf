@@ -57,6 +57,8 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     use_V2 = mkV2 "käyttää" ;
     verify2_V2 = mkV2 "varmistella" ;
     verify_V2 = mkV2 "varmistaa" ;
+    view2_V2 = mkV2 "katsoa" ;
+    view_V2 = mkV2 "katsella" ;
     write2_V2 = mkV2 "kirjoittaa" ;
     write_V2 = mkV2 "kirjoittaa" ;
 
@@ -66,6 +68,7 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
 
     -- -- N LEXICON -- --
     access_N = mkN "pääsy" ;
+    application_N = mkN "sovellus" ;
     child_N = mkN "lapsi" "lapsen" "lasta" "lapsena" "lapseen" "lasten" "lapsia" "lapsina" "lapsissa" "lapsiin" ;
     data_N = mkN "tieto" ;
     file_N = mkN "tiedosto" ;
@@ -94,6 +97,7 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
 
     -- -- N2 LEXICON -- --
     access_N2 = mkN2 access_N ;
+    application_N2 = mkN2 application_N ;
     child_N2 = mkN2 child_N ;
     data_N2 = mkN2 data_N ;
     file_N2 = mkN2 file_N ;

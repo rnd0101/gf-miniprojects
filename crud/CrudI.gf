@@ -120,6 +120,8 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, Conjunctio
     Update = update_V2 ;
     Verify2 = verify2_V2 ;
     Verify = verify_V2 ;
+    View2 = view2_V2 ;
+    View = view_V2 ;
     Write2 = write2_V2 ;
     Write = write_V2 ;
 
@@ -127,6 +129,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, Conjunctio
     Copy3 = copy3_V3 ;
 
     Access = mkCN access_N ;
+    Application = mkCN application_N ;
     Child = mkCN child_N ;
     Data = mkCN data_N ;
     File = mkCN file_N ;
@@ -154,6 +157,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, Conjunctio
     User = mkCN user_N ;
 
     ActorAccess = mkNP access_N ;
+    ActorApplication = mkNP application_N ;
     ActorChild = mkNP child_N ;
     ActorData = mkNP data_N ;
     ActorFile = mkNP file_N ;
@@ -181,6 +185,7 @@ incomplete concrete CrudI of Crud = open Numeral, Syntax, Verb, Noun, Conjunctio
     ActorUser = mkNP user_N ;
 
     AccessOf = access_N2 ;
+    ApplicationOf = application_N2 ;
     ChildOf = child_N2 ;
     DataOf = data_N2 ;
     FileOf = file_N2 ;

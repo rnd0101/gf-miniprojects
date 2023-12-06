@@ -123,6 +123,8 @@ abstract Crud = Numeral ** {
     Update : Action ;
     Verify2 : Action ;
     Verify : Action ;
+    View2 : Action ;
+    View : Action ;
     Write2 : Action ;
     Write : Action ;
 
@@ -130,6 +132,7 @@ abstract Crud = Numeral ** {
     Copy3 : Action3 ;
 
     Access : Kind ;
+    Application : Kind ;
     Child : Kind ;
     Data : Kind ;
     File : Kind ;
@@ -157,6 +160,7 @@ abstract Crud = Numeral ** {
     User : Kind ;
 
     ActorAccess : Actor ;
+    ActorApplication : Actor ;
     ActorChild : Actor ;
     ActorData : Actor ;
     ActorFile : Actor ;
@@ -184,6 +188,7 @@ abstract Crud = Numeral ** {
     ActorUser : Actor ;
 
     AccessOf : NomMod ;
+    ApplicationOf : NomMod ;
     ChildOf : NomMod ;
     DataOf : NomMod ;
     FileOf : NomMod ;

@@ -57,6 +57,8 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
     update_V2 = mkV2 (mkV "edit" "edits" "edited" "edited" "editing");
     verify2_V2 = mkV2 "verify" ;
     verify_V2 = mkV2 "verify" ;
+    view2_V2 = mkV2 (mkV "view") ;
+    view_V2 = mkV2 "view" ;
     write2_V2 = mkV2 (irregV "write" "wrote" "written") ;
     write_V2 = mkV2 (irregV "write" "wrote" "written") ;
 
@@ -66,6 +68,7 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
 
     -- -- N LEXICON -- --
     access_N = mkN "access" ;
+    application_N = mkN "application" ;
     child_N = mk2N "child" "children" ;
     data_N = mkN "data" "data";
     file_N = mkN "file" ;
@@ -94,6 +97,7 @@ instance LexCrudEng of LexCrud = open Prelude, SyntaxEng, ParadigmsEng, IrregEng
 
     -- -- N2 LEXICON -- --
     access_N2 = mkN2 access_N ;
+    application_N2 = mkN2 application_N ;
     child_N2 = mkN2 child_N ;
     data_N2 = mkN2 data_N ;
     file_N2 = mkN2 file_N ;

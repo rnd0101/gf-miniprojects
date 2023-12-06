@@ -109,6 +109,10 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, (X=Extra
     use2_V2 = dirV2 use2_V  ;
     use_V = use2_V ;
     use_V2 = use2_V2 ;
+    view2_V = mkV perfective "смотреть" "смотрю" "смотрит" ;
+    view2_V2 = dirV2 view2_V ;
+    view_V = mkV perfective "просмотреть" "просмотрю" "просмотрит" ;
+    view_V2 = dirV2 view_V ;
     verify2_V = regV imperfective first "проверя" "ю" "проверял" "проверяй" "проверять"  ;
     verify2_V2 = dirV2 verify2_V  ;
     verify_V = regV perfective second "провер" "ю" "проверил" "проверь" "проверить"  ;
@@ -124,6 +128,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, (X=Extra
 
     -- -- N LEXICON -- --
     access_N = mkN "доступ" ;
+    application_N = mkN "приложение" ;
     child_N = mkN "ребёнок" "ребёнка" "ребёнку" "ребёнка" "ребёнком" "ребёнке" "ребёнке" "дети" "детей" "детям" "детей" "детьми" "детях" masculine animate ;
     data_N = mkN (mkA "данный") masculine inanimate ;
     file_N = mkN "файл" ;
@@ -152,6 +157,7 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, (X=Extra
 
     -- -- N2 LEXICON -- --
     access_N2 = mkN2 access_N ;
+    application_N2 = mkN2 application_N ;
     child_N2 = mkN2 child_N ;
     data_N2 = mkN2 data_N ;
     file_N2 = mkN2 file_N ;
