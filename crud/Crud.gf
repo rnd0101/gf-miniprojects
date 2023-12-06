@@ -78,6 +78,8 @@ abstract Crud = Numeral ** {
     Change : Action ;
     Connect2 : Action ;
     Connect : Action ;
+    Configure2 : Action ;
+    Configure : Action ;
     Copy : Action ;
     Copy2 : Action ;
     Create2 : Action ;

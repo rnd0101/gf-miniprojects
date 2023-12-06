@@ -15,6 +15,8 @@ interface LexCrud = open Syntax in {
     change_V2 : V2 ;
     connect2_V2 : V2 ;
     connect_V2 : V2 ;
+    configure2_V2 : V2 ;
+    configure_V2 : V2 ;
     copy_V2 : V2 ;
     copy2_V2 : V2 ;
     create2_V2 : V2 ;

@@ -1,5 +1,4 @@
 --# -coding=utf-8
-
 instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
   oper
     makeImpoliteImp : V2 -> NP -> Utt = \v2,np -> mkUtt (mkImp v2 np) ;
@@ -10,6 +9,8 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     become_V2 = mkV2 (mkV "tulla") ;  -- not correct
     connect2_V2 = mkV2 "yhdistellä" ;
     connect_V2 = mkV2 "yhdistää" ;
+    configure2_V2 = mkV2 "konfiguroida" ;
+    configure_V2 = mkV2 "konfiguroida" ;
     change2_V2 = mkV2 "vaihtaa" ;
     change_V2 = mkV2 "vaihtaa" ;
     copy_V = mkV "kopioida" ;
@@ -70,7 +71,7 @@ instance LexCrudFin of LexCrud = open Prelude, SyntaxFin, ParadigmsFin in {
     file_N = mkN "tiedosto" ;
     filter_N = mkN "suodatin" ;
     folder_N = mkN "kansio" ;
-    function_N = mkN "tominto" ;
+    function_N = mkN "toiminto" ;
     group_N = mkN "ryhmä" ;
     instruction_N = mkN "käsky" ;
     measurement_N = mkN "mittaus" ;

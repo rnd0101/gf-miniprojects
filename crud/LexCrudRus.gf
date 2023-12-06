@@ -23,6 +23,10 @@ instance LexCrudRus of LexCrud = open Prelude, SyntaxRus, ParadigmsRus, (X=Extra
     connect2_V2 = dirV2 connect2_V  ;
     connect_V = mkV perfective "связать" "свяжу" "свяжет"  ;
     connect_V2 = dirV2 connect_V  ;
+    configure2_V = mkV imperfective "конфигурировать" "конфигурирую" ;
+    configure2_V2 = dirV2 configure2_V ;
+    configure_V = mkV perfective "сконфигурировать" "сконфигурирую" ;
+    configure_V2 = dirV2 configure_V ;
     copy_V = mkV imperfective transitive "копировать" "копирую" "копирует" "2a" ;
     copy_V2 = dirV2 copy_V ;
     copy2_V = mkV perfective transitive "скопировать" "скопирую" "скопирует" "2a" ;
